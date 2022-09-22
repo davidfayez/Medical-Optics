@@ -38,6 +38,7 @@ public class Startup
              config.Cookie.Name = CookieAuthenticationDefaults.AuthenticationScheme;
              config.LoginPath = "/Account/Login";
          });
+        services.AddMvc();
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddInfrastructure(Configuration);
         services.AddApplication();
@@ -64,10 +65,9 @@ public class Startup
         //    options.Filters.Add<ApiExceptionFilterAttribute>())
         //        .AddFluentValidation(x => x.AutomaticValidationEnabled = false);
 
-        services.AddControllersWithViews()
-                .AddFluentValidation();
-
+        services.AddControllersWithViews().AddFluentValidation();
         services.AddRazorPages();
+
 
         // Customise default API behaviour
         //services.Configure<ApiBehaviorOptions>(options => 

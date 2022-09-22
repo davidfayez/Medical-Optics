@@ -2,6 +2,9 @@
 .treemenu li { list-style: none; transition:.5s;}
 .treemenu .toggler { cursor: pointer; }
 .treemenu .toggler:before { display: inline-block; margin-right: 2pt; }
+.treemenu .toggler:lang(ar):before { position: absolute; right: 10px; left: auto;}
+.treemenu .toggler:before { position: absolute; left: 10px;margin-top: 2px;}
+
 li.tree-empty > .toggler { opacity: 0.3; cursor: default; }
 li.tree-empty > .toggler:before { content: "\2212"; }
 li.tree-closed > .toggler:before { content: "+"; }
@@ -10,3 +13,7 @@ li.tree-opened > .toggler:before { content: "\2212"; }
 .treemenu{
 padding-left:10px;
 }
+.treemenu:lang(ar){
+    padding-right:10px;
+    padding-left: 0px;
+    }

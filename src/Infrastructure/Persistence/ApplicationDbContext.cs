@@ -68,7 +68,7 @@ public partial class ApplicationDbContext : IdentityDbContext<AspNetUser, Applic
             {
                 case EntityState.Added:
                     entry.Entity.CreatedUserId = _currentUserService.UserId;
-                    entry.Entity.CreationDate = entry.Entity.CreationDate == default ? _dateTime.Now : entry.Entity.CreationDate;
+                    entry.Entity.CreationDate = _dateTime.Now;
                     break;
 
                 case EntityState.Modified:

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using FluentValidation;
 using Medical_Optics.Application.Common.Extensions;
 using Medical_Optics.Application.Common.Resources;
-using Medical_Optics.Application.Optic.Complaint.Commands.Add;
 
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Update;
 public class UpdateComplaintCommandValidator : AbstractValidator<UpdateComplaintCommand>

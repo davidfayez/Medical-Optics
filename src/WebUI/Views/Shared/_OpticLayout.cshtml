@@ -1,0 +1,326 @@
+﻿<html lang="ar">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="~/images/five.png">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap-rtl.css">
+    <link rel="stylesheet" type="text/css" href="~/css/fontawesome-all.css">
+    <link rel="stylesheet" href="~/css/btn-effect.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/pages.css">
+
+
+    <!-- SmartMenus core CSS (required) -->
+    <link href="~/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+    <!-- "sm-simple" menu theme (optional, you can use your own CSS, too) -->
+    <link href="~/css/sm-simple.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/icon.css" rel="stylesheet" type="text/css" />
+    <!--................................save.........................-->
+    <link type="text/css" rel="stylesheet" href="~/css/waitMe.css">
+    <link rel="stylesheet" href="~/css/media.css">
+
+    <!--.................For This Page only.................-->
+
+    <link href="~/css/jquery.multiselect.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/imagelightbox.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.Jcrop.min.css" />
+    <link rel="stylesheet" href="~/css/accordion-menu.css">
+    <title>Welcome to Ansari Website</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="container-fluid">
+
+            <!--  <button  class="shadow-div float-left btn-menu"><i class="fas fa-bars"></i> </button>
+            -->
+            <h1 class="float-left">الانصارى</h1>
+            <div class="dropdown float-right">
+
+                <button class="shadow-div dropdown-toggle" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/profile-icon.png" class="img-flag"><span>اهلا جيمى !! </span></button>
+
+                <div class="dropdown-menu dropright-menu accout-drop" aria-labelledby="dropdownMenuButton4">
+                    <ul>
+
+                        <li>
+                            <img src="images/profile-icon.png" class="img-drop">
+                            <div class="a-header">
+                                <h4>اهلا جيمى !!</h4>
+                                <a href="" class="a-link-drop">الاصدار 1.1</a>
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <div class="a-header">
+                                <a href="#" class="a-link-drop">En</a>
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <div class="a-header">
+                                <a href="#" class="a-link-drop">تغيير كلمة المرور</a>
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <div class="a-header">
+                                <a href="#" class="a-link-drop">تسجيل خروج</a>
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </header>
+
+    <button class="back-menu">
+        <i class="fas fa-bars"></i>
+
+    </button>
+    <nav id="main-nav">
+        <partial name="_OpticMenu" />
+    </nav>
+    <!-- card-->
+
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+
+
+
+
+
+    <!-- delete -->
+    <div class="modal fade modal-delete" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content back-dark-blue  text-center">
+
+                <a class="icon-pop"><i class="fas fa-trash-alt"></i></a>
+
+                <div class="modal-body text-center padding-modal">
+                    <h3 class="h3-pop-del"> Are you sure</h3>
+                </div>
+                <div class="text-center modal-button padding-bottom">
+                    <button type="button" class="btn btn-danger">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">no</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- print -->
+
+    <div class="modal fade modal-print" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content back-dark-blue  text-center">
+
+                <a class="icon-pop"><i class="fas fa-print"></i></a>
+
+                <div class="modal-body text-center padding-modal">
+                    <h3 class="h3-pop-del"> Are you sure print this file</h3>
+                </div>
+                <div class="text-center modal-button padding-bottom">
+                    <button type="button" class="btn btn-danger">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">no</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--.......................attach-file.....................-->
+
+
+    <div class="modal fade" id="Attach-file" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+            <div class="modal-content back-black btn-no-raduis">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">اضافة مرفقات</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="line-header-pop"></div>
+
+                <div class="modal-body">
+                    <div class="row">
+
+
+                        <div class="col-9 form-group ">
+                            <input type="file" class="form-control input-sys" id="inputPassword" multiple>
+
+                        </div>
+                        <div class="col-3 form-group ">
+                            <button class="btn  btn-success btn-no-raduis">Save </button>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <table class="table  pop-attach table-bordered">
+                        <tr>
+                            <td>اسم الملف</td>
+                            <td>تحميل</td>
+
+                            <td>حذف</td>
+                        </tr>
+                        <tr>
+                            <td>A-Accounting-Guide-inner.jpg</td>
+                            <td><a class="btn btn-success btn-sm "><i class="fas fa-download"></i> تحميل </a></td>
+
+                            <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target=".modal-delete"><i class="fas fa-trash-alt"></i> </button></td>
+
+                        </tr>
+                        <tr>
+                            <td>A-Accounting-Guide-inner.jpg</td>
+                            <td><a class="btn btn-success btn-sm "><i class="fas fa-download"></i> تحميل </a></td>
+
+                            <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target=".modal-delete"><i class="fas fa-trash-alt"></i> </button></td>
+                        </tr>
+                    </table>
+
+
+
+
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-no-raduis" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/js/jquery-2.1.1.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/my-js.js"></script>
+
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="~/js/jquery.smartmenus.js"></script>
+
+    <!-- SmartMenus jQuery init -->
+    <script type="text/javascript">
+        $(function () {
+            $('#main-menu').smartmenus({
+                mainMenuSubOffsetX: -1,
+                subMenusSubOffsetX: 10,
+                subMenusSubOffsetY: 0
+            });
+        });
+    </script>
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="~/js/icon.js"></script>
+
+    <script src="~/js/waitMe.js"></script>
+    <script>
+        $(function () {
+
+            var current_effect = 'win8';
+
+            $('.save_ro').click(function () {
+                run_waitMe(current_effect);
+                setTimeout(function () {
+                    $(".waitMe").removeAttr("style").fadeOut(200);
+                }, 4000);
+            });
+
+
+            function run_waitMe(effect) {
+                $('.yourdiv').waitMe({
+                    effect: effect,
+                    text: 'Please wait...',
+                    bg: 'rgba(0,0,0,0.1)',
+                    color: '#000',
+                    sizeW: '',
+                    sizeH: ''
+                });
+            }
+
+        });
+    </script>
+
+    <!--.................For This Page only.................-->
+
+
+    <script src="~/js/jquery.multiselect.js"></script>
+
+    <script>
+        $(function () {
+            $('select[multiple].active.3col').multiselect({
+                columns: 1,
+                placeholder: 'اختار ',
+                search: true,
+                searchOptions: {
+                    //                'default': 'coun'
+                },
+                selectAll: true
+            });
+
+        });
+    </script>
+
+    <script src="~/js/imagelightbox.js"></script>
+    <script src="~/js/lightbox.js"></script>
+
+
+    <!-- .....................cropping................. -->
+
+    <script type="text/javascript" src="~/js/jquery.Jcrop.js"></script>
+    <script type="text/javascript" src="~/js/jquery.SimpleCropper.js"></script>
+    <script>
+        // Init Simple Cropper
+        $('.cropme').simpleCropper();
+    </script>
+
+    <script src="~/js/accordion.js"></script>
+    <script>
+        jQuery(function () {
+            jQuery("#acdnmenu").accordionMenu();
+        });
+    </script>
+</body>
+</html>
