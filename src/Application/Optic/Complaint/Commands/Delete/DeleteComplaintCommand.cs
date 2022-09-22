@@ -7,23 +7,13 @@ using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
-using Medical_Optics.Application.Optic.Complaint.Commands.Add;
 using DB = Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Delete;
 public class DeleteComplaintCommand : IRequest<bool>, IMapFrom<DB.Complaint>
 {
     public int Id { get; set; }
-    public string ComplaintCode { get; set; }
-    public string ComplaintNameAr { get; set; }
-    public string ComplaintNameEn { get; set; }
-    public string ComplaintImagePath { get; set; } // صورة الشكوى 
-    public string Description { get; set; }
-    public void Mapping(Profile profile)
-    {
-        profile.CreateMap<CreateComplaintCommand, DB.Complaint>()
-               .ReverseMap();
-    }
+    
 }
 
 public class DeleteComplaintCommandHandler : IRequestHandler<DeleteComplaintCommand, bool>

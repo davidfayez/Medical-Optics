@@ -8,9 +8,7 @@
             <ul>
                 <li>
                     <a href="#" class="hvr-underline-from-center">@Global.MainScreens</a>
-                    <ul>
-                        <partial name="_MainPages" />
-                    </ul>
+                    
                 </li>
                 <li><a asp-action="Index" asp-controller="AspNetUser" class="hvr-underline-from-center">@Global.Users</a></li>
                 <li><a asp-action="Create" asp-controller="Role" class="hvr-underline-from-center">@Global.Roles </a></li>
@@ -25,29 +23,6 @@
 
 
 
-        <li>
-            <a href="#" class="hvr-underline-from-center">@Global.GeneralLedger</a>
-            <ul>
-                <li>
-                    <a href="#" class="hvr-underline-from-center">@Global.Setting</a>
-
-                    <ul>
-                        <partial name="_GLSettingMenu" />
-
-                    </ul>
-
-                </li>
-                <li>
-                    <a href="#" class="hvr-underline-from-center">@Global.Transactions</a>
-
-                    <ul>
-                        <partial name="_GLTransactionMenu" />
-                    </ul>
-
-                </li>
-               
-            </ul>
-        </li>
        
         <li>
             <a href="#" class="hvr-underline-from-center">@Global.Assets</a>

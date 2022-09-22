@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Medical_Optics.Application.Common.Mappings;
-using Medical_Optics.Application.Optic.Complaint.Commands.Add;
 using DB = Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Application.Optic.Complaint.Queries.GetAll;

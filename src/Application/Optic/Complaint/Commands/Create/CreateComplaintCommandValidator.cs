@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FluentValidation;
 using Medical_Optics.Application.Common.Extensions;
 using Medical_Optics.Application.Common.Resources;
-using Medical_Optics.Application.Optic.Complaint.Commands.Add;
+using Medical_Optics.Application.Optic.Complaint.Commands.Create;
 
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Create;
 public class CreateComplaintCommandValidator : AbstractValidator<CreateComplaintCommand>
