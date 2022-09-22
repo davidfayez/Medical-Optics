@@ -1,0 +1,579 @@
+.print-div{
+	display:none;
+}
+
+
+@media print{
+	body{
+		  -webkit-print-color-adjust: exact !important;
+		  -ms-print-color-adjust: exact !important;
+		  		  -moz-print-color-adjust: exact !important;
+
+		print-color-adjust: exact !important;
+		background-image:none !important;
+
+	}
+	body:lang(ar){
+  font-family: Verdana, Geneva, sans-serif;
+
+		
+}
+	
+	.header-admin{
+		display:none;
+	}
+	
+	.big-menu{
+		display:none;
+	}
+	.container-padding{
+		display:none;
+	}
+	.print-div{
+		display:block;
+	}
+	.input-sys-print{
+		border-radius: 8px;
+    padding: 1px 4px;
+    border: 1px solid #5786e8;
+    color: #000;
+	}
+.input-sys {
+    border: 1px solid #5786e8;
+    background-color: #dee8f3;
+    color: #000;
+			border-radius: 8px;
+
+}
+	
+	.title-data{
+		position:relative;
+	
+
+	}
+	
+.title-data h3{
+				border:1px solid #5786e8;
+				padding:1px !important;
+				font-size:14px;
+				border-radius:5px;
+background-color:#BBCEFF !important;
+font-weight:bold;
+color:#000 !important;
+max-width:170px;
+text-align:center;
+color:#5786e8;
+z-index:5;
+		position:relative;
+
+	}
+	.title-data::after{
+		content:"";
+		border-top:1px solid #5786e8;
+		position:absolute;
+		top:10px;
+		z-index:1;
+		width:100%;
+		
+	}
+	
+		.patient-data{
+		border:1px solid #f00;
+		padding:15px !important;
+		border-radius:10px;
+		position:relative;
+				margin-top:20px;
+
+	}
+	.patient-data h3{
+		position:absolute;
+				border:1px solid #f00;
+
+		top:-20px !important;
+		left:20px;
+				padding:5px !important;
+				font-size:18px;
+				border-radius:5px;
+background-color:#fff !important;
+font-weight:bold;
+	}
+		.patient-data h3:lang(ar){
+			left:auto;
+			right:20px !important;
+		}
+	.logo-print{
+		width:100px;
+		margin-bottom:10px;
+	}
+	.hr-print{
+	border-top: 1px solid #f00;
+}
+.title-div-print{
+	padding:2px 2px 3px 30px !important;
+	position:relative;
+	border-radius:25px;
+border:1px solid #f00;
+color:#f00;
+width:100%;
+margin:7px 0px;
+}
+.title-div-print:lang(ar){
+		padding:2px 30px 3px 2px !important;
+
+}
+.title-div-print i{
+border:1px solid #f00;
+padding:2px;
+position:absolute;
+left:5px;
+top:3px;
+border-radius:50%;
+
+
+}
+.title-div-print i:lang(ar){
+	left:auto;
+	right:5px;
+}
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+.r-l-color{
+	color:#f00;
+}
+
+.label-small{
+	font-size:14px !important;
+}
+.page-2 .form-group{
+	margin-bottom:15px;
+}
+.page-2 label{
+	margin-bottom:2px !important;
+}
+.page-1 .title-div-print{
+	margin:20px 0px !important;
+}
+.page-2 .title-div-print{
+	margin:15px 0px !important;
+}
+
+.page-4 .title-div-print{
+	margin:20px 0px !important;
+}
+
+.page-5 .title-div-print{
+	margin:20px 0px !important;
+}
+
+.page-6 .title-div-print{
+	margin:20px 0px !important;
+}
+
+.table{
+	margin-bottom:0px;
+}
+.table th{
+	padding:3px 5px;
+}
+.table-inner th, .table-inner td{
+	padding:1px;
+}
+.table-inner input[type=radio]{
+	margin-top:10px !important;
+}
+.table-inner td{
+}
+.table-inner tr th:nth-child:(2), .table-inner tr th:nth-child:(3) , .table-inner tr th:nth-child:(4){
+
+}
+.table-small th{
+	font-size:14px;
+}
+.patient-data label{
+	margin-bottom:0px;
+
+}
+.pain-div{
+	font-size:15px;
+	line-height:18px;
+}
+.table-ins{
+	width:100%;
+}
+.table-ins th, .table-ins td{
+	padding:4px;
+	font-size:14px;
+}
+.checklist-div hr{
+	margin:5px;
+}
+.border-print{
+	padding:30px;
+	border-radius:20px;
+	border:1px solid #5785e7;
+	position:relative;
+	direction:ltr !important;
+	  font-family: 'Cairo';
+	  text-align:left;
+
+}
+.border-print hr{
+		border-top:1px solid #5785e7;
+
+}
+.h3-print{
+	font-size:18px;
+	position:absolute;
+	left:30px;
+	top:-20px;
+	padding:10px;
+	color:#fff;
+	border-radius:10px;
+	background-color:#5785e7 !important;
+}
+
+.border-print-ar{
+	padding:30px;
+	border-radius:20px;
+	border:1px solid #5785e7;
+	position:relative;
+	direction:rtl;
+	text-align:right;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+.border-print-ar p{
+	line-height:29px;
+}
+.border-print-ar hr{
+		border-top:1px solid #5785e7;
+
+}
+.h3-print-ar{
+	font-size:18px;
+	position:absolute;
+	right:30px;
+	top:-20px;
+	padding:10px;
+	color:#fff;
+	border-radius:10px;
+	background-color:#5785e7 !important;
+}
+
+.page-small .form-group{
+	margin-bottom:7px;
+}
+.border-title{
+	border-radius:20px;
+	color:#5785e7;
+	margin:2px 0px;
+	text-align:center;
+	font-weight:bold;
+
+}
+.border-title h6{
+	font-weight:bold;
+	margin-bottom:2px;
+}
+
+
+/*..........................new.................*/
+
+header{
+	width:100%; 
+	position:fixed;
+	top:0px; 
+	left:0px;
+	padding:0px;
+	background-color:transparent;
+	
+	
+	}
+	
+.container-print{
+	padding:0px 40px 0px 40px;
+	
+}
+
+
+.logo-div-print{
+	float:left;
+	background-color:#007dc5;
+	width:400px;
+	text-align:center;
+	height:200px;
+	padding:20px;
+	 display: table;
+	 color:#fff;
+	position:relative;
+}
+.shape-div-round{
+	position:absolute;
+	left:100%;
+	top:0px;
+	width:133px;
+	height:200px;
+	background-size:100% 100%;
+}
+.content-div-print{
+	 vertical-align:middle;
+  display: table-cell;
+  padding-left:67px;
+}
+.content-div-print h6{
+	margin:8px 0px 0px 0px;
+}
+.right-title-print{
+	float:right;
+	position:relative;
+	width:640px;
+	height:231px;
+	background-size:100% 100%;
+	
+}
+.shape-img{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.content-title-print{
+	position:absolute;
+	top:0px;
+	right:0px;
+	padding:30px 30px 30px 140px;
+}
+.content-title-print strong{
+	color:#007dc5;
+	
+}
+.content-title-print h6{
+	margin-bottom:12px;
+}
+.user-title{
+	position:absolute;
+	top:210px;
+	left:0px;
+		width:400px;
+		padding:0 20px;
+
+}
+.user-title h6{
+	font-size:14px;
+
+}
+.user-title strong{
+	color:#007DC5;
+
+}
+.page-head{
+	padding:20px;
+	background-color:#007DC5;
+	color:#fff;
+	border-radius:40px;
+	margin-bottom:10px;
+	position:relative;
+	top:250px;
+	
+}
+
+table.customTable {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  color: #000;
+  
+  }
+
+table.customTable td, table.customTable th {
+  border: 2px solid #7EA8F8;
+
+  padding: 5px 5px;
+  font-size:14px;
+  
+
+}
+
+
+
+.head-color{
+	background-color:#007DC5;
+	color:#fff;
+}
+
+.signature-ul{
+	padding:0px;
+	margin:0px;
+	text-align:center;
+}
+.signature-ul li{
+list-style:none;
+}
+.signature-ul li h6{
+	color:#007dc5;
+	font-weight:bold;
+
+}
+.signature-ul img{
+	width:150px;
+}
+.item-footer{
+	position:absolute;
+	left:0px;
+	bottom:15px;
+}
+.line-footer{
+	width:60px;
+	height:230px;
+	position:absolute;
+	left:0px;
+bottom:0px;
+background-color:#007DC5;
+border-radius:0px 10px 10px 0px;
+z-index:1;
+}
+footer{
+	width:100%; 
+	position:fixed;
+	bottom:0px; 
+	left:0px;
+}
+
+.item-footer{
+	position:absolute;
+	bottom:60px;
+	width:550px;
+	left:75px;
+	direction:ltr;
+	text-align:left;
+	border-right:1px solid #007DC5;
+}
+.barcode-div{
+position:absolute;
+left:625px;
+padding:20px;	
+	bottom:60px;
+
+}
+.barcode-div img{
+	width:80px;
+}
+.footer-ul{
+	padding:0px;
+	margin:0px;
+}
+.footer-ul li{
+	list-style:none;
+	color:#007DC5;
+	position:relative;
+	margin-bottom:10px;
+}
+.icon-footer{
+	width:25px;
+	height:25px;
+	color:#fff;
+	font-size:14px;
+	position:absolute;
+	left:-30px;
+	z-index:2;
+	text-align:center;
+}
+
+ .page-footer-space {
+  height: 230px;
+
+}
+ .page-header-space {
+  height: 250px;
+}
+
+
+    thead {display: table-header-group;} 
+
+ tfoot {display: table-footer-group;}
+ 
+ .piont-horzintal{
+	 opacity:.5s;
+	 color:#CCC;
+ }
+ .big-p{
+	 font-size:20px;
+ }
+.head-print{
+	position:relative;
+	top:250px;
+}
+
+.title-text {
+    color: #06F;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #06F;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: #06C;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #06C;
+}
+
+.shape-div{
+	float:right;
+}
+.line-print{
+	width:150px;
+	background-color:#06C;
+	height:2px;
+	margin:0 auto;
+}
+.box-div{
+	width:250px;
+	text-align:center;
+}
+
+.title-cash{
+	color:#F00;
+}
+.title-h2{
+	font-size:22px;
+}
+.taxes-div{
+	position:fixed;
+width: calc(100% - 10px);
+height: calc(100% - 230px);
+
+	left:5px;
+	top:5px;
+	border:1px solid #000;
+	border-radius:20px;
+	margin-top:220px;
+	
+}
+
+.ul-number li{
+	list-style:decimal;
+}
+
+.h3-underline{
+	border-bottom:1px solid #000;
+	margin-bottom:20px;
+	font-size:18px;
+}
+.input-sys-tax{
+		border-radius: 0px;
+    padding: 1px 4px;
+    border: 1px solid #000;
+    color: #000;
+}
+.tax-img{
+	text-align:center;
+	width:100%;
+	height:350px;
+	position:fixed;
+	left:0px;
+	top:20px;
+}
+
+}

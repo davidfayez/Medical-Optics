@@ -1,0 +1,87 @@
+﻿@using ERP.DAL.Domains
+@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AspNetUser> SignInManager
+@{
+    var userImagePath = Context.Request.Cookies["userImagePath"];
+    var language = Global.Lang;
+}
+<!DOCTYPE html>
+<html lang="@language">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - ERP</title>
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="~/images/five.png">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    @if (language == "ar")
+    {
+    <link rel="stylesheet" href="~/css/bootstrap-rtl.css">
+    }
+    <link href="~/lib/bootstrap-sweetalert/sweetalert1.0.1.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/fontawesome-all.css">
+    <link rel="stylesheet" href="~/css/btn-effect.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link href="~/css/pages.css" rel="stylesheet" />
+
+
+
+    <!-- SmartMenus core CSS (required) -->
+    <link href="~/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+    <!-- "sm-simple" menu theme (optional, you can use your own CSS, too) -->
+    <link href="~/css/sm-simple.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/icon.css" rel="stylesheet" type="text/css" />
+    <!--................................save.........................-->
+    <link type="text/css" rel="stylesheet" href="~/css/waitMe.css">
+    <link rel="stylesheet" href="~/css/media.css">
+
+    <!--kendo CSS-->
+
+    <link href="~/css/Kendo-UI/kendo.common-material.min.css" rel="stylesheet" />
+    @*<link href="~/css/Kendo-UI/kendo.rtl.min.css" rel="stylesheet" />*@
+    <link href="~/css/Kendo-UI/kendo.material.min.css" rel="stylesheet" />
+    <link href="~/css/Kendo-UI/kendo.material.mobile.min.css" rel="stylesheet" />
+    <!--End Kendo CSS-->
+    <link href="~/css/customcss.css" rel="stylesheet" />
+    <script src="~/js/jquery-2.1.1.js"></script>
+
+    <title>Welcome to Ansari ERP System</title>
+</head>
+<body>
+   
+    <header>
+
+        <div class="container-fluid">
+            <partial name="_Header" />
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <button class="back-menu">
+        <i class="fas fa-bars"></i>
+
+    </button>
+    <div>
+        @*<style>
+            body {
+                background-image: url(~/images/body-Fin-4.jpg)
+            }
+        </style>*@
+        @RenderBody()
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/js/jquery-2.1.1.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/my-js.js"></script>
+
+    <!-- jQuery -->
+
+    <script type="text/javascript" src="~/js/icon.js"></script>
+
+</body>
+</html>

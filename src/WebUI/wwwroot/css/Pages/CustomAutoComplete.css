@@ -1,0 +1,9 @@
+﻿/*.k-autocomplete .k-input {
+    border: 1px solid;
+    border-color: #ced4da;
+}*/
+
+.k-autocomplete .k-input, .k-multiselect-wrap, .k-textbox > input {
+    border: 1px solid;
+    border-color: #ced4da;
+}

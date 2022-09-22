@@ -1,0 +1,57 @@
+﻿@model LoginVM
+
+@{
+    ViewData["Title"] = Global.Login ;
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="bubble-container">
+
+    <div class="main-w3layouts wrapper">
+        <h1 class="h1-login">Login</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form action="#" method="post">
+
+                    <input class="text" type="text" asp-for="UserName" placeholder="User Name">
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                    <input class="text" type="password" asp-for="Password" placeholder="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <select asp-for="FK_DefBranchId" asp-items="Model.Branchs" class="form-control input-sys" placeholder="Branch">
+                    </select>
+                    <span asp-validation-for="FK_DefBranchId" class="text-danger"></span>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="wthree-text checkbox">
+                        <label class="anim" asp-for="RememberMe">
+                            <input asp-for="RememberMe" class="checkbox">
+                            @Html.DisplayNameFor(m => m.RememberMe)
+                        </label>
+                        <div class="clear"> </div>
+                    </div>
+                    <input type="submit" value="SIGNUP">
+                </form>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="colorlibcopy-agile">
+            <p>© 2019 Ansari Tech. All rights reserved | Design by <a href="#" target="_blank">Ansari technonlgy</a></p>
+        </div>
+        <!-- //copyright -->
+
+    </div>
+    <!-- //main -->
+
+
+    <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>

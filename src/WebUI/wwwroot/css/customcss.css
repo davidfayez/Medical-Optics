@@ -1,0 +1,34 @@
+﻿
+.customDDL {
+    /* border: 1px solid !important;*/
+    /* border-color: #ced4da;*/
+    width: 100% !important
+}
+
+.customMultiSelect {
+    width: 100% !important;
+    overflow: auto !important;
+}
+
+#example .k-listbox .k-item {
+    cursor: move;
+}
+
+#example .arrow {
+    padding: 8px 0 5px 238px;
+}
+
+#save-changes-btn {
+    float: right;
+    margin-top: 20px;
+}
+
+#example .demo-section {
+    max-width: none;
+    width: 640px;
+}
+
+#example .k-listbox {
+    width: 275px;
+    height: 310px;
+}

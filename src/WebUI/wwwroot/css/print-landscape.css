@@ -1,0 +1,59 @@
+﻿
+/*for landscape only*/
+@media print {
+
+    @page {
+        size: landscape;
+    }
+
+    body {
+        zoom: 60%;
+    }
+
+
+    .right-title-print {
+        width: 1250px;
+        height: 189px;
+    }
+
+    .shape-div-round {
+        width: 113px;
+        height: 170px;
+    }
+
+    .logo-div-print {
+        height: 170px;
+    }
+
+    .user-title {
+        top: 180px;
+    }
+
+
+    .line-footer {
+        width: 40px;
+        height: 150px;
+    }
+
+    .page-footer-space {
+        height: 170px !important;
+    }
+
+    .page-header-space {
+        height: 210px;
+    }
+
+    .barcode-div {
+        bottom: 40px;
+        left: 1080px;
+    }
+
+    .item-footer {
+        bottom: 60px;
+        width: 1000px;
+    }
+
+    .page-head {
+        top: 210px;
+    }
+}

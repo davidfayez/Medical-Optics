@@ -1,0 +1,65 @@
+﻿@{
+    var userImagePath = Context.Request.Cookies["userImagePath"];
+    var language = @Global.Lang;
+
+}
+
+<!DOCTYPE html>
+
+<html lang="@language">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="/images/five.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    @if(language=="ar")
+    { 
+       <link rel="stylesheet" href="css/bootstrap-rtl.css" type="text/css">
+    }
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/css/btn-effect.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/login.css" type="text/css">
+
+
+
+    <!-- SmartMenus core CSS (required) -->
+    <link href="/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+    <!-- "sm-simple" menu theme (optional, you can use your own CSS, too) -->
+    <link href="/css/sm-simple.css" rel="stylesheet" type="text/css" />
+    <link href="/css/icon.css" rel="stylesheet" type="text/css" />
+    <!--................................save.........................-->
+    <link type="text/css" rel="stylesheet" href="/css/waitMe.css">
+    <link rel="stylesheet" href="/css/media.css" type="text/css">
+
+    <title>Welcome to Ansari Website</title>
+    <style>
+
+        body {
+            background-image: url(../images/login.jpg)
+        }
+    </style>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/my-js.js"></script>
+
+    <!-- jQuery -->
+
+    <script type="text/javascript" src="/js/icon.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿@using ERP.DAL.Domains
+@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AspNetUser> SignInManager
+@{
+    var u = User.Identity.Name;
+    var userImagePath = Context.Request.Cookies["userImagePath"];
+    if (userImagePath == null || userImagePath =="")
+        userImagePath = "profile-icon.jpg";
+       
+}
+
+<div class="container-fluid">
+
+    <!--  <button  class="shadow-div float-left btn-menu"><i class="fas fa-bars"></i> </button>
+    -->
+    <h1 class="float-left">@Global.Ansari</h1>
+
+
+
+
+    <div class="dropdown float-right">
+
+        <button class="shadow-div dropdown-toggle" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/Images/Users/@userImagePath" class="img-flag"><span>@Global.Welcome  @User.Identity.Name !! </span></button>
+
+        <div class="dropdown-menu dropright-menu accout-drop" aria-labelledby="dropdownMenuButton4">
+            <ul>
+
+                <li >
+                  
+                    <div class="a-header">
+                        <h4> @User.Identity.Name !!</h4>                       
+                    </div>
+                </li>
+
+                <li >
+
+                    <div class="a-header">
+                        <a id="aLang" href="/Home/SwitchLanguage" class="a-link-drop" >@Global.LanguageTitle</a>
+                       
+                    </div>
+                </li>
+
+                <li >
+
+                    <div class="a-header">
+                        <a asp-action="ChangePassword" asp-controller="AspNetUser" class="a-link-drop">@Global.ChangePassword</a>
+                    </div>
+                </li>
+
+                <li >
+
+                    <div class="a-header">
+                        <form method="post" asp-controller="AspNetUser" asp-action="logout">
+                            <button type="submit" class="btn btn-link" style="text-decoration:none!important">
+                                @Global.LogOut
+                            </button>
+                        </form>
+                        @*<a asp-controller="Account" asp-action="Logout" class="a-link-drop">تسجيل خروج</a>*@
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="clear"></div>
+
+</div>

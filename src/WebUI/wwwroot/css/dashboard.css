@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.accordion{font-size:18px;overflow: hidden;}.accordion__section{background: #ffffff;margin-bottom:10px;/* border: solid 2px #eeeeee; */padding: 5px;}.accordion__section:last-of-type{margin-bottom:0;}.accordion__titlebox{display:-ms-flexbox;display:flex;padding: 0px 14px 14px;line-height:20px;cursor:pointer;will-change:transform;transition:.3s;margin-top: 10px;border-bottom: 1px solid #e0e0e0;}.accordion__titlebox:hover{/}.accordion__icon{min-width: 18px;height: 18px;position: absolute;left: 10px;}.accordion__icon .minus,.accordion__icon .plus{position:absolute;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:18px;height:18px;will-change:transform;transition:.3s}.accordion__icon .plus{opacity:1;visibility:visible}.accordion__icon .minus{opacity:0;visibility:hidden}.accordion__title{font-size: 16;font-weight: bold;}.accordion__content{padding: 20px 15px;display:none;}@media (max-width:768px){.accordion__content{}}.accordion__titlebox_active{/* background: #297b04; */color: #000000;}.accordion__titlebox_active .plus{opacity:0;visibility:hidden}.accordion__titlebox_active .minus{opacity:1;visibility:visible}
+
+.accordion__content label{
+	font-size:15px;
+}
+
+.box-acc{
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.1);
+	/* margin-top:20px; */
+	margin-bottom: 30px;
+}
+
+.item-chart-10{
+	/* margin:0  auto; */
+	text-align: center;
+}
+
+.a-dashbborad{
+	color:#fff !important;
+	font-size:16px;
+}
+
+
+
+.item-content{text-align:center;color: #fff;}
+.i-1{
+	font-size:40px;
+	/* color:#4b91c9; */
+}
+.i-2{
+	font-size:40px;
+	/* color:#999; */
+}
+
+.i-3{
+	font-size:40px;
+	/* color: #ffffff; */
+}
+.no-h6{
+	display:block;
+	width:100%;
+	font-size:30px;
+	font-weight:bold;
+		text-align:center;
+
+	
+}
+
+.titl-p{
+		display:block;
+		width:100%;
+		color: #fff;
+		text-align:center;
+}
+
+.three-item{
+	padding:30px 0px;
+}
+
+.item-chart-2{
+	max-width:100%;
+	overflow-x:auto;
+}
+
+
+
+
+
+.scroll-comment{
+	height: 375px;
+	overflow:auto;
+}
+.a-employ{
+	color:#000 !important;
+	padding:5px;
+}
+
+
+
+/*.............blocks............*/
+.background-green{
+    background: #00b09b;
+    background: -webkit-linear-gradient(45deg, #00b09b, #96c93d)!important;
+    background: linear-gradient(45deg, #00b09b, #96c93d)!important;
+
+}
+
+.background-orange{
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(45deg, #fc4a1a, #f7b733)!important;
+    background: linear-gradient(45deg, #fc4a1a, #f7b733)!important;
+}
+
+.background-blue{
+    background: #6a11cb;
+    background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc)!important;
+    background: linear-gradient(45deg, #6a11cb , #2575fc)!important;
+}
+
+.background-red{
+	background: #ee0979;
+    background: -webkit-linear-gradient(45deg, #ee0979, #ff6a00)!important;
+    background: linear-gradient(45deg, #ee0979, #ff6a00)!important;
+}
+.blocks-1{
+	padding: 15px;
+	border-radius:5px;
+	color:#fff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+.line-bar{
+	margin:5px 0px;
+	    height: .3rem;
+}
+
+
+
+
+
+
+.mb20{
+       /* margin: 7px 20px; */
+   }
+  .cdev {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin:0 auto;
+}
+ 
+.cdev div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+ 
+.cdev div span {
+  position: absolute;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  left: 12.5px;
+  top: 12.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+ 
+.cdev .background { background-color: #b3cef6; }
+ 
+.cdev .rotate {
+  clip: rect(0 50px 100px 0);
+  background-color: #4b86db;
+}
+ 
+.cdev .left {
+  clip: rect(0 50px 100px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+ 
+.cdev .right {
+  clip: rect(0 50px 100px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+ 
+@keyframes
+toggle {  0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}  
+
+.div-progress{
+	padding:15px 120px 15px 15px;
+	position:relative;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.1);
+	min-height:115px;
+	margin-bottom:30px;
+}
+.div-progress h6{
+	font-weight:bold;
+}
+
+.position-pro{
+	position:absolute;
+	right: -4px;
+	top: 11px;
+}
