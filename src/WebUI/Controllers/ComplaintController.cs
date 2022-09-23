@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ERP.DAL.Domains;
+using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Optic.Complaint.Commands.Create;
 using Medical_Optics.Application.Optic.Complaint.Commands.Update;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetById;
@@ -9,9 +11,12 @@ namespace Medical_Optics.WebUI.Controllers;
 public class ComplaintController : BaseController
 {
     private readonly IMapper _mapper;
-    public ComplaintController(IMapper mapper)
+    private readonly IFileHandler _fileHandler;
+
+    public ComplaintController(IMapper mapper, IFileHandler fileHandler)
     {
         _mapper = mapper;
+        _fileHandler = fileHandler;
     }
 
     public IActionResult Index()
@@ -28,23 +33,29 @@ public class ComplaintController : BaseController
     [HttpPost]
     public async Task<IActionResult> CreateAsync(CreateComplaintCommand command)
     {
-        //if(ModelState.IsValid)
+        //if(ModelState.IsValid)"Complaints/5.jpg"
         //{
-            var isSuccess = await Mediator.Send(command);
-            if(isSuccess)
-                return View("Index");
+        var ComplaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
+        command.ComplaintImagePath = ComplaintImagePath;
+        var isSuccess = await Mediator.Send(command);
+        if(isSuccess)
+        {
+            if (ComplaintImagePath != null)
+                _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
+            
+            return View("Index");
+        }
         //}
         return View(command);
     }
-
     [HttpGet]
     public async Task<IActionResult> EditAsync(int id)
     {
         if (id > 0)
         {
             var Complaint = await Mediator.Send(new GetComplaintByIdQuery
-                                                {
-                                                    Id = id,
+            {
+                Id = id,
                                                 });
             if(Complaint != null)
             {
@@ -55,13 +66,23 @@ public class ComplaintController : BaseController
 
         return View(new UpdateComplaintCommand());
     }
+
     [HttpPost]
     public async Task<IActionResult> EditAsync(UpdateComplaintCommand command)
     {
+        var ComplaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
+        if(ComplaintImagePath != null)
+            command.ComplaintImagePath = ComplaintImagePath;
+
         var isSuccess = await Mediator.Send(command);
         if (isSuccess)
+        {
+            if(ComplaintImagePath != null)
+                _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
+
             return View("Index");
-        
+        }
+
         return View(command);
     }
 

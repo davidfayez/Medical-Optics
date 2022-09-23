@@ -22,6 +22,16 @@
     <link type="text/css" rel="stylesheet" href="~/css/waitMe.css">
     <link rel="stylesheet" href="~/css/media.css">
 
+    <!--kendo CSS-->
+
+    <link href="~/css/Kendo-UI/kendo.common-material.min.css" rel="stylesheet" />
+    @*<link href="~/css/Kendo-UI/kendo.rtl.min.css" rel="stylesheet" />*@
+    <link href="~/css/Kendo-UI/kendo.material.min.css" rel="stylesheet" />
+    <link href="~/css/Kendo-UI/kendo.material.mobile.min.css" rel="stylesheet" />
+    <link href="~/css/Pages/CustomAutoComplete.css" rel="stylesheet" />
+    <!--End Kendo CSS-->
+    <link href="~/css/customcss.css" rel="stylesheet" />
+
     <!--.................For This Page only.................-->
 
     <link href="~/css/jquery.multiselect.css" rel="stylesheet" />
@@ -322,5 +332,15 @@
             jQuery("#acdnmenu").accordionMenu();
         });
     </script>
+
+    <!--Kendo js-->
+    @*<script src="~/js/Kendo-UI/jquery.min.js"></script>*@
+    <script src="~/js/Kendo-UI/jszip.min.js"></script>
+    <script src="~/js/Kendo-UI/Kendo.all.min.js"></script>
+    <script src="~/js/Kendo-UI/kendo.web.min.js"></script>
+    @*<script src="~/js/Kendo-UI/kendo.culture.ar-EG.min.js"></script>*@
+    <script src="~/js/Kendo-UI/kendo.ar-JO.js"></script>
+    <!--End Kendo js-->
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

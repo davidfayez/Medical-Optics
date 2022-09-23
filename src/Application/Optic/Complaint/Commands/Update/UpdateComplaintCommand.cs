@@ -9,6 +9,7 @@ using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Application.Optic.Complaint.Commands.Create;
 using Medical_Optics.Domain.Common;
+using Microsoft.AspNetCore.Http;
 using DB = Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Update;
@@ -20,6 +21,8 @@ public class UpdateComplaintCommand : AuditableEntity, IRequest<bool>, IMapFrom<
     public string ComplaintNameEn { get; set; }
     public string ComplaintImagePath { get; set; } // صورة الشكوى 
     public string Description { get; set; }
+    public IFormFile ComplaintImage { get; set; }
+
     public void Mapping(Profile profile)
     {
         profile.CreateMap<UpdateComplaintCommand, DB.Complaint>()

@@ -10,6 +10,7 @@ using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Domain.Common;
 using Medical_Optics.Domain.Entities.Optic;
 using Medical_Optics.Domain.Interfaces;
+using Microsoft.AspNetCore.Http;
 using DB = Medical_Optics.Domain.Entities.Optic;
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Create;
 public class CreateComplaintCommand : AuditableEntity, IRequest<bool>, IMapFrom<DB.Complaint>
@@ -18,8 +19,10 @@ public class CreateComplaintCommand : AuditableEntity, IRequest<bool>, IMapFrom<
     public string ComplaintCode { get; set; }
     public string ComplaintNameAr { get; set; }
     public string ComplaintNameEn { get; set; }
-    public string ComplaintImagePath { get; set; } = "Test 1";
+    public string ComplaintImagePath { get; set; }
     public string Description { get; set; }
+    public IFormFile ComplaintImage { get; set; }
+
     public void Mapping(Profile profile)
     {
         profile.CreateMap<CreateComplaintCommand, DB.Complaint>()

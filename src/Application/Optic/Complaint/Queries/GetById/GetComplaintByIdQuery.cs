@@ -24,12 +24,17 @@ public class GetComplaintByIdQueryHandler : IRequestHandler<GetComplaintByIdQuer
     }
     public Task<DB.Complaint> Handle(GetComplaintByIdQuery request, CancellationToken cancellationToken)
     {
-        var Complaint = _applicationDbContext.Complaints.FirstOrDefault(s=>s.Id == request.Id && !s.IsDeleted);
+        var Complaint = _applicationDbContext.Complaints.FirstOrDefault(s => s.Id == request.Id && !s.IsDeleted);
 
-        if(Complaint != null)
+        if (Complaint != null)
+        {
+            Complaint.ComplaintImagePath =Complaint.ComplaintImagePath != null ? "Complaints/" + Complaint.ComplaintImagePath : "Users/profile-icon.jpg";
             return Task.FromResult(Complaint);
+        }
         else
             return Task.FromResult(new DB.Complaint());
 
     }
+
+    
 }
