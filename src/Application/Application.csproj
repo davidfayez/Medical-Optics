@@ -12,6 +12,7 @@
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.4" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="1.0.3" />
         
     </ItemGroup>
 
@@ -30,6 +31,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Global.resx</DependentUpon>
       </Compile>
+      <Compile Update="Common\Resources\Optic.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Optic.resx</DependentUpon>
+      </Compile>
       <Compile Update="Common\Resources\Style.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -45,6 +51,10 @@
       <EmbeddedResource Update="Common\Resources\Global.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Global.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Common\Resources\Optic.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Optic.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="Common\Resources\Style.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>

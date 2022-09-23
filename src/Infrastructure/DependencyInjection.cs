@@ -43,7 +43,8 @@ public static class DependencyInjection
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
         services.AddScoped<IDomainEventService, DomainEventService>();
-        services.AddScoped<ICookieHandler, CookieHandler>();
+        services.AddTransient<ICookieHandler, CookieHandler>();
+        services.AddTransient<IFileHandler, FileHandler>();
 
 
         //services

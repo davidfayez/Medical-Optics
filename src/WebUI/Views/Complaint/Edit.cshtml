@@ -1,12 +1,12 @@
 ﻿@model UpdateComplaintCommand
 @{
-    ViewData["Title"] = Global.Edit /*+ " " + Hr.BloodType*/;
+    ViewData["Title"] = Global.Edit + " " + Optic.Complaint;
     Layout = "_OpticLayout";
 }
 <div class="card margin-card container-fluid yourdiv">
     <div class="card-header position-relative padding-card row">
         <div class="col-md-4">
-            <span class="icon-page"></span> <h3 class="page-name">اسم الصفحة</h3>
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Edit @Optic.Complaint</h3>
         </div>
         <div class="col-md-8">
 
@@ -23,7 +23,7 @@
 
                 <div class="card">
                     <div class="card-header back-green">
-                        الملف الطبى للنظارت
+                        @Optic.OpticMedicalFile/@Global.Edit /@Optic.Complaint
                     </div>
                     <div class="card-body back-black">
 
@@ -37,78 +37,95 @@
             </div>
 
             <div class="col-xl-10 col-lg-12">
-
+                
                 <!--Page Content-->
-                <form asp-controller="Complaint" asp-action="Edit" method="post" class="col-xl-10 col-lg-12">
-                    <input type="hidden" asp-for="Id" />
-                    <input type="hidden" asp-for="ComplaintImagePath" />
-                    <div class="row">
-                        <label asp-for="ComplaintCode" class="col-xl-2 col-lg-3 form-group  "></label>
+                <form asp-controller="Complaint" asp-action="Edit" method="post" class="row" enctype="multipart/form-data">
+                    <div class="col-lg-9 ">
+                        <input type="hidden" asp-for="Id" />
 
-                        <div class="col-xl-3 col-lg-3 form-group ">
-                            <input type="text" asp-for="ComplaintCode" class="form-control input-sys">
-                            <span asp-validation-for="ComplaintCode" class="text-danger"></span>
+                        <div class="row">
+                            <label asp-for="ComplaintCode" class="col-xl-2 col-lg-3 form-group">@Global.Code</label>
+
+                            <div class="col-xl-3 col-lg-3 form-group ">
+                                <input type="text" asp-for="ComplaintCode" class="form-control input-sys">
+                                <span asp-validation-for="ComplaintCode" class="text-danger"></span>
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-3 ">
+                                <label asp-for="ComplaintNameAr" class="form-group  ">
+                                    @Global.NameAr
+                                </label>
+                                <span class="text-danger" style="float:@Style.Float">*</span>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 form-group ">
+                                <input type="text" class="form-control input-sys" asp-for="ComplaintNameAr">
+                                <span asp-validation-for="ComplaintNameAr" class="text-danger"></span>
+                            </div>
+                            <div class="col-xl-2 col-lg-3 ">
+                                <label asp-for="ComplaintNameEn" class="form-group  ">
+                                    @Global.NameEn
+                                </label>
+                                <span class="text-danger" style="float:@Style.Float">*</span>
+                            </div>
 
-                    <div class="row">
-                        <div class="col-xl-2 col-lg-3 ">
-                            <label asp-for="ComplaintNameAr" class="form-group  ">
+                            <div class="col-xl-3 col-lg-3 form-group ">
+                                <input asp-for="ComplaintNameEn" type="text" class="form-control input-sys">
+                                <span asp-validation-for="ComplaintNameEn" class="text-danger"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <label asp-for="Description" class="col-xl-2 col-lg-3 form-group  ">
+                                @Global.Description
                             </label>
-                            <span class="text-danger" style="float:@Style.Float">*</span>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 form-group ">
-                            <input type="text" class="form-control input-sys" asp-for="ComplaintNameAr">
-                            <span asp-validation-for="ComplaintNameAr" class="text-danger"></span>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 ">
-                            <label asp-for="ComplaintNameEn" class="form-group  ">
-                            </label>
-                            <span class="text-danger" style="float:@Style.Float">*</span>
-                        </div>
 
-                        <div class="col-xl-3 col-lg-3 form-group ">
-                            <input asp-for="ComplaintNameEn" type="text" class="form-control input-sys">
-                            <span asp-validation-for="ComplaintNameEn" class="text-danger"></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-
-                        <label asp-for="Description" class="col-xl-2 col-lg-3 form-group  ">
-
-                        </label>
-
-                        <div class="col-xl-8 col-lg-7 form-group ">
-                            <textarea asp-for="Description" class="form-control input-sys" id="Description"></textarea>
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-                        <label asp-for="IsActive" class="col-xl-2 col-lg-3 form-group "></label>
-
-                        <div class="col-xl-2 col-lg-3 col-6 form-group">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" asp-for="IsActive" value="True" class="custom-control-input" id="rdActive" checked>
-                                <label class="custom-control-label" for="rdActive">@Global.Active</label>
+                            <div class="col-xl-8 col-lg-7 form-group ">
+                                <textarea asp-for="Description" class="form-control input-sys" id="Description"></textarea>
 
                             </div>
                         </div>
 
-                        <div class="col-xl-2 col-lg-3 col-6 form-group">
-                            <div class="custom-control custom-radio mb-3">
-                                <input type="radio" class="custom-control-input" asp-for="IsActive" value="False" id="rdInactive">
-                                <label class="custom-control-label" for="rdInactive">@Global.Inactive</label>
+                        <div class="row">
+
+                            <label asp-for="IsActive" class="col-xl-2 col-lg-3 form-group ">@Global.Status</label>
+
+                            <div class="col-xl-2 col-lg-3 col-6 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" asp-for="IsActive" value="True" class="custom-control-input" id="rdActive" checked>
+                                    <label class="custom-control-label" for="rdActive">@Global.Active</label>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-lg-3 col-6 form-group">
+                                <div class="custom-control custom-radio mb-3">
+                                    <input type="radio" class="custom-control-input" asp-for="IsActive" value="False" id="rdInactive">
+                                    <label class="custom-control-label" for="rdInactive">@Global.Inactive</label>
+                                </div>
                             </div>
                         </div>
+                    
                     </div>
+                    <div class="col-lg-3">
 
+                        <style>
+                            .form-group {
+                                margin-bottom: 30px;
+                            }
+                        </style>
 
+                        <div class="image-upload">
+                            <input type="hidden" asp-for="ComplaintImagePath" value="@Model.ComplaintImagePath" />
+                            <img src="~/images/@Model.ComplaintImagePath" id="complaintImage">
+                            <label for="ComplaintImage">@Global.UploadImage</label>
+                            <input type="file" asp-for="ComplaintImage" accept=".gif, .jpg, .png" onchange="setImage(this)" style="display:none;">
+                        </div>
+                    </div>
                     <br>
                     <div class="text-center">
                         <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
@@ -118,8 +135,12 @@
 
                 </form>
                 <!--Page Content-->
+               
             </div>
 
         </div>
     </div>
 </div>
+@section Scripts{
+    <script src="~/js/pages/complaint/EditComplaint.js"></script>
+}
