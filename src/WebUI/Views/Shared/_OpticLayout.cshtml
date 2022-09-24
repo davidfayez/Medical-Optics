@@ -1,4 +1,11 @@
-﻿<html lang="ar">
+﻿@using Microsoft.AspNetCore.Http;
+@inject SignInManager<AspNetUser> SignInManager
+@{
+    var userImagePath = Context.Request.Cookies["userImagePath"];
+    var language = @Global.Lang;
+
+}
+<html lang="ar">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,6 +15,7 @@
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/bootstrap-rtl.css">
     <link rel="stylesheet" type="text/css" href="~/css/fontawesome-all.css">
+    <link href="~/lib/bootstrap-sweetalert/sweetalert1.0.1.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/btn-effect.css">
     <link rel="stylesheet" href="~/css/main.css">
     <link rel="stylesheet" href="~/css/pages.css">
@@ -39,6 +47,14 @@
 
     <link rel="stylesheet" type="text/css" href="~/css/jquery.Jcrop.min.css" />
     <link rel="stylesheet" href="~/css/accordion-menu.css">
+    @if (language == "en")
+    {
+        <script src="~/js/ERP_Helper/ERP_Helpers.js"></script>
+    }
+    else
+    {
+        <script src="~/js/ERP_Helper/ERP_HelpersAr.js"></script>
+    }
     <title>Welcome to Ansari Website</title>
 </head>
 <body>
@@ -245,6 +261,7 @@
     <script src="~/js/jquery-2.1.1.js"></script>
     <script src="~/js/popper.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap-sweetalert/sweetalert1.0.1.min.js"></script>
     <script src="~/js/my-js.js"></script>
 
 
