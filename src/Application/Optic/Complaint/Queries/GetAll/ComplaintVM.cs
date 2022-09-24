@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Medical_Optics.Application.Common.Mappings;
+using Medical_Optics.Domain.Common;
 using DB = Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
-public class ComplaintVM: IMapFrom<DB.Complaint>
+public class ComplaintVM: AuditableEntity ,IMapFrom<DB.Complaint>
 {
     public void Mapping(Profile profile)
     {

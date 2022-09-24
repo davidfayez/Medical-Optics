@@ -2,7 +2,9 @@
 using ERP.DAL.Domains;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Optic.Complaint.Commands.Create;
+using Medical_Optics.Application.Optic.Complaint.Commands.Delete;
 using Medical_Optics.Application.Optic.Complaint.Commands.Update;
+using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetById;
 using Microsoft.AspNetCore.Mvc;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
@@ -86,5 +88,19 @@ public class ComplaintController : BaseController
         return View(command);
     }
 
+    [HttpPost]
+    public async Task<JsonResult> DeleteAsync(int id)
+    {
+        var isSuccess = await Mediator.Send(
+            new DeleteComplaintCommand {
+                Id = id
+            });
+        return Json(isSuccess);
+    }
 
+    public async Task<JsonResult> GetAll()
+    {
+        var Complaints = await Mediator.Send(new GetAllComplaintsQuery());
+        return Json(Complaints);
+    }
 }
