@@ -14,7 +14,7 @@ public class SubComplaint : AuditableEntity
     public string SubComplaintCode { get; set; }
     public string SubComplaintNameAr { get; set; }
     public string SubComplaintNameEn { get; set; }
-    public string SubComplaintPhotoPath { get; set; } // صورة الشكوى 
+    public string? SubComplaintPhotoPath { get; set; } = null; // صورة الشكوى 
     public string Description { get; set; }
     public virtual Complaint? Complaint { get; set; }
 }

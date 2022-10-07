@@ -42,7 +42,7 @@ public class ComplaintController : BaseController
         var isSuccess = await Mediator.Send(command);
         if(isSuccess)
         {
-            if (complaintImagePath != null)
+            if (ComplaintImagePath != null)
                 _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
             
             return View("Index");
