@@ -18,9 +18,6 @@ public class GetSubComplaintByIdQueryHandler : IRequestHandler<GetSubComplaintBy
     }
     public async Task<DB.SubComplaint> Handle(GetSubComplaintByIdQuery request, CancellationToken cancellationToken)
     {
-        if (request.Id > 0)
-            return await Task.FromResult(new DB.SubComplaint());
-
         try
         {
             var subComplaint = _applicationDbContext.SubComplaints.FirstOrDefault(c => c.Id == request.Id && !c.IsDeleted);
