@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using Medical_Optics.Application.Common.Extensions;
 using Medical_Optics.Application.Common.Resources;
 

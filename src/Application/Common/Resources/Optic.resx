@@ -120,7 +120,13 @@
   <data name="Complaint" xml:space="preserve">
     <value>Complaint</value>
   </data>
+  <data name="Diagnose" xml:space="preserve">
+    <value>Diagnose</value>
+  </data>
   <data name="OpticMedicalFile" xml:space="preserve">
     <value>Optics Medical File</value>
+  </data>
+  <data name="SubComplaint" xml:space="preserve">
+    <value>SubComplaint</value>
   </data>
 </root>
