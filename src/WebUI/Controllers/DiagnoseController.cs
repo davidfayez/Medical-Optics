@@ -29,8 +29,13 @@ public class DiagnoseController : BaseController
     [HttpPost]
     public async Task<IActionResult> CreateAsync(CreateDiagnoseCommand command)
     {
-        var isSuccess = await Mediator.Send(command);
-        return isSuccess ? View("Index") : (IActionResult)View(command);
+        if (ModelState.IsValid)
+        {
+            var isSuccess = await Mediator.Send(command);
+            return isSuccess ? View("Index") : (IActionResult)View(command);
+        }
+        return View(command);
+
     }
 
     [HttpGet]
@@ -55,8 +60,13 @@ public class DiagnoseController : BaseController
     [HttpPost]
     public async Task<IActionResult> EditAsync(UpdateDiagnoseCommand command)
     {
-        var isSuccess = await Mediator.Send(command);
-        return isSuccess ? View("Index") : (IActionResult)View(command);
+        if (ModelState.IsValid)
+        {
+            var isSuccess = await Mediator.Send(command);
+            return isSuccess ? View("Index") : (IActionResult)View(command);
+        }
+        return View(command);
+
     }
 
     [HttpPost]

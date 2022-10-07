@@ -29,8 +29,13 @@ public class SubComplaintController : BaseController
     [HttpPost]
     public async Task<IActionResult> Create(CreateSubComplaintCommand command)
     {
-        var isSuccess = await Mediator.Send(command);
-        return isSuccess ? View("Index") : (IActionResult)View(command);
+        if (ModelState.IsValid)
+        {
+            var isSuccess = await Mediator.Send(command);
+            return isSuccess ? View("Index") : (IActionResult)View(command);
+        }
+        return View(command);
+
     }
 
     [HttpGet]
@@ -55,8 +60,12 @@ public class SubComplaintController : BaseController
     [HttpPost]
     public async Task<IActionResult> EditAsync(UpdateSubComplaintCommand command)
     {
-        var isSuccess = await Mediator.Send(command);
-        return isSuccess ? View("Index") : (IActionResult)View(command);
+        if (ModelState.IsValid)
+        {
+            var isSuccess = await Mediator.Send(command);
+            return isSuccess ? View("Index") : (IActionResult)View(command);
+        }
+        return View(command);
     }
 
     [HttpPost]
