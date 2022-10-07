@@ -43,6 +43,11 @@ public class Startup
         services.AddInfrastructure(Configuration);
         services.AddApplication();
 
+        services.AddMiniProfiler(options =>
+        {
+            options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.BottomLeft;
+            options.PopupShowTimeWithChildren = true;
+        });
 
         services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -65,7 +70,11 @@ public class Startup
         //    options.Filters.Add<ApiExceptionFilterAttribute>())
         //        .AddFluentValidation(x => x.AutomaticValidationEnabled = false);
 
-        services.AddControllersWithViews().AddFluentValidation();
+        services.AddControllersWithViews().AddFluentValidation(fv =>
+        {
+            fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+            fv.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        });
         services.AddRazorPages();
 
 
@@ -115,6 +124,7 @@ public class Startup
         //{
         //    app.UseSpaStaticFiles();
         //}
+        app.UseMiniProfiler();
 
         //app.UseSwaggerUi3(settings =>
         //{

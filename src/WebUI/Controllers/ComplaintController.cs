@@ -35,8 +35,8 @@ public class ComplaintController : BaseController
     [HttpPost]
     public async Task<IActionResult> CreateAsync(CreateComplaintCommand command)
     {
-        //if(ModelState.IsValid)"Complaints/5.jpg"
-        //{
+        if(ModelState.IsValid)
+        {
         var ComplaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
         command.ComplaintImagePath = ComplaintImagePath;
         var isSuccess = await Mediator.Send(command);
@@ -47,7 +47,7 @@ public class ComplaintController : BaseController
             
             return View("Index");
         }
-        //}
+        }
         return View(command);
     }
     [HttpGet]
