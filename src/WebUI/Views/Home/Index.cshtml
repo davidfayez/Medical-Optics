@@ -12,116 +12,28 @@
         background: #ffc107;
     }
 </style>
-<div class="container">
+<div class="container-fluid">
 
-    <div class="title-div">
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
         <div class="row">
-            <div class="col-sm-7">@Global.ERPSystems </div>
-            <div class="col-sm-5 text-right">@Global.Version1 </div>
+            <div class="col-xl-2 col-lg-9 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
     </div>
-
-
-    <ul class="row link-main">
-        <li class="col-lg-3 li-links">
-            <div class="div-menu">
-                <img src="../images/icon-1.png" class="icon-li">
-                <a asp-action="Index" asp-controller="Home" class="link-only">@Global.MainBoard</a>
-
-            </div>
-        </li>
-
-        <li class="col-lg-3 li-links">
-            <div class="div-menu">
-                <img src="../images/icon-2.png" class="icon-li">
-                <a asp-action="Index" asp-controller="Home" class="link-only"> @Global.Settings </a>
-                <ul class="links-items">
-                    <li><a asp-action="Index" asp-controller="DefFreezingReason">@Global.MainScreens</a></li>
-                    <li><a asp-action="Index" asp-controller="AspNetUser">@Global.Users</a></li>
-                    <li><a asp-action="Create" asp-controller="Role">@Global.Roles </a></li>
-                    <li><a asp-action="Index" asp-controller="DefCompany"> @Global.CompanyProfilePageTitle</a></li>
-                    <li><a asp-action="Index" asp-controller="DefBranch" asp-route-standalone="1"> @Global.CompanyBranches</a></li>
-                    <li><a asp-action="Index" asp-controller="DefCountry" asp-route-standalone="1">@Global.Country</a></li>
-                    <li><a asp-action="Index" asp-controller="DefCurrency" asp-route-standalone="1">@Global.Currency </a></li>
-
-
-                </ul>
-            </div>
-        </li>
-
-        
-
-
-        <li class="col-lg-3 li-links">
-            <div class="div-menu">
-                <img src="../images/icon-6.png" class="icon-li">
-                <a href="#" class="link-only"> إدارة الإنتاج</a>
-                <ul class="links-items">
-                    <li><a href="#" class="hvr-underline-from-center">عمليات الانتاج</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">إدارة الانتاج</a></li>
-                </ul>
-            </div>
-        </li>
-
-        <li class="col-lg-3 li-links">
-            <div class="div-menu">
-                <img src="../images/icon-8.png" class="icon-li">
-                <a href="#" class="link-only">خدمة العملاء</a>
-                <ul class="links-items">
-                    <li><a href="#" class="hvr-underline-from-center">لوحة المراقبة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">البيانات الاساسية</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة العملاء</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة المبيعات والتسويق</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة الوقت</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة الوثائق</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">الاشعارات والتنبيهات</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">تحليل البيانات</a></li>
-                </ul>
-            </div>
-        </li>
-
-
-        <li class="col-lg-3 li-links">
-            <div class="div-menu">
-                <img src="../images/icon-9.png" class="icon-li">
-                <a href="#" class="link-only"> الخدمات المساندة</a>
-                <ul class="links-items">
-                    <li><a href="#" class="hvr-underline-from-center">لوحة المراقبة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">البيانات الاساسية</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">صياة الخدمات المساندة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">السيارات</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">الامن والسلامة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">الاجهزة الطبية</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">االمطبخ</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">المغسلة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">النظافة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">التفصيل والخيياطة</a></li>
-                </ul>
-            </div>
-        </li>
-
-        <li class="col-lg-3 li-links">
-            <div class="div-menu">
-                <img src="../images/icon-10.png" class="icon-li">
-                <a href="#" class="link-only"> ادارة الاملاك والعقارات</a>
-                <ul class="links-items">
-                    <li><a href="#" class="hvr-underline-from-center">لوحة المراقبة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">البيانات الاساسية</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة العملاء</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة العروض والطلبات</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة العروض والوحدات</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة العقود وانواعها</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة الصيانة</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة اتحاد الملاك</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">ادارة الدعاوى القضائية</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">الاشعارات والتنبيهات</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">النظام المالى</a></li>
-
-                </ul>
-            </div>
-        </li>
-
-    </ul>
-
 </div>

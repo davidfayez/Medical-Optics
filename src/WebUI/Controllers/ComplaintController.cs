@@ -42,7 +42,7 @@ public class ComplaintController : BaseController
         var isSuccess = await Mediator.Send(command);
         if(isSuccess)
         {
-            if (ComplaintImagePath != null)
+            if (complaintImagePath != null)
                 _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
             
             return View("Index");
@@ -55,13 +55,13 @@ public class ComplaintController : BaseController
     {
         if (id > 0)
         {
-            var Complaint = await Mediator.Send(new GetComplaintByIdQuery
+            var complaint = await Mediator.Send(new GetComplaintByIdQuery
             {
                 Id = id,
                                                 });
-            if(Complaint != null)
+            if(complaint != null)
             {
-                var result = _mapper.Map<UpdateComplaintCommand>(Complaint);
+                var result = _mapper.Map<UpdateComplaintCommand>(complaint);
                 return View(result);
             }
         }
@@ -72,14 +72,14 @@ public class ComplaintController : BaseController
     [HttpPost]
     public async Task<IActionResult> EditAsync(UpdateComplaintCommand command)
     {
-        var ComplaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
-        if(ComplaintImagePath != null)
-            command.ComplaintImagePath = ComplaintImagePath;
+        var complaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
+        if(complaintImagePath != null)
+            command.ComplaintImagePath = complaintImagePath;
 
         var isSuccess = await Mediator.Send(command);
         if (isSuccess)
         {
-            if(ComplaintImagePath != null)
+            if(complaintImagePath != null)
                 _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
 
             return View("Index");

@@ -70,11 +70,29 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Diagnose.
+        /// </summary>
+        public static string Diagnose {
+            get {
+                return ResourceManager.GetString("Diagnose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Optics Medical File.
         /// </summary>
         public static string OpticMedicalFile {
             get {
                 return ResourceManager.GetString("OpticMedicalFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubComplaint.
+        /// </summary>
+        public static string SubComplaint {
+            get {
+                return ResourceManager.GetString("SubComplaint", resourceCulture);
             }
         }
     }
