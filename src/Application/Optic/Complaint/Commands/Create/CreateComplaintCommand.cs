@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Domain.Common;
-using Medical_Optics.Domain.Entities.Optic;
-using Medical_Optics.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using DB = Medical_Optics.Domain.Entities.Optic;
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Create;
@@ -44,8 +37,8 @@ public class CreateComplaintCommandHandler : IRequestHandler<CreateComplaintComm
     {
         try
         {
-            var Complaint = _mapper.Map<DB.Complaint>(request);
-            _applicationDbContext.Complaints.Add(Complaint);
+            var complaint = _mapper.Map<DB.Complaint>(request);
+            _applicationDbContext.Complaints.Add(complaint);
             await _applicationDbContext.SaveChangesAsync(cancellationToken);
             return await Task.FromResult(true);
         }

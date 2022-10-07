@@ -1,6 +1,6 @@
 ﻿@model CreateComplaintCommand
 @{
-    ViewData["Title"] =  @Optic.Complaint;
+    ViewData["Title"] = @Optic.Complaint;
     Layout = "_OpticLayout";
 }
 <div class="card margin-card container-fluid yourdiv">
@@ -42,8 +42,7 @@
                 <button type="button" class="btn btn-outline-success exportExcel" style="float:left;">@Global.Export<i class="fa fa-file-excel"></i></button>
                 <a class="btn btn-success btn-sm btn-add" asp-action="Create"><i class="fas fa-plus"></i>@Global.AddNew</a>
                 <br />
-                <div id="ComplaintsGrid">
-
+                <div id="SubComplaintGrid">
                 </div>
                 <!--Page Content-->
             </div>
@@ -52,5 +51,5 @@
     </div>
 </div>
 @section Scripts{
-    <script src="~/js/pages/Complaint/ListComplaint.js"></script>
+    <script src="~/js/pages/SubCompalint/ListSubComplaint.js"></script>
 }

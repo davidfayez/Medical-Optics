@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
-using Medical_Optics.Application.Optic.Complaint.Commands.Create;
 using Medical_Optics.Domain.Common;
 using Microsoft.AspNetCore.Http;
 using DB = Medical_Optics.Domain.Entities.Optic;

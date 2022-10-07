@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using DB = Medical_Optics.Domain.Entities.Optic;
 

@@ -1,12 +1,12 @@
-﻿@model CreateComplaintCommand
+﻿@model CreateDiagnoseCommand
 @{
-    ViewData["Title"] =  @Optic.Complaint;
+    ViewData["Title"] = @Optic.Diagnose;
     Layout = "_OpticLayout";
 }
 <div class="card margin-card container-fluid yourdiv">
     <div class="card-header position-relative padding-card row">
         <div class="col-md-4">
-            <span class="icon-page"></span> <h3 class="page-name">  @Optic.Complaint</h3>
+            <span class="icon-page"></span> <h3 class="page-name">  @Optic.Diagnose</h3>
         </div>
         <div class="col-md-8">
 
@@ -23,7 +23,7 @@
 
                 <div class="card">
                     <div class="card-header back-green">
-                        @Optic.OpticMedicalFile/@Optic.Complaint
+                        @Optic.OpticMedicalFile/@Optic.Diagnose
                     </div>
                     <div class="card-body back-black">
 
@@ -42,7 +42,7 @@
                 <button type="button" class="btn btn-outline-success exportExcel" style="float:left;">@Global.Export<i class="fa fa-file-excel"></i></button>
                 <a class="btn btn-success btn-sm btn-add" asp-action="Create"><i class="fas fa-plus"></i>@Global.AddNew</a>
                 <br />
-                <div id="ComplaintsGrid">
+                <div id="DiagnoseGrid">
 
                 </div>
                 <!--Page Content-->
@@ -51,6 +51,7 @@
         </div>
     </div>
 </div>
+
 @section Scripts{
-    <script src="~/js/pages/Complaint/ListComplaint.js"></script>
+    <script src="~/js/pages/Diagnose/ListDiagnose.js"></script>
 }
