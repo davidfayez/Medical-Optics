@@ -9,12 +9,12 @@ public class UpdateComplaintCommandValidator : AbstractValidator<UpdateComplaint
     public UpdateComplaintCommandValidator()
     {
         RuleFor(e => e.ComplaintCode).NotNull()
-                .WithMessage(ErrorMessages.RequiredMessage.StringFormat("Complaint Code"));
+                .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.Code));
 
         RuleFor(e => e.ComplaintNameAr).NotNull()
-                .WithMessage(ErrorMessages.RequiredMessage.StringFormat("Arabic Name"));
+                .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.NameAr));
 
         RuleFor(e => e.ComplaintNameEn).NotNull()
-                .WithMessage(ErrorMessages.RequiredMessage.StringFormat("English Name"));
+                .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.NameEn));
     }
 }

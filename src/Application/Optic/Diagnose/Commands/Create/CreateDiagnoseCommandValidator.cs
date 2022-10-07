@@ -8,12 +8,12 @@ public class CreateDiagnoseCommandValidator:AbstractValidator<CreateDiagnoseComm
     public CreateDiagnoseCommandValidator()
     {
         RuleFor(e => e.DiagnoseCode).NotNull()
-                .WithMessage(ErrorMessages.RequiredMessage.StringFormat("Diagnose Code"));
+                .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.Code));
 
         RuleFor(e => e.DiagnoseNameEn).NotNull()
-            .WithMessage(ErrorMessages.RequiredMessage.StringFormat("English Name"));
+            .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.NameAr));
 
         RuleFor(e => e.DiagnoseNameAr).NotNull()
-            .WithErrorCode(ErrorMessages.RequiredMessage.StringFormat("Arabic Name"));  
+            .WithErrorCode(ErrorMessages.RequiredMessage.StringFormat(Global.NameEn));  
     }
 }
