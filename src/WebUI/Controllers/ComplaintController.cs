@@ -72,19 +72,21 @@ public class ComplaintController : BaseController
     [HttpPost]
     public async Task<IActionResult> EditAsync(UpdateComplaintCommand command)
     {
-        var complaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
-        if(complaintImagePath != null)
-            command.ComplaintImagePath = complaintImagePath;
-
-        var isSuccess = await Mediator.Send(command);
-        if (isSuccess)
+        if (ModelState.IsValid)
         {
-            if(complaintImagePath != null)
-                _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
+            var complaintImagePath = (command.ComplaintImage != null) ? command.ComplaintCode + command.ComplaintImage.FileName.Substring(command.ComplaintImage.FileName.LastIndexOf('.')) : null;
+            if (complaintImagePath != null)
+                command.ComplaintImagePath = complaintImagePath;
 
-            return View("Index");
+            var isSuccess = await Mediator.Send(command);
+            if (isSuccess)
+            {
+                if (complaintImagePath != null)
+                    _fileHandler.UploadFile("Complaints", command.ComplaintImage, command.ComplaintCode.ToString());
+
+                return View("Index");
+            }
         }
-
         return View(command);
     }
 
