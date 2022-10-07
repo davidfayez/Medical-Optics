@@ -8,12 +8,12 @@ public class CreateSubComplaintCommandValidator:AbstractValidator<CreateSubCompl
     public CreateSubComplaintCommandValidator()
     {
         RuleFor(s => s.SubComplaintCode).NotNull()
-                .WithMessage(ErrorMessages.RequiredMessage.StringFormat("Sub Complaint Code"));
+                .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.Code));
 
         RuleFor(e => e.SubComplaintNameAr).NotNull()
-               .WithMessage(ErrorMessages.RequiredMessage.StringFormat("Arabic Name"));
+               .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.NameAr));
 
         RuleFor(e => e.SubComplaintNameEn).NotNull()
-                .WithMessage(ErrorMessages.RequiredMessage.StringFormat("English Name"));
+                .WithMessage(ErrorMessages.RequiredMessage.StringFormat(Global.NameEn));
     }
 }
