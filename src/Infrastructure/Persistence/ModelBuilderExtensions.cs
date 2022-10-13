@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ERP.DAL.Domains;
+﻿using ERP.DAL.Domains;
 using ERP.DAL.Domains.Authentication;
 using ERP.DAL.Domains.Def;
+using Medical_Optics.Domain.Entities.Def;
 using Microsoft.EntityFrameworkCore;
 
 namespace Medical_Optics.Infrastructure.Persistence;

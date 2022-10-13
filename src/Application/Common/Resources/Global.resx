@@ -216,6 +216,12 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="CapitalNameAr" xml:space="preserve">
+    <value>Capital Name Arabic</value>
+  </data>
+  <data name="CapitalNameEn" xml:space="preserve">
+    <value>Capital Name English</value>
+  </data>
   <data name="CashBank" xml:space="preserve">
     <value>Cash And Bank</value>
   </data>

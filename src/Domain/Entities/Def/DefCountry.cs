@@ -1,13 +1,11 @@
-﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace ERP.DAL.Domains.Def
+namespace Medical_Optics.Domain.Entities.Def
 {
     [Table("DefCountry")]
-    public class DefCountry :AuditableEntity
+    public class DefCountry : AuditableEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

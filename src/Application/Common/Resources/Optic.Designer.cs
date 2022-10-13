@@ -70,6 +70,15 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Diagnose.
         /// </summary>
         public static string Diagnose {
@@ -84,6 +93,15 @@ namespace Medical_Optics.Application.Common.Resources {
         public static string OpticMedicalFile {
             get {
                 return ResourceManager.GetString("OpticMedicalFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Religion.
+        /// </summary>
+        public static string Religion {
+            get {
+                return ResourceManager.GetString("Religion", resourceCulture);
             }
         }
         
