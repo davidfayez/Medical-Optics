@@ -483,6 +483,12 @@
   <data name="GeneralSetting" xml:space="preserve">
     <value>الاعدادات العامة</value>
   </data>
+  <data name="GovernorateNameAr" xml:space="preserve">
+    <value>اسم المحافظة بالعربي</value>
+  </data>
+  <data name="GovernorateNameEn" xml:space="preserve">
+    <value>اسم المحافظة بالانجليزي</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>الرئيسية</value>
   </data>
