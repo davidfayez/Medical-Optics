@@ -216,6 +216,12 @@
   <data name="Cancel" xml:space="preserve">
     <value>تراجع</value>
   </data>
+  <data name="CapitalNameAr" xml:space="preserve">
+    <value>اسم العاصمه عربى</value>
+  </data>
+  <data name="CapitalNameEn" xml:space="preserve">
+    <value>اسم العاصمه انجليزى</value>
+  </data>
   <data name="CashBank" xml:space="preserve">
     <value>النقد والبنوك</value>
   </data>

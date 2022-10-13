@@ -120,11 +120,17 @@
   <data name="Complaint" xml:space="preserve">
     <value>الشكوي</value>
   </data>
+  <data name="Country" xml:space="preserve">
+    <value>البلد</value>
+  </data>
   <data name="Diagnose" xml:space="preserve">
     <value>التشخيص</value>
   </data>
   <data name="OpticMedicalFile" xml:space="preserve">
     <value>الملف الطبى للنظارت</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>الديانه</value>
   </data>
   <data name="SubComplaint" xml:space="preserve">
     <value>الشكوى الفرعيه</value>

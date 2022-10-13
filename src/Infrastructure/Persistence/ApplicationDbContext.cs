@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using ERP.DAL.Domains.Def;
 using Medical_Optics.Domain.Entities.Optic;
 using System.Reflection;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Infrastructure.Persistence;
 
