@@ -65,6 +65,7 @@
 
     <ItemGroup>
       <Folder Include="Branches\Commands\" />
+      <Folder Include="Def\City\Queries\GetAll\" />
     </ItemGroup>
 
 </Project>

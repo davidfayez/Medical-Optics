@@ -1141,6 +1141,24 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arabic Governorate Name.
+        /// </summary>
+        public static string GovernorateNameAr {
+            get {
+                return ResourceManager.GetString("GovernorateNameAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English Governorate Name.
+        /// </summary>
+        public static string GovernorateNameEn {
+            get {
+                return ResourceManager.GetString("GovernorateNameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {

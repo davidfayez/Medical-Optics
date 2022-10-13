@@ -477,6 +477,12 @@
   <data name="GeneralSetting" xml:space="preserve">
     <value>General Setting</value>
   </data>
+  <data name="GovernorateNameAr" xml:space="preserve">
+    <value>Arabic Governorate Name</value>
+  </data>
+  <data name="GovernorateNameEn" xml:space="preserve">
+    <value>English Governorate Name</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
