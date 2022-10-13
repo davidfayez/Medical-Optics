@@ -2,9 +2,10 @@
     <li>
         Main Information
         <ul>
-            <li><a href="#">الجنسية </a> </li>
-            <li><a href="#">الديانة </a> </li>
+            <li><a asp-controller="DefCountry" asp-action="Index">البلد </a> </li>
+            <li><a asp-controller="DefReligion" asp-action="Index">الديانه </a></li>
             <li><a href="#">الحالة االجتماعية </a> </li>
+            <li><a href="#">الجنسية </a> </li>
 
         </ul>
     </li>
@@ -22,9 +23,9 @@
             <li>
                 البيانات الاساسية
                 <ul>
-                    <li><a asp-controller="Complaint" asp-action="Create"> اضافة شكوى</a></li>
-                    <li><a asp-controller="SubComplaint" asp-action="Create">  اضافة شكوى فرعية</a></li>
-                    <li><a asp-controller="Diagnose" asp-action="Create"> اضافة تشخيص</a></li>
+                    <li><a asp-controller="Complaint" asp-action="Index"> اضافة شكوى</a></li>
+                    <li><a asp-controller="SubComplaint" asp-action="Index">  اضافة شكوى فرعية</a></li>
+                    <li><a asp-controller="Diagnose" asp-action="Index"> اضافة تشخيص</a></li>
                 </ul>
             </li>
 

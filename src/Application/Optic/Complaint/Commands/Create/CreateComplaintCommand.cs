@@ -5,6 +5,8 @@ using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Domain.Common;
 using Microsoft.AspNetCore.Http;
 using DB = Medical_Optics.Domain.Entities.Optic;
+
+
 namespace Medical_Optics.Application.Optic.Complaint.Commands.Create;
 public class CreateComplaintCommand : AuditableEntity, IRequest<bool>, IMapFrom<DB.Complaint>
 {

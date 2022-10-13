@@ -1,0 +1,55 @@
+﻿@model CreateDefReligionCommand
+@{
+    ViewData["Title"] = @Optic.Religion;
+    Layout = "_OpticLayout";
+}
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">  @Optic.Religion</h3>
+        </div>
+        <div class="col-md-8">
+
+            <div class="menu text-right">
+                <partial name="_HeaderMenu" />
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile/@Optic.Religion
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-10 col-lg-12">
+
+                <!--Page Content-->
+                <button type="button" class="btn btn-outline-success exportExcel" style="float:left;">@Global.Export<i class="fa fa-file-excel"></i></button>
+                <a class="btn btn-success btn-sm btn-add" asp-action="Create"><i class="fas fa-plus"></i>@Global.AddNew</a>
+                <br />
+                <div id="DefReligionGrid"></div>
+                <!--Page Content-->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/Pages/DefReligion/ListDefReligion.js"></script>
+}

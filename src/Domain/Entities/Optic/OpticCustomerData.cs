@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ERP.DAL.Domains.Def;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Domain.Entities.Optic;
 

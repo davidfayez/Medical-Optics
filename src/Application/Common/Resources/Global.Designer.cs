@@ -358,6 +358,24 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Capital Name Arabic.
+        /// </summary>
+        public static string CapitalNameAr {
+            get {
+                return ResourceManager.GetString("CapitalNameAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capital Name English.
+        /// </summary>
+        public static string CapitalNameEn {
+            get {
+                return ResourceManager.GetString("CapitalNameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cash And Bank.
         /// </summary>
         public static string CashBank {
