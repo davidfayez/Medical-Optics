@@ -8,6 +8,7 @@ using ERP.DAL.Domains.Def;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
 using Medical_Optics.Domain.Common;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Company.Queries.GetAll;
 public class CompanyVM : AuditableEntity, IMapFrom<DefCompany>

@@ -12,6 +12,7 @@ using Medical_Optics.Domain.Common;
 using ERP.DAL.Domains.Def;
 using AutoMapper;
 using Medical_Optics.Application.Common.Interfaces;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Currency.Commands.Create;
 public class CreateCurrencyCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefCurrency>

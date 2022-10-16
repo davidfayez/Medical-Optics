@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ERP.DAL.Domains.Def;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
-using Medical_Optics.Application.Optic.Currency.Queries.GetById;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Currency.Queries.GetById;
 public class GetCurrencyByIdQuery : IRequest<DefCurrency>
