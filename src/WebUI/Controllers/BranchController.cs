@@ -5,17 +5,18 @@ using Medical_Optics.Application.Def.Branch.Commands.Create;
 using Medical_Optics.Application.Def.Branch.Commands.Delete;
 using Medical_Optics.Application.Def.Branch.Commands.Update;
 using Medical_Optics.Application.Def.Branch.Queries.GetById;
-using Medical_Optics.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medical_Optics.WebUI.Controllers;
 public class BranchController : BaseController
 {
     private readonly IMapper _mapper;
+    private readonly IFileHandler _fileHandler;
 
-    public BranchController(IMapper mapper)
+    public BranchController(IMapper mapper, IFileHandler fileHandler)
     {
         _mapper = mapper;
+        _fileHandler = fileHandler;
     }
     public IActionResult Index()
     {
@@ -33,18 +34,25 @@ public class BranchController : BaseController
     {
         if (ModelState.IsValid)
         {
+            var branchImagePath = (command.BranchImage != null) ? command.BranchCode + command.BranchImage.FileName.Substring(command.BranchImage.FileName.LastIndexOf('.')) : null;
+                command.LogoUrl = branchImagePath;
             var isSuccess = await Mediator.Send(command);
             if (isSuccess)
-                return View("Index");
+            {
+                if (branchImagePath != null)
+                    _fileHandler.UploadFile("Branches", command.BranchImage, command.BranchCode.ToString());
 
+                return View("Index");
+            }
         }
         return View(command);
     }
-    [HttpGet]
-    public async Task<IActionResult> EditAsync(int id)
+
+[HttpGet]
+public async Task<IActionResult> EditAsync(int id)
+{
+    if (id > 0)
     {
-        if (id > 0)
-        {
             var complaint = await Mediator.Send(new GetBranchByIdQuery
             {
                 Id = id,
@@ -64,10 +72,16 @@ public class BranchController : BaseController
     {
         if (ModelState.IsValid)
         {
+            var branchImagePath = (command.BranchImage != null) ? command.BranchCode + command.BranchImage.FileName.Substring(command.BranchImage.FileName.LastIndexOf('.')) : null;
+            command.LogoUrl = branchImagePath;
             var isSuccess = await Mediator.Send(command);
             if (isSuccess)
-                return View("Index");
+            {
+                if (branchImagePath != null)
+                    _fileHandler.UploadFile("Branches", command.BranchImage, command.BranchCode.ToString());
 
+                return View("Index");
+            }
         }
         return View(command);
     }

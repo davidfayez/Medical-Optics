@@ -11,6 +11,7 @@ using ERP.DAL.Domains.Def;
 using Medical_Optics.Domain.Entities.Optic;
 using System.Reflection;
 using Medical_Optics.Domain.Entities.Def;
+using Medical_Optics.Domain.Entities.Identity;
 
 namespace Medical_Optics.Infrastructure.Persistence;
 

@@ -13,6 +13,7 @@ using Medical_Optics.Application.Def.Company.Commands.Update;
 using Medical_Optics.Application.Optic.Complaint.Commands.Update;
 using Medical_Optics.Domain.Common;
 using Microsoft.AspNetCore.Http;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Company.Commands.Update;
 public class UpdateCompanyCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefCompany>

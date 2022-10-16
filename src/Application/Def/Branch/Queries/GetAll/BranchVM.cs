@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Medical_Optics.Application.Common.Mappings;
+using Medical_Optics.Domain.Common;
+using Medical_Optics.Domain.Entities.Def;
+using Microsoft.AspNetCore.Http;
 
 namespace Medical_Optics.Application.Def.Branch.Queries.GetAll;
-public class BranchVM
+public class BranchVM :AuditableEntity,IMapFrom<DefBranch>
 {
+    public void Mapping(Profile profile)
+    {
+        profile.CreateMap<BranchVM, DefBranch>()
+               .ReverseMap();
+    }
+
+
     public int Id { get; set; }
     public string BranchCode { get; set; }
     public string BranchNameAr { get; set; }
@@ -24,8 +31,11 @@ public class BranchVM
     public string Notes { get; set; }
     public string LogoUrl { get; set; }
     public int? DefCountryId { get; set; }
+    public int? DefCityId { get; set; }
     public int? DefBranchId { get; set; }
     public string CommercialRegister { get; set; }
     public string TaxCard { get; set; }
     public string Website { get; set; }
+    public IFormFile BranchImage { get; set; }
+
 }

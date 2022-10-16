@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using ERP.DAL.Domains.Def;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Domain.Common;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.City.Commands.Create;
 public class CreateCityCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefCity>

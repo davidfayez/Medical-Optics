@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
-using Medical_Optics.Application.Def.City.Queries.GetAll;
-using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
 
 namespace Medical_Optics.Application.Def.Company.Queries.GetAll;
 public class GetAllCompaniesQuery : IRequest<List<CompanyVM>>

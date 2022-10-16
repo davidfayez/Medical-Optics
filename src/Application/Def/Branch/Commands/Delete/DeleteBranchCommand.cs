@@ -8,6 +8,7 @@ using ERP.DAL.Domains.Def;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Branch.Commands.Delete;
 public class DeleteBranchCommand : IRequest<bool>, IMapFrom<DefBranch>

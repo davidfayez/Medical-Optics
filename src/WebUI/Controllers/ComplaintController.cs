@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using ERP.DAL.Domains;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Optic.Complaint.Commands.Create;
 using Medical_Optics.Application.Optic.Complaint.Commands.Delete;
@@ -7,7 +6,6 @@ using Medical_Optics.Application.Optic.Complaint.Commands.Update;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetById;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Medical_Optics.WebUI.Controllers;
 public class ComplaintController : BaseController

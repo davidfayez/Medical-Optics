@@ -10,6 +10,7 @@ using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Application.Def.City.Commands.Update;
 using Medical_Optics.Domain.Common;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.City.Commands.Update;
 public class UpdateCityCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefCity>

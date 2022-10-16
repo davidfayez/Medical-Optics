@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ERP.DAL.Domains.Def;
-using MediatR;
+﻿using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
-using Medical_Optics.Application.Def.City.Queries.GetById;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.City.Queries.GetById;
 public class GetCityByIdQuery : IRequest<DefCity>

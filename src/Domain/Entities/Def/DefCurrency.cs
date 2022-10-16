@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace ERP.DAL.Domains.Def
-{
+namespace Medical_Optics.Domain.Entities.Def;
+
     [Table("DefCurrency")]
     public class DefCurrency : AuditableEntity
     {
@@ -40,4 +40,4 @@ namespace ERP.DAL.Domains.Def
         public int? DefBranchId { get; set; }
         public virtual DefBranch DefBranch { get; set; }
     }
-}
+
