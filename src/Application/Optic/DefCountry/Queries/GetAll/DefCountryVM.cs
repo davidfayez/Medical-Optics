@@ -10,11 +10,13 @@ public class DefCountryVM: AuditableEntity,IMapFrom<DB.DefCountry>
 {
     public void Mapping(Profile profile)
     {
-        profile.CreateMap<DefCountryVM, DB.DefCountry>()
+        profile.CreateMap<DB.DefCountry, DefCountryVM>()
+            .ForMember(dest => dest.CodeAndName, opt => opt.MapFrom(src => src.CountryCode + "-" + src.CountryNameAr))
                .ReverseMap();
     }
     public int Id { get; set; }
     public string CountryCode { get; set; }
+    public string CodeAndName { get; set; }
     public string CountryNameAr { get; set; }
     public string CountryNameEn { get; set; }
     public string CapitalNameAr { get; set; }

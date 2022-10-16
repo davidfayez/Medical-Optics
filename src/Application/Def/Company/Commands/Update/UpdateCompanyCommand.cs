@@ -8,8 +8,11 @@ using ERP.DAL.Domains.Def;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
+using Medical_Optics.Application.Def.Company.Commands.Create;
 using Medical_Optics.Application.Def.Company.Commands.Update;
+using Medical_Optics.Application.Optic.Complaint.Commands.Update;
 using Medical_Optics.Domain.Common;
+using Microsoft.AspNetCore.Http;
 
 namespace Medical_Optics.Application.Def.Company.Commands.Update;
 public class UpdateCompanyCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefCompany>
@@ -32,6 +35,16 @@ public class UpdateCompanyCommand : AuditableEntity, IRequest<bool>, IMapFrom<De
     public string CommercialRegister { get; set; }
     public string Location { get; set; }
     public string TaxCard { get; set; }
+    public IFormFile CompanyImage { get; set; }
+    public void Mapping(Profile profile)
+    {
+        profile.CreateMap<UpdateCompanyCommand, DefCompany>()
+               .ReverseMap();
+
+        profile.CreateMap<UpdateCompanyCommand, CreateCompanyCommand>()
+               .ReverseMap();
+    }
+
 }
 
 public class UpdateCompanyCommandHandler : IRequestHandler<UpdateCompanyCommand, bool>

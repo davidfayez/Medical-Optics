@@ -1,0 +1,171 @@
+﻿@model UpdateCityCommand
+@{
+  ViewData["Title"] = @Global.Edit + " " + @Optic.Complaint;
+    Layout = "_OpticLayout";
+    var divClass = "col-xl-10 col-lg-12";
+}
+
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name"> @Global.Edit @Global.City</h3>
+        </div>
+        <partial name="_HomeIcon" />
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+             <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Global.GeneralSetting/@Global.Edit /@Global.City
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="@divClass">
+                <!--Page Content-->
+                <form asp-action="Edit" id="formCity" method="post" class="col-xl-10 col-lg-12">
+
+
+                    <div class="row">
+                        <input hidden asp-for="Id" />
+                        <input hidden asp-for="CreationDate" />
+                        <input hidden asp-for="LastModifiedDate" />
+                        <label asp-for="CityCode" class="col-xl-2 col-lg-3 form-group  "></label>
+
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" asp-for="CityCode" class="form-control input-sys" readonly>
+                            <span asp-validation-for="CityCode" class="text-danger"></span>
+                            @*<span id="validCode" class="text-danger"></span>*@
+                        </div>
+
+
+
+                        <label asp-for="IsActive" class="col-xl-2 col-lg-3 form-group ">
+
+                        </label>
+
+                        <div class="col-xl-2 col-lg-3 form-group">
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" asp-for="IsActive" value="True" class="custom-control-input" id="customControlValidation2" checked="">
+                                <label class="custom-control-label" for="customControlValidation2">@Global.Active</label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-xl-2 col-lg-3 form-group">
+
+                            <div class="custom-control custom-radio mb-3">
+                                <input type="radio" class="custom-control-input" asp-for="IsActive" value="False" id="customControlValidation3">
+                                <label class="custom-control-label" for="customControlValidation3">@Global.Inactive</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xl-2 col-lg-3 ">
+                            <label asp-for="DefCountryId" class="form-group  ">
+                            </label>
+                            <span class="text-danger" style="float:@Style.Float">*</span>
+                        </div>
+
+
+                        <div class="col-xl-8 col-lg-7 form-group ">
+                            <input class="form-control input-sys customDDL" asp-for="DefCountryId" />
+                            <span id="countryIdvalidation" class="text-danger" style="display:none">@ErrorMessages.Required</span>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 ">
+                            <label asp-for="CityNameAr" class="form-group  ">
+                            </label>
+                            <span class="text-danger" style="float:@Style.Float">*</span>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" class="form-control input-sys" asp-for="CityNameAr">
+                            <span asp-validation-for="CityNameAr" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 ">
+                            <label asp-for="CityNameEn" class="form-group  ">
+                            </label>
+                            <span class="text-danger" style="float:@Style.Float">*</span>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input asp-for="CityNameEn" type="text" class="form-control input-sys">
+                            <span asp-validation-for="CityNameEn" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-3 ">
+                            <label asp-for="GovernorateNameAr" class="form-group  ">
+                            </label>
+                            <span class="text-danger" style="float:@Style.Float">*</span>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" class="form-control input-sys" asp-for="GovernorateNameAr">
+                            <span asp-validation-for="GovernorateNameAr" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 ">
+                            <label asp-for="GovernorateNameEn" class="form-group  ">
+                            </label>
+                            <span class="text-danger" style="float:@Style.Float">*</span>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input asp-for="GovernorateNameEn" type="text" class="form-control input-sys">
+                            <span asp-validation-for="GovernorateNameEn" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <label asp-for="Description" class="col-xl-2 col-lg-3 form-group  ">
+
+                        </label>
+
+                        <div class="col-xl-8 col-lg-7 form-group ">
+                            <textarea asp-for="Description" class="form-control input-sys" id="Description"></textarea>
+
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <div class="text-center">
+                        <button type="button" id="btnSubmit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <button type="button" class="btn btn-danger btn-sm btnDelete" onclick="removeCountryEdit(@Model.Id);"><i class="fas fa-trash-alt"></i> @Global.Delete</button>
+                        <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
+
+                    </div>
+
+                </form>
+                <!--Page Content-->
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/Pages/City/EditCity.js"></script>
+}
+

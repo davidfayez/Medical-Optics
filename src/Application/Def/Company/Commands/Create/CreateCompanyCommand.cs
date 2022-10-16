@@ -9,6 +9,7 @@ using ERP.DAL.Domains.Def;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
+using Medical_Optics.Application.Def.Company.Commands.Update;
 using Medical_Optics.Domain.Common;
 
 namespace Medical_Optics.Application.Def.Company.Commands.Create;
@@ -32,6 +33,12 @@ public class CreateCompanyCommand : AuditableEntity, IRequest<bool>, IMapFrom<De
     public string CommercialRegister { get; set; }
     public string Location { get; set; }
     public string TaxCard { get; set; }
+
+    public void Mapping(Profile profile)
+    {
+        profile.CreateMap<CreateCompanyCommand, DefCompany>()
+               .ReverseMap();
+    }
 }
 
 public class CreateCompanyCommandHandler : IRequestHandler<CreateCompanyCommand, bool>
