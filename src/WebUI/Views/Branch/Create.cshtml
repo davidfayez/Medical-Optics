@@ -1,0 +1,227 @@
+﻿@model CreateBranchCommand
+@{
+    ViewData["Title"] = @Global.Add + " " + @Global.Branch;
+    Layout = "_OpticLayout";
+}
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Add  @Global.Branch</h3>
+        </div>
+        <div class="col-md-8">
+
+            <div class="menu text-right">
+                <partial name="_HeaderMenu" />
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile/@Global.Add /@Global.Branch
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-10 col-lg-12">
+                <form asp-controller="Branch" asp-action="Create" method="post" class="row" enctype="multipart/form-data">
+                    <div class="col-lg-9 ">
+
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-3 ">
+                                <label asp-for="DefCompanyId" class="form-group">@Global.CompanyName</label>
+                            </div>
+                            <div class="col-xl-10 col-lg-8 form-group">
+                                <input type="text" asp-for="DefCompanyId" class="form-control input-sys customDDL">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="BranchCode" class="form-group "></label>
+                                </div>
+
+                                <div class="col-xl-4 col-lg-8 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="BranchCode">
+                                </div>
+                        </div>
+
+                        <div class="row">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="BranchNameAr" class="form-group "> </label>
+                                </div>
+                                <div class="col-xl-4 col-lg-8 form-group">
+                                    <input type="text" class="form-control input-sys" asp-for="BranchNameAr">
+                                </div>
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="BranchNameEn" class="form-group "></label>
+                                </div>
+                                <div class="col-xl-4 col-lg-8 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="BranchNameEn">
+                                </div>
+
+
+                        </div>
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="BranchAddress" class="form-group "></label>
+                                </div>
+                                <div class="col-xl-10 col-lg-8 form-group">
+                                    <input type="text" class="form-control input-sys" asp-for="BranchAddress">
+                                </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="DefCountryId" class="form-group">@Global.Countries</label>
+                                </div>
+                                <div class="col-xl-10 col-lg-8 form-group">
+                                    <input type="text" asp-for="DefCountryId" class="form-control input-sys customDDL">
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-3 ">
+                                <label asp-for="DefCityId" class="form-group">@Global.Cities</label>
+                            </div>
+                            <div class="col-xl-10 col-lg-8 form-group">
+                                <input type="text" asp-for="DefCityId" class="form-control input-sys customDDL">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="Phone1" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-3 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Phone1">
+                                </div>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Phone2">
+
+                                </div>
+
+                                <div class="col-lg-3 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Phone3">
+
+                                </div>
+
+                        </div>
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="Fax" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-3 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Fax">
+                                </div>
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Fax2">
+
+                                </div>
+                                <div class="col-lg-3 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Fax3">
+
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="Email" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Email">
+                                </div>
+
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="Website" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Website">
+                                </div>
+
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="TaxCard" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="TaxCard">
+                                </div>
+
+
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="CommercialRegister" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="CommercialRegister">
+                                </div>
+
+
+
+                                <div class="col-xl-2 col-lg-3 ">
+                                    <label asp-for="PostCode" class="form-group "></label>
+                                </div>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="PostCode">
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xl-2 col-lg-3">
+                                    <label asp-for="Notes" class="form-group "></label>
+                                </div>
+                                <div class="col-xl-10 col-lg-9 form-group">
+                                    <textarea class="form-control input-sys" asp-for="Notes"> </textarea>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <style>
+                            .form-group {
+                                margin-bottom: 30px;
+                            }
+                        </style>
+
+                        <div class="image-upload">
+                            <img src="~/images/Users/profile-icon.jpg" id="branchImage">
+                            <label for="BranchImage">@Global.UploadImage</label>
+                            <input type="file" asp-for="BranchImage" accept=".gif, .jpg, .png" onchange="setImage(this)" style="display:none;">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/pages/Branch/AddEditBranch.js"></script>
+}

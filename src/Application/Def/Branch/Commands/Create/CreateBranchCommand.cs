@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using ERP.DAL.Domains.Def;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
-using Medical_Optics.Application.Def.Branch.Commands.Create;
 using Medical_Optics.Domain.Common;
+using Medical_Optics.Domain.Entities.Def;
+using Microsoft.AspNetCore.Http;
 
 namespace Medical_Optics.Application.Def.Branch.Commands.Create;
 public class CreateBranchCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefBranch>
@@ -32,10 +26,13 @@ public class CreateBranchCommand : AuditableEntity, IRequest<bool>, IMapFrom<Def
     public string Notes { get; set; }
     public string LogoUrl { get; set; }
     public int? DefCountryId { get; set; }
+    public int? DefCityId { get; set; }
     public int? DefBranchId { get; set; }
     public string CommercialRegister { get; set; }
     public string TaxCard { get; set; }
     public string Website { get; set; }
+    public IFormFile BranchImage { get; set; }
+
 
     public void Mapping(Profile profile)
     {

@@ -1,9 +1,10 @@
 ﻿using ERP.DAL.Domains.Def;
+using Medical_Optics.Domain.Entities.Def;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ERP.DAL.Domains.Authentication
-{
+namespace Medical_Optics.Domain.Entities.Identity;
+
     [Table("AspNetUserRolesCustom")]
     public class AspNetUserRolesCustom
     {
@@ -18,4 +19,4 @@ namespace ERP.DAL.Domains.Authentication
         public int DefBranchId { get; set; }
         public virtual DefBranch DefBranch { get; set; }
     }
-}
+

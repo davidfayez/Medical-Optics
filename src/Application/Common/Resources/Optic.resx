@@ -126,6 +126,9 @@
   <data name="Diagnose" xml:space="preserve">
     <value>Diagnose</value>
   </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
   <data name="OpticMedicalFile" xml:space="preserve">
     <value>Optics Medical File</value>
   </data>

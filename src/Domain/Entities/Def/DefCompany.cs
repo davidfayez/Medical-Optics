@@ -7,8 +7,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace ERP.DAL.Domains.Def
-{
+namespace Medical_Optics.Domain.Entities.Def;
+
 	[Table("DefCompany")]
 	public class DefCompany : AuditableEntity
     {
@@ -68,5 +68,5 @@ namespace ERP.DAL.Domains.Def
 		public string TaxCard { get; set; }
 
 	}
-}
+
 
