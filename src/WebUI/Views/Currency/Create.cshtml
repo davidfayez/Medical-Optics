@@ -1,0 +1,146 @@
+﻿@model CreateCurrencyCommand
+@{
+    ViewData["Title"] = Global.Add + " " + Global.Currency;
+    var divClass = "col-xl-10 col-lg-12";
+}
+
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Currencies</h3>
+        </div>
+        <partial name="_HomeIcon" />
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+                    <!--Side menu-->
+                    <div class="card ">
+                        <div class="card-header back-green">
+                            @Global.GeneralLedger/ @Global.Currencies
+                        </div>
+                        <div class="card-body back-black">
+                            <ul class="result-search left-links">
+                                <partial name="_LeftMenu" />
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!--end Side menu-->
+
+                </div>
+
+
+            <div class="@divClass">
+                <!--Page Content-->
+                <form method="post" id="currencyFormAdd" class="col-xl-10 col-lg-12">
+
+                    <input hidden asp-for="Id" id="hiddenId" />
+                    <input hidden asp-for="CreatedUserId" id="FK_CreatorId" />
+                    <input type="date" hidden asp-for="LastModifiedDate" id="LastModifiedDate" />
+                    <input type="date" hidden asp-for="CreationDate" id="CreationDate" />
+                    <input type="checkbox" hidden asp-for="IsDeleted" id="IsDeleted" />
+
+                    <div class="row">
+                        <label asp-for="Code" class="col-xl-2 col-lg-3 form-group ">@Global.Code</label>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" asp-for="Code" class="form-control input-sys" id="Code" readonly>
+                            <span asp-validation-for="Code" class="text-danger"></span>
+                            <span id="validCurrencyCode" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label asp-for="CurrencyNameAr" class="col-xl-2 col-lg-3 form-group ">@Global.NameAr</label>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" asp-for="CurrencyNameAr" class="form-control input-sys" id="CurrencyNameAr">
+                            <span asp-validation-for="CurrencyNameAr" class="text-danger"></span>
+                        </div>
+                        <label asp-for="CurrencyNameEn" class="col-xl-2 col-lg-3 form-group ">@Global.NameEn</label>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" asp-for="CurrencyNameEn" class="form-control input-sys" id="CurrencyNameEn">
+                            <span asp-validation-for="CurrencyNameEn" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label asp-for="AbbreviationAr" class="col-xl-2 col-lg-3 form-group ">@Global.AbbreviationAr</label>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" asp-for="AbbreviationAr" class="form-control input-sys" id="AbbreviationAr">
+                            <span asp-validation-for="AbbreviationAr" class="text-danger"></span>
+                        </div>
+                        <label asp-for="AbbreviationEn" class="col-xl-2 col-lg-3 form-group ">@Global.AbbreviationEn</label>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="text" asp-for="AbbreviationEn" class="form-control input-sys" id="AbbreviationEn">
+                            <span asp-validation-for="AbbreviationEn" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label asp-for="DefaultFactor" class="col-xl-2 col-lg-3 form-group ">@Global.DefaultFactor</label>
+                        <div class="col-xl-3 col-lg-3 form-group ">
+                            <input type="number" asp-for="DefaultFactor" class="form-control input-sys" id="DefaultFactor">
+                            <span asp-validation-for="DefaultFactor" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-xl-2 col-lg-3 form-group ">
+                            @Global.Status
+                        </label>
+
+                        <div class="col-xl-2 col-lg-3 form-group">
+                            <div class="custom-control custom-radio mb-3">
+                                <input type="radio" class="custom-control-input" asp-for="IsPimary" name="isPimary" value="True" id="customControlValidation5">
+                                <label class="custom-control-label" for="customControlValidation5">@Global.Main</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 form-group">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" asp-for="IsPimary" value="False" name="isPimary" class="custom-control-input" id="customControlValidation4" checked="">
+                                <label class="custom-control-label" for="customControlValidation4">@Global.NotMain</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="col-xl-2 col-lg-3 form-group ">
+                        </label>
+                        <div class="col-xl-2 col-lg-3 form-group">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" asp-for="IsActive" name="isActive" value="True" class="custom-control-input" id="customControlValidation2" checked="">
+                                <label class="custom-control-label" for="customControlValidation2">@Global.Active</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 form-group">
+                            <div class="custom-control custom-radio mb-3">
+                                <input type="radio" class="custom-control-input" asp-for="IsActive" name="isActive" value="False" id="customControlValidation3">
+                                <label class="custom-control-label" for="customControlValidation3">@Global.Inactive</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="col-xl-2 col-lg-3 form-group ">@Global.Description </label>
+                        <div class="col-xl-8 col-lg-9 form-group ">
+                            <textarea type="text" asp-for="Notes" class="form-control input-sys" id="Notes"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <button type="button" id="submitCurrency" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
+
+                    </div>
+                </form>
+                <!--Page Content-->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/pages/Currency/AddCurrency.js"></script>
+}

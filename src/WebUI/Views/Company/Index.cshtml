@@ -1,0 +1,218 @@
+﻿@model UpdateCompanyCommand
+@{
+    ViewData["Title"] = Global.CompanyProfilePageTitle;
+}
+
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">@Global.CompanyProfilePageTitle</h3>
+        </div>
+        <partial name="_HomeIcon" />
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+                <!--Side menu-->
+                <!--end Side menu-->
+
+            </div>
+            <div class="col-xl-10 col-lg-12">
+                <form asp-action="Index" enctype="multipart/form-data">
+                    <div class="row">
+
+                        <div class="col-lg-9 ">
+                            <div class="row">
+                                <input type="hidden" asp-for="Id" />
+                                <label asp-for="CompanyNameAr" class="col-lg-2 form-group "> </label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="CompanyNameAr">
+                                    <span asp-validation-for="CompanyNameAr" class="text-danger"></span>
+                                </div>
+
+                                <label asp-for="CompanyNameEn" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="CompanyNameEn">
+                                    <span asp-validation-for="CompanyNameEn" class="text-danger"></span>
+                                </div>
+
+                                <label asp-for="CompanyAddress" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="CompanyAddress">
+                                    <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+                                </div>
+
+                                <label asp-for="Phone1" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Phone1">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+
+                                <label asp-for="Email" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+
+                                <label asp-for="Phone2" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Phone2">
+
+                                </div>
+
+                                <label asp-for="Fax" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Fax">
+
+                                </div>
+
+                                <label asp-for="Phone3" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Phone3">
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row">
+
+                                <label asp-for="PostCode" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="PostCode">
+
+                                </div>
+
+                                <label asp-for="Website" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Website">
+                                    <span asp-validation-for="Website" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <label asp-for="Location" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-10 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="Location">
+                                    <span asp-validation-for="Location" class="text-danger"></span>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row">
+                                <label asp-for="FinancialYearStart" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="date" class="form-control input-sys" asp-for="FinancialYearStart">
+                                    <span asp-validation-for="FinancialYearStart" class="text-danger"></span>
+                                </div>
+
+                                <label asp-for="TaxCard" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="TaxCard">
+                                    <span asp-validation-for="TaxCard" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <label asp-for="FinancialYearEnd" class="col-lg-2 form-group "> </label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="date" class="form-control input-sys" asp-for="FinancialYearEnd">
+                                    <span asp-validation-for="FinancialYearEnd" class="text-danger"></span>
+                                </div>
+
+                                <label asp-for="CommercialRegister" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <input type="text" class="form-control input-sys" asp-for="CommercialRegister">
+                                    <span asp-validation-for="CommercialRegister" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <label asp-for="Notes" class="col-lg-2 form-group "></label>
+
+                                <div class="col-lg-4 form-group ">
+                                    <textarea class="form-control input-sys" asp-for="Notes"> </textarea>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <style>
+                                .form-group {
+                                    margin-bottom: 30px;
+                                }
+                            </style>
+
+                            <div class="image-upload">
+                                <input type="hidden" asp-for="LogoUrl" />
+                                <img src="~/@ViewBag.compImage" id="imgCompany">
+                                <label for="CompanyImage">Upload Image</label>
+                                <input type="file" asp-for="CompanyImage" accept=".gif, .jpg, .png" onchange="setImage(this)" style="display:none;">
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>@Global.Save</button>
+                            <a asp-action="Index" asp-controller="Home" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+           $(document).ready(function () {
+
+            var saved = '@TempData["Saved"]';
+            if (saved == "SavedSuccessfully") {
+                swal({
+                    title: Resources.SavedSuccessfullyResource,
+                    confirmButtonText: Resources.DoneResource,
+                    type: "success"
+                });
+            }
+
+           });
+
+    </script>
+    <script src="~/js/Pages/DefCompany/DefCompanyAdd.js"></script>
+}

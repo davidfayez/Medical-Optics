@@ -49,8 +49,15 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Remove="wwwroot\js\Pages\City\AddCity.js" />
+    </ItemGroup>
+
+    <ItemGroup>
       <None Include="Views\Account\Login.cshtml" />
       <None Include="Views\Account\UnauthorizedUser.cshtml" />
+      <None Include="Views\City\Create.cshtml" />
+      <None Include="Views\City\Edit.cshtml" />
+      <None Include="Views\City\Index.cshtml" />
       <None Include="Views\Shared\_LayoutLogin.cshtml" />
       <None Include="wwwroot\css\bootstrap-grid.css.map" />
       <None Include="wwwroot\css\bootstrap-grid.min.css.map" />
@@ -181,6 +188,7 @@
       <None Include="wwwroot\js\modernizr.js" />
       <None Include="wwwroot\js\moment.min.js" />
       <None Include="wwwroot\js\my-js.js" />
+      <None Include="wwwroot\js\Pages\City\AddCity.js" />
       <None Include="wwwroot\js\Pages\Layout.js" />
       <None Include="wwwroot\js\paginga.jquery.js" />
       <None Include="wwwroot\js\popper.min.js" />

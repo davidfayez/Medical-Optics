@@ -1,15 +1,21 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AutoMapper;
+using ERP.DAL.Domains.Def;
 using Medical_Optics.Application.Common.Mappings;
+using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
 using Medical_Optics.Domain.Common;
-using DB = Medical_Optics.Domain.Entities.Def;
-
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Company.Queries.GetAll;
-public class CompanyVM: AuditableEntity, IMapFrom<DB.DefCompany>
+public class CompanyVM : AuditableEntity, IMapFrom<DefCompany>
 {
     public void Mapping(Profile profile)
     {
-        profile.CreateMap<CompanyVM, DB.DefCompany>()
+        profile.CreateMap<CompanyVM, DefCompany>()
                .ReverseMap();
     }
 

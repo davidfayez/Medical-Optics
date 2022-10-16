@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
 
 
-    loadComplaintsGrid();
+    loadCitiesGrid();
 
-    function loadComplaintsGrid() {
+    function loadCitiesGrid() {
         var dataSource = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: "/Complaint/GetAll",
+                    url: "/City/GetAll",
                     Type: "GET"
                 }
             },
@@ -20,9 +20,9 @@
                     id: "id",
                     fields: {
                         id: { editable: false },
-                        complaintCode: { editable: false },
-                        complaintNameAr: { editable: false },
-                        complaintNameEn: { editable: false },
+                        cityCode: { editable: false },
+                        cityNameAr: { editable: false },
+                        cityNameEn: { editable: false },
                         description: { editable: false },
                         creationDate: { type: "date", editable: false },
                         lastModifiedDate: { type: "date", editable: false },
@@ -35,9 +35,9 @@
         });
 
 
-        var grid = $("#ComplaintsGrid").kendoGrid({
+        var grid = $("#CitiesGrid").kendoGrid({
             excel: {
-                fileName: "Complaints.xlsx",
+                fileName: "Cities.xlsx",
                 allPages: Resources.GridAllPages,
                 filterable: Resources.GridFilterable
             },
@@ -63,9 +63,9 @@
             },
             columns: [
 
-                { field: "complaintCode", title: Resources.CodeResource, width: Resources.CodeWidth },
-                { field: "complaintNameAr", title: Resources.NameArResource, width: Resources.NameWidth },
-                { field: "complaintNameEn", title: Resources.NameEnResource, width: Resources.NameWidth },
+                { field: "cityCode", title: Resources.CodeResource, width: Resources.CodeWidth },
+                { field: "cityNameAr", title: Resources.NameArResource, width: Resources.NameWidth },
+                { field: "cityNameEn", title: Resources.NameEnResource, width: Resources.NameWidth },
 
                 { width: Resources.CheckboxWidth, template: "<input type='checkbox' data-bind='checked:isActive' class= 'control-label i-check' disabled = 'disabled' />", headerTemplate: Resources.Status },
 
@@ -88,7 +88,7 @@
                 },
                 {
                     width: Resources.DoubleActionWidth,
-                    template: "<a  href='/Complaint/Edit/#= id #'  class='btn btn-success btn-sm btnEdit'><i class='fas fa-edit'></i></a> <a  class='btn btn-danger btn-sm btnDelete' ><i class='fas fa-trash-alt'></i></a>"
+                    template: "<a  href='/City/Edit/#= id #'  class='btn btn-success btn-sm btnEdit'><i class='fas fa-edit'></i></a> <a  class='btn btn-danger btn-sm btnDelete' ><i class='fas fa-trash-alt'></i></a>"
 
                 },
 
@@ -99,19 +99,19 @@
                     kendo.bind(this, dataItem);
 
                 });
-                
+
             },
             //resizable: true
         });
-        grid.data("kendoGrid").table.on("click", ".btnDelete", removeComplaint);
+        grid.data("kendoGrid").table.on("click", ".btnDelete", removeCity);
     }
 
-    function removeComplaint() {
+    function removeCity() {
 
         //var deletee = stringify(resources.delete).serialize();
 
         var row = $(this).closest("tr"),
-            grid = $("#ComplaintsGrid").data("kendoGrid"),
+            grid = $("#CitiesGrid").data("kendoGrid"),
             dataItem = grid.dataItem(row);
         //var filters = grid.dataSource.filter();
         swal({
@@ -126,13 +126,13 @@
         }, function () {
             setTimeout(function () {
                 $.ajax({
-                    url: "/Complaint/Delete?Id=" + dataItem.id,
+                    url: "/City/Delete?Id=" + dataItem.id,
                     type: "Post",
                     contentType: 'application/json; charset=utf-8',
                     success: function (result) {
                         debugger;
                         if (result) {
-                            loadComplaintsGrid();
+                            loadCitiesGrid();
                             //grid.refresh();
                             //grid.dataSource.filter(filters);
                             swal({
@@ -158,5 +158,5 @@
 
 });
 $(".exportExcel").on('click', function () {
-    $("#ComplaintsGrid").getKendoGrid().saveAsExcel();
+    $("#CitiesGrid").getKendoGrid().saveAsExcel();
 });

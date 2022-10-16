@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
 
 
-    loadComplaintsGrid();
+    loadCurrenciesGrid();
 
-    function loadComplaintsGrid() {
+    function loadCurrenciesGrid() {
         var dataSource = new kendo.data.DataSource({
             transport: {
                 read: {
-                    url: "/Complaint/GetAll",
+                    url: "/Currency/GetAll",
                     Type: "GET"
                 }
             },
@@ -35,9 +35,9 @@
         });
 
 
-        var grid = $("#ComplaintsGrid").kendoGrid({
+        var grid = $("#CurrenciesGrid").kendoGrid({
             excel: {
-                fileName: "Complaints.xlsx",
+                fileName: "Currencys.xlsx",
                 allPages: Resources.GridAllPages,
                 filterable: Resources.GridFilterable
             },
@@ -88,7 +88,7 @@
                 },
                 {
                     width: Resources.DoubleActionWidth,
-                    template: "<a  href='/Complaint/Edit/#= id #'  class='btn btn-success btn-sm btnEdit'><i class='fas fa-edit'></i></a> <a  class='btn btn-danger btn-sm btnDelete' ><i class='fas fa-trash-alt'></i></a>"
+                    template: "<a  href='/Currency/Edit/#= id #'  class='btn btn-success btn-sm btnEdit'><i class='fas fa-edit'></i></a> <a  class='btn btn-danger btn-sm btnDelete' ><i class='fas fa-trash-alt'></i></a>"
 
                 },
 
@@ -99,19 +99,19 @@
                     kendo.bind(this, dataItem);
 
                 });
-                
+
             },
             //resizable: true
         });
-        grid.data("kendoGrid").table.on("click", ".btnDelete", removeComplaint);
+        grid.data("kendoGrid").table.on("click", ".btnDelete", removeCurrency);
     }
 
-    function removeComplaint() {
+    function removeCurrency() {
 
         //var deletee = stringify(resources.delete).serialize();
 
         var row = $(this).closest("tr"),
-            grid = $("#ComplaintsGrid").data("kendoGrid"),
+            grid = $("#CurrenciesGrid").data("kendoGrid"),
             dataItem = grid.dataItem(row);
         //var filters = grid.dataSource.filter();
         swal({
@@ -126,13 +126,13 @@
         }, function () {
             setTimeout(function () {
                 $.ajax({
-                    url: "/Complaint/Delete?Id=" + dataItem.id,
+                    url: "/Currency/Delete?Id=" + dataItem.id,
                     type: "Post",
                     contentType: 'application/json; charset=utf-8',
                     success: function (result) {
                         debugger;
                         if (result) {
-                            loadComplaintsGrid();
+                            loadCurrenciesGrid();
                             //grid.refresh();
                             //grid.dataSource.filter(filters);
                             swal({
@@ -158,5 +158,5 @@
 
 });
 $(".exportExcel").on('click', function () {
-    $("#ComplaintsGrid").getKendoGrid().saveAsExcel();
+    $("#CurrenciesGrid").getKendoGrid().saveAsExcel();
 });
