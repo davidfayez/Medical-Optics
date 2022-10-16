@@ -126,6 +126,9 @@
   <data name="Diagnose" xml:space="preserve">
     <value>التشخيص</value>
   </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>الجنسيه</value>
+  </data>
   <data name="OpticMedicalFile" xml:space="preserve">
     <value>الملف الطبى للنظارت</value>
   </data>

@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Medical_Optics.Domain.Entities.Def;
 
-namespace ERP.DAL.Domains.Def
-{
+namespace Medical_Optics.Domain.Entities.Def;
+
     [Table("DefCity")]
     public class DefCity : AuditableEntity
     {
@@ -31,4 +31,4 @@ namespace ERP.DAL.Domains.Def
         public string Description { get; set; }
         public virtual DefCountry DefCountry { get; set; }
     }
-}
+

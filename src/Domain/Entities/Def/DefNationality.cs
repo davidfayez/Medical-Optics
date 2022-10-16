@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
-namespace ERP.DAL.Domains.Def
-{
-    [Table("DefNationality")]
+namespace Medical_Optics.Domain.Entities.Def;
+
+[Table("DefNationality")]
     public class DefNationality : AuditableEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -25,7 +21,8 @@ namespace ERP.DAL.Domains.Def
 
         [StringLength(1000)]
         public string Description { get; set; }
+
         public int? DefBranchId { get; set; }
         public virtual DefBranch DefBranch { get; set; }
     }
-}
+

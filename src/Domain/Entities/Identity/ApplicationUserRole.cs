@@ -1,17 +1,13 @@
-﻿using ERP.DAL.Domains.Def;
+﻿using Medical_Optics.Domain.Entities.Def;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
-namespace ERP.DAL.Domains.Authentication
+namespace Medical_Optics.Domain.Entities.Identity;
+
+[Table("AspNetUserRoles")]
+public class ApplicationUserRole : IdentityUserRole<string>
 {
-    
-    [Table("AspNetUserRoles")]
-    public class ApplicationUserRole : IdentityUserRole<string>
-    {
-        public int DefBranchId { get; set; }
-        public virtual DefBranch DefBranch { get; set; }
-    }
+    public int DefBranchId { get; set; }
+    public virtual DefBranch DefBranch { get; set; }
 }
+

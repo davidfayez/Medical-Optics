@@ -1,11 +1,9 @@
-﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Medical_Optics.Domain.Entities.Def;
 
-namespace ERP.DAL.Domains.Def
-{
+
+namespace Medical_Optics.Domain.Entities.Def;
+
     [Table("DefBranch")]
     public class DefBranch : AuditableEntity
     {
@@ -65,9 +63,11 @@ namespace ERP.DAL.Domains.Def
         [StringLength(50)]
         public string Website { get; set; }
 
+
         public virtual DefCountry DefCountry { get; set; }
         public virtual DefCity DefCity { get; set; }
         public virtual DefCompany DefCompany { get; set; }
-    }
+
 }
+
 

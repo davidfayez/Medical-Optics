@@ -2,6 +2,7 @@
 using ERP.DAL.Domains.Authentication;
 using ERP.DAL.Domains.Def;
 using Medical_Optics.Domain.Entities.Def;
+using Medical_Optics.Domain.Entities.Identity;
 using Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Application.Common.Interfaces;

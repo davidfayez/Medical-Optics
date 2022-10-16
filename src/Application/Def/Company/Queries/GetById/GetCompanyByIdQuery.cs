@@ -7,6 +7,7 @@ using ERP.DAL.Domains.Def;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetById;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Company.Queries.GetById;
 public class GetCompanyByIdQuery : IRequest<DefCompany>

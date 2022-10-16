@@ -10,6 +10,7 @@ using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Application.Def.Company.Commands.Update;
 using Medical_Optics.Domain.Common;
+using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Application.Def.Company.Commands.Update;
 public class UpdateCompanyCommand : AuditableEntity, IRequest<bool>, IMapFrom<DefCompany>
