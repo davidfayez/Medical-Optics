@@ -1,7 +1,7 @@
 ﻿@model UpdateCurrencyCommand
 @{
-    ViewData["Title"] = Global.Edit + " " + Global.Currency;
-    var standalone = string.IsNullOrEmpty(Context.Request.Query["standalone"]) ? false : true;
+    ViewData["Title"] = @Global.Edit + " " + @Global.Currency;
+    Layout = "_OpticLayout";
     var divClass = "col-xl-10 col-lg-12";
 }
 <div class="card margin-card container-fluid yourdiv">
@@ -129,7 +129,7 @@
                     </div>
                     <br>
                     <div class="text-center">
-                        <button type="button" id="submitCurrencyEdit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
                         <button type="button" class="btn btn-danger btn-sm btnDelete" onclick="removeCurrencyEdit(@Model.Id);"><i class="fas fa-trash-alt"></i> @Global.Delete</button>
                         <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
 

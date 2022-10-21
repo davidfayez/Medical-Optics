@@ -1,6 +1,7 @@
 ﻿@model CreateCurrencyCommand
 @{
-    ViewData["Title"] = Global.Add + " " + Global.Currency;
+    ViewData["Title"] = @Global.Add + " " + @Global.Currencies;
+    Layout = "_OpticLayout";
     var divClass = "col-xl-10 col-lg-12";
 }
 
@@ -34,7 +35,7 @@
 
             <div class="@divClass">
                 <!--Page Content-->
-                <form method="post" id="currencyFormAdd" class="col-xl-10 col-lg-12">
+                <form asp-controller="Currency" asp-action="Create" method="post" class="col-xl-10 col-lg-12">
 
                     <input hidden asp-for="Id" id="hiddenId" />
                     <input hidden asp-for="CreatedUserId" id="FK_CreatorId" />
@@ -45,7 +46,7 @@
                     <div class="row">
                         <label asp-for="Code" class="col-xl-2 col-lg-3 form-group ">@Global.Code</label>
                         <div class="col-xl-3 col-lg-3 form-group ">
-                            <input type="text" asp-for="Code" class="form-control input-sys" id="Code" readonly>
+                            <input type="text" asp-for="Code" class="form-control input-sys" id="Code">
                             <span asp-validation-for="Code" class="text-danger"></span>
                             <span id="validCurrencyCode" class="text-danger"></span>
                         </div>
@@ -130,7 +131,7 @@
                     </div>
                     <br>
                     <div class="text-center">
-                        <button type="button" id="submitCurrency" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
                         <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
 
                     </div>
@@ -140,7 +141,8 @@
         </div>
     </div>
 </div>
-
+@*
 @section Scripts{
     <script src="~/js/pages/Currency/AddCurrency.js"></script>
 }
+*@

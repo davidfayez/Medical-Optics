@@ -20,9 +20,9 @@
                     id: "id",
                     fields: {
                         id: { editable: false },
-                        complaintCode: { editable: false },
-                        complaintNameAr: { editable: false },
-                        complaintNameEn: { editable: false },
+                        Code: { editable: false },
+                        currencyNameAr: { editable: false },
+                        currencyNameEn: { editable: false },
                         description: { editable: false },
                         creationDate: { type: "date", editable: false },
                         lastModifiedDate: { type: "date", editable: false },
@@ -63,9 +63,9 @@
             },
             columns: [
 
-                { field: "complaintCode", title: Resources.CodeResource, width: Resources.CodeWidth },
-                { field: "complaintNameAr", title: Resources.NameArResource, width: Resources.NameWidth },
-                { field: "complaintNameEn", title: Resources.NameEnResource, width: Resources.NameWidth },
+                { field: "code", title: Resources.CodeResource, width: Resources.CodeWidth },
+                { field: "currencyNameAr", title: Resources.NameArResource, width: Resources.NameWidth },
+                { field: "currencyNameEn", title: Resources.NameEnResource, width: Resources.NameWidth },
 
                 { width: Resources.CheckboxWidth, template: "<input type='checkbox' data-bind='checked:isActive' class= 'control-label i-check' disabled = 'disabled' />", headerTemplate: Resources.Status },
 
