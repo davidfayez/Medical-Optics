@@ -43,13 +43,13 @@ public class CityController : BaseController
     {
         if (id > 0)
         {
-            var complaint = await Mediator.Send(new GetCityByIdQuery
+            var city = await Mediator.Send(new GetCityByIdQuery
             {
                 Id = id,
             });
-            if (complaint != null)
+            if (city != null)
             {
-                var result = _mapper.Map<UpdateCityCommand>(complaint);
+                var result = _mapper.Map<UpdateCityCommand>(city);
                 return View(result);
             }
         }

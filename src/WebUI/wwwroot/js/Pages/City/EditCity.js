@@ -31,6 +31,7 @@ $("#btnSubmit").on('click', function () {
         $("#formCity").submit();
     }
 });
+
 function removeCountryEdit(id) {
 
     swal({
@@ -70,6 +71,6 @@ function removeCountryEdit(id) {
                 error: function (err, xqr, txt) { }
             });
 
-        }, 3000);
+        }, 2000);
     });
 }

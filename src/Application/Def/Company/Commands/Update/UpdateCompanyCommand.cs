@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using ERP.DAL.Domains.Def;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
 using Medical_Optics.Application.Def.Company.Commands.Create;
-using Medical_Optics.Application.Def.Company.Commands.Update;
-using Medical_Optics.Application.Optic.Complaint.Commands.Update;
 using Medical_Optics.Domain.Common;
 using Microsoft.AspNetCore.Http;
 using Medical_Optics.Domain.Entities.Def;
@@ -42,8 +34,8 @@ public class UpdateCompanyCommand : AuditableEntity, IRequest<bool>, IMapFrom<De
         profile.CreateMap<UpdateCompanyCommand, DefCompany>()
                .ReverseMap();
 
-        profile.CreateMap<UpdateCompanyCommand, CreateCompanyCommand>()
-               .ReverseMap();
+        //profile.CreateMap<UpdateCompanyCommand, CreateCompanyCommand>()
+        //       .ReverseMap();
     }
 
 }
