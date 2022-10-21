@@ -1,8 +1,6 @@
-﻿
-@{
-    ViewData["Title"] = Global.Currencies;
-    var standalone = string.IsNullOrEmpty(Context.Request.Query["standalone"]) ? false : true;
-    var divClass = "col-xl-10 col-lg-12";
+﻿@{
+    ViewData["Title"] = @Optic.Complaint;
+    Layout = "_OpticLayout";
 }
 
 <div class="card margin-card container-fluid yourdiv">
@@ -32,13 +30,13 @@
                 <!--end Side menu-->
             </div>
 
-            <div class="@divClass">
+            <div class="col-xl-10 col-lg-12">
                 <input type="hidden" id="Name" value="@Global.Currencies" />
 
                 <!--Page Content-->
                 <button type="button" class="btn btn-outline-success exportExcel" style="float:left;">@Global.Export<i class="fa fa-file-excel"></i></button>
 
-                                    <a class="btn btn-success btn-sm btn-add" asp-action="Create"><i class="fas fa-plus"></i>@Global.AddNew</a>
+                <a class="btn btn-success btn-sm btn-add" asp-action="Create"><i class="fas fa-plus"></i>@Global.AddNew</a>
 
                 <br />
                 <div id="CurrenciesGrid">

@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using ERP.DAL.Domains.Def;
+﻿using AutoMapper;
 using MediatR;
 using Medical_Optics.Application.Common.Interfaces;
 using Medical_Optics.Application.Common.Mappings;
-using Medical_Optics.Application.Def.Company.Commands.Update;
 using Medical_Optics.Domain.Common;
 using Medical_Optics.Domain.Entities.Def;
 

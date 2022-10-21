@@ -1,6 +1,7 @@
 ﻿@model UpdateCompanyCommand
 @{
-    ViewData["Title"] = Global.CompanyProfilePageTitle;
+    ViewData["Title"] = @Global.Add + " " + @Global.CompanyProfilePageTitle;
+    Layout = "_OpticLayout";
 }
 
 <div class="card margin-card container-fluid yourdiv">
@@ -19,7 +20,7 @@
 
             </div>
             <div class="col-xl-10 col-lg-12">
-                <form asp-action="Index" enctype="multipart/form-data">
+                <form asp-action="Edit" enctype="multipart/form-data">
                     <div class="row">
 
                         <div class="col-lg-9 ">

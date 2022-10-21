@@ -1,6 +1,6 @@
 ﻿@model UpdateCityCommand
 @{
-  ViewData["Title"] = @Global.Edit + " " + @Optic.Complaint;
+    ViewData["Title"] = @Global.Edit + " " + @Global.City;
     Layout = "_OpticLayout";
     var divClass = "col-xl-10 col-lg-12";
 }
@@ -34,7 +34,7 @@
 
             <div class="@divClass">
                 <!--Page Content-->
-                <form asp-action="Edit" id="formCity" method="post" class="col-xl-10 col-lg-12">
+                <form asp-controller="City" asp-action="Edit" method="post" class="col-xl-10 col-lg-12">
 
 
                     <div class="row">
@@ -153,8 +153,8 @@
 
                     <br>
                     <div class="text-center">
-                        <button type="button" id="btnSubmit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
-                        <button type="button" class="btn btn-danger btn-sm btnDelete" onclick="removeCountryEdit(@Model.Id);"><i class="fas fa-trash-alt"></i> @Global.Delete</button>
+                        <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <button type="button" class="btn btn-danger btn-sm" onclick="removeCountryEdit(@Model.Id);"><i class="fas fa-trash-alt"></i> @Global.Delete</button>
                         <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
 
                     </div>
