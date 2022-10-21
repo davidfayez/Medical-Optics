@@ -771,6 +771,9 @@
   <data name="Settings" xml:space="preserve">
     <value>الإعدادات</value>
   </data>
+  <data name="SocialStatus" xml:space="preserve">
+    <value>الحالة الاجتماعية</value>
+  </data>
   <data name="StartDate" xml:space="preserve">
     <value>تاريخ بداية اول دفعة</value>
   </data>

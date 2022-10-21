@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Domain.Entities.Def;
 
@@ -24,5 +25,8 @@ namespace Medical_Optics.Domain.Entities.Def;
 
         public int? DefBranchId { get; set; }
         public virtual DefBranch DefBranch { get; set; }
-    }
+        public virtual IList<CustomerData> CustomersData { get; set; }
+
+
+}
 

@@ -2,8 +2,10 @@
 using ERP.DAL.Domains.Authentication;
 using ERP.DAL.Domains.Def;
 using Medical_Optics.Domain.Entities.Def;
+using Medical_Optics.Domain.Entities.HR;
 using Medical_Optics.Domain.Entities.Identity;
 using Medical_Optics.Domain.Entities.Optic;
+using Medical_Optics.Domain.Entities.Optic.Favorites;
 
 namespace Medical_Optics.Application.Common.Interfaces;
 public interface IApplicationDbContext
@@ -27,12 +29,28 @@ public interface IApplicationDbContext
     DbSet<DefReligion> DefReligions { get;}
     #endregion
 
+    #region HR
+    DbSet<HrSocialStatus> HrSocialStatus { get; }
+    #endregion
+
     #region Optic
     DbSet<Complaint> Complaints { get; }
     DbSet<SubComplaint> SubComplaints { get; }
     DbSet<Diagnose> Diagnoses { get; }
+    DbSet<CustomerData> CustomersData { get; }
+    DbSet<MedicalInsurance> MedicalInsurances { get; }
+    DbSet<NationalAddress> NationalAddresses { get; }
 
     #endregion
+
+    #region Favorite
+    DbSet<FavoriteComplaint> FavoriteComplaints { get; }
+    DbSet<FavoriteDiagnosis> FavoriteDiagnosises { get; }
+    DbSet<FavoriteExamination> FavoriteExaminations { get; }
+    DbSet<FavoritePharmacy> FavoritePharmacies { get; }
+
+    #endregion
+
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 
 }

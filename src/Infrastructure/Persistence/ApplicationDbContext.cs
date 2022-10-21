@@ -12,6 +12,8 @@ using Medical_Optics.Domain.Entities.Optic;
 using System.Reflection;
 using Medical_Optics.Domain.Entities.Def;
 using Medical_Optics.Domain.Entities.Identity;
+using Medical_Optics.Domain.Entities.HR;
+using Medical_Optics.Domain.Entities.Optic.Favorites;
 
 namespace Medical_Optics.Infrastructure.Persistence;
 
@@ -55,12 +57,28 @@ public partial class ApplicationDbContext : IdentityDbContext<AspNetUser, Applic
     public virtual DbSet<DefReligion> DefReligions => Set<DefReligion>();
     #endregion
 
+    #region HR
+    public virtual DbSet<HrSocialStatus> HrSocialStatus => Set<HrSocialStatus>();
+    #endregion
+
     #region Optic
     public virtual DbSet<Complaint> Complaints => Set<Complaint>();
     public virtual DbSet<SubComplaint> SubComplaints => Set<SubComplaint>();
     public virtual DbSet<Diagnose> Diagnoses => Set<Diagnose>();
+    public virtual DbSet<CustomerData> CustomersData => Set<CustomerData>();
+    public virtual DbSet<MedicalInsurance> MedicalInsurances => Set<MedicalInsurance>();
+    public virtual DbSet<NationalAddress> NationalAddresses => Set<NationalAddress>();
 
     #endregion
+
+    #region Favorite
+    public virtual DbSet<FavoriteComplaint> FavoriteComplaints => Set<FavoriteComplaint>();
+    public virtual DbSet<FavoriteDiagnosis> FavoriteDiagnosises => Set<FavoriteDiagnosis>();
+    public virtual DbSet<FavoriteExamination> FavoriteExaminations => Set<FavoriteExamination>();
+    public virtual DbSet<FavoritePharmacy> FavoritePharmacies => Set<FavoritePharmacy>();
+
+    #endregion
+
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
