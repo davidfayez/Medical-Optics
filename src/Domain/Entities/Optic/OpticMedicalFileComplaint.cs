@@ -24,5 +24,5 @@ public class OpticMedicalFileComplaint : AuditableEntity
     public string Description { get; set; }
 
 
-    public virtual OpticCustomerData Client { get; set; }
+    public virtual CustomerData Client { get; set; }
 }

@@ -23,5 +23,5 @@ public class OpticMedicalFileDiagnosis : AuditableEntity
     [Required, StringLength(50)]
     public string DiagnosisCode { get; set; }
 
-    public virtual OpticCustomerData Client { get; set; }
+    public virtual CustomerData Client { get; set; }
 }

@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Domain.Entities.Def;
 
@@ -21,4 +22,6 @@ public class DefReligion : AuditableEntity
     public string ReligionNameEn { get; set; }
     [StringLength(1000)]
     public string Description { get; set; }
+    public virtual IList<CustomerData> CustomersData { get; set; }
+
 }

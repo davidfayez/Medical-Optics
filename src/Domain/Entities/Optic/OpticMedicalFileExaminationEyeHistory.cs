@@ -27,5 +27,5 @@ public class OpticMedicalFileExaminationEyeHistory : AuditableEntity
 
     [StringLength(500)]
     public string EyeHistoryOther { get; set; }
-    public virtual OpticCustomerData Client { get; set; }
+    public virtual CustomerData Client { get; set; }
 }

@@ -45,5 +45,5 @@ public class OpticMedicalFileExamination : AuditableEntity
     [Required, StringLength(1000)]
     public string LocalExamination { get; set; }         // المكتوب في Textarea
 
-    public virtual OpticCustomerData Client { get; set; }
+    public virtual CustomerData Client { get; set; }
 }

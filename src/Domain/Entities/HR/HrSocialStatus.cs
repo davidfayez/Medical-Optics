@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Medical_Optics.Domain.Entities.Optic;
 
 namespace Medical_Optics.Domain.Entities.HR;
 [Table("HrSocialStatus")]//الحالة الاجتماعية
@@ -23,5 +24,7 @@ public class HrSocialStatus : AuditableEntity
     public string TypeNameEn { get; set; }
     [StringLength(1000)]
     public string Description { get; set; }
-    
+    public virtual IList<CustomerData> CustomersData { get; set; }
+
+
 }
