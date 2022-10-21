@@ -768,6 +768,9 @@
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="SocialStatus" xml:space="preserve">
+    <value>Social Status</value>
+  </data>
   <data name="StartDate" xml:space="preserve">
     <value>First payment date</value>
   </data>

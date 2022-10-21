@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Medical_Optics.Domain.Entities.Optic;
 
-[Table("OpticCustomerMedicalInsurance")] // التامين الطبى للعميل
-public class OpticCustomerMedicalInsurance : AuditableEntity
+[Table("CustomerMedicalInsurance")] // التامين الطبى للعميل
+public class CustomerMedicalInsurance : AuditableEntity
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
@@ -31,5 +31,5 @@ public class OpticCustomerMedicalInsurance : AuditableEntity
 
     [StringLength(1000)]
     public string Description { get; set; }
-    public virtual OpticCustomerData Client { get; set; }
+    public virtual CustomerData Client { get; set; }
 }

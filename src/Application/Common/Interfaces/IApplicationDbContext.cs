@@ -2,6 +2,7 @@
 using ERP.DAL.Domains.Authentication;
 using ERP.DAL.Domains.Def;
 using Medical_Optics.Domain.Entities.Def;
+using Medical_Optics.Domain.Entities.HR;
 using Medical_Optics.Domain.Entities.Identity;
 using Medical_Optics.Domain.Entities.Optic;
 
@@ -25,6 +26,10 @@ public interface IApplicationDbContext
     DbSet<DefDocumentType> DefDocumentTypes { get;} 
     DbSet<DefNationality> DefNationalities { get;} 
     DbSet<DefReligion> DefReligions { get;}
+    #endregion
+
+    #region HR
+    DbSet<HrSocialStatus> HrSocialStatus { get; }
     #endregion
 
     #region Optic

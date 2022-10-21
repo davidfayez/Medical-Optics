@@ -8,7 +8,7 @@ using Medical_Optics.Domain.Entities.Def;
 namespace Medical_Optics.Domain.Entities.Optic;
 
 [Table("CustomerData")]    // بيانات العميل الاساسية
-public class OpticCustomerData : AuditableEntity
+public class CustomerData : AuditableEntity
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }

@@ -2014,6 +2014,15 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Social Status.
+        /// </summary>
+        public static string SocialStatus {
+            get {
+                return ResourceManager.GetString("SocialStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First payment date.
         /// </summary>
         public static string StartDate {

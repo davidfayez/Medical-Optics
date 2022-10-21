@@ -12,6 +12,7 @@ using Medical_Optics.Domain.Entities.Optic;
 using System.Reflection;
 using Medical_Optics.Domain.Entities.Def;
 using Medical_Optics.Domain.Entities.Identity;
+using Medical_Optics.Domain.Entities.HR;
 
 namespace Medical_Optics.Infrastructure.Persistence;
 
@@ -53,6 +54,10 @@ public partial class ApplicationDbContext : IdentityDbContext<AspNetUser, Applic
     public virtual DbSet<DefDocumentType> DefDocumentTypes => Set<DefDocumentType>();
     public virtual DbSet<DefNationality> DefNationalities => Set<DefNationality>();
     public virtual DbSet<DefReligion> DefReligions => Set<DefReligion>();
+    #endregion
+
+    #region HR
+    public virtual DbSet<HrSocialStatus> HrSocialStatus => Set<HrSocialStatus>();
     #endregion
 
     #region Optic

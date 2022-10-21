@@ -7,8 +7,8 @@ using Medical_Optics.Domain.Entities.Def;
 
 namespace Medical_Optics.Domain.Entities.Optic;
 
-[Table("OpticNationalAddress")] // العنوان الوطنى الموحد
-public class OpticNationalAddress : AuditableEntity
+[Table("NationalAddress")] // العنوان الوطنى الموحد
+public class NationalAddress : AuditableEntity
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
@@ -40,7 +40,7 @@ public class OpticNationalAddress : AuditableEntity
     [StringLength(10)]
     public string UnitNumber { get; set; } // رقم الوحدة
     public virtual DefCity City { get; set; }
-    public virtual OpticCustomerData Client { get; set; }
+    public virtual CustomerData Client { get; set; }
 
 
 }
