@@ -32,9 +32,9 @@ public class SubComplaintConfiguration : IEntityTypeConfiguration<SubComplaint>
                .HasMaxLength(1000);
 
         builder.HasOne(s => s.Complaint)
-            .WithMany(s => s.SubComplaints)
-            .HasForeignKey(s => s.ComplaintId)
-            .OnDelete(DeleteBehavior.NoAction);
+               .WithMany(s => s.SubComplaints)
+               .HasForeignKey(s => s.ComplaintId)
+               .OnDelete(DeleteBehavior.NoAction);
 
     }
 }

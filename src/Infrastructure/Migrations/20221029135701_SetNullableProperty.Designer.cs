@@ -4,6 +4,7 @@ using Medical_Optics.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Medical_Optics.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221029135701_SetNullableProperty")]
+    partial class SetNullableProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1344,7 +1346,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("NationalityId")
-                        //.IsRequired()
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("PayType")
@@ -1355,11 +1357,11 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ReligionId")
-                        //.IsRequired()
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int?>("SocialStatusId")
-                        //.IsRequired()
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -2416,20 +2418,20 @@ namespace Medical_Optics.Infrastructure.Migrations
                     b.HasOne("Medical_Optics.Domain.Entities.Def.DefNationality", "Nationality")
                         .WithMany("CustomersData")
                         .HasForeignKey("NationalityId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                    //.IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("Medical_Optics.Domain.Entities.Def.DefReligion", "Religion")
                         .WithMany("CustomersData")
                         .HasForeignKey("ReligionId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                    //.IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("Medical_Optics.Domain.Entities.HR.HrSocialStatus", "SocialStatus")
                         .WithMany("CustomersData")
                         .HasForeignKey("SocialStatusId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                        //.IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("CreatedUser");
 

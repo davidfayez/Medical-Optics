@@ -61,6 +61,51 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Age.
+        /// </summary>
+        public static string Age {
+            get {
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card Image.
+        /// </summary>
+        public static string CardImage {
+            get {
+                return ResourceManager.GetString("CardImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card Number.
+        /// </summary>
+        public static string CardNumber {
+            get {
+                return ResourceManager.GetString("CardNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class Type.
+        /// </summary>
+        public static string ClassType {
+            get {
+                return ResourceManager.GetString("ClassType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client Name.
+        /// </summary>
+        public static string ClientName {
+            get {
+                return ResourceManager.GetString("ClientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Complaint.
         /// </summary>
         public static string Complaint {
@@ -79,11 +124,182 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Customer Data.
+        /// </summary>
+        public static string CustomerData {
+            get {
+                return ResourceManager.GetString("CustomerData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer File No.
+        /// </summary>
+        public static string CustomerFileNo {
+            get {
+                return ResourceManager.GetString("CustomerFileNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Image.
+        /// </summary>
+        public static string CustomerImage {
+            get {
+                return ResourceManager.GetString("CustomerImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer MRN.
+        /// </summary>
+        public static string CustomerMRN {
+            get {
+                return ResourceManager.GetString("CustomerMRN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Arabic Name.
+        /// </summary>
+        public static string CustomerNameAr {
+            get {
+                return ResourceManager.GetString("CustomerNameAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer English Name.
+        /// </summary>
+        public static string CustomerNameEn {
+            get {
+                return ResourceManager.GetString("CustomerNameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Expiry.
+        /// </summary>
+        public static string DateExpiry {
+            get {
+                return ResourceManager.GetString("DateExpiry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Issued.
+        /// </summary>
+        public static string DateIssued {
+            get {
+                return ResourceManager.GetString("DateIssued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Diagnose.
         /// </summary>
         public static string Diagnose {
             get {
                 return ResourceManager.GetString("Diagnose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extra Number.
+        /// </summary>
+        public static string ExtraNumber {
+            get {
+                return ResourceManager.GetString("ExtraNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Family Name.
+        /// </summary>
+        public static string FamilyName {
+            get {
+                return ResourceManager.GetString("FamilyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Father Name.
+        /// </summary>
+        public static string FatherName {
+            get {
+                return ResourceManager.GetString("FatherName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        public static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID Number.
+        /// </summary>
+        public static string IDNumber {
+            get {
+                return ResourceManager.GetString("IDNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID Type.
+        /// </summary>
+        public static string IDType {
+            get {
+                return ResourceManager.GetString("IDType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insurance Company Name.
+        /// </summary>
+        public static string InsuranceCompanyName {
+            get {
+                return ResourceManager.GetString("InsuranceCompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MainCustomerData.
+        /// </summary>
+        public static string MainCustomerData {
+            get {
+                return ResourceManager.GetString("MainCustomerData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        public static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medical Insurance.
+        /// </summary>
+        public static string MedicalInsurance {
+            get {
+                return ResourceManager.GetString("MedicalInsurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to National Address.
+        /// </summary>
+        public static string NationalAddress {
+            get {
+                return ResourceManager.GetString("NationalAddress", resourceCulture);
             }
         }
         
@@ -106,6 +322,24 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Patient File.
+        /// </summary>
+        public static string PatientFile {
+            get {
+                return ResourceManager.GetString("PatientFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pay Type.
+        /// </summary>
+        public static string PayType {
+            get {
+                return ResourceManager.GetString("PayType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Religion.
         /// </summary>
         public static string Religion {
@@ -115,11 +349,56 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Social Status.
+        /// </summary>
+        public static string SocialStatus {
+            get {
+                return ResourceManager.GetString("SocialStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Street Name.
+        /// </summary>
+        public static string StreetName {
+            get {
+                return ResourceManager.GetString("StreetName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SubComplaint.
         /// </summary>
         public static string SubComplaint {
             get {
                 return ResourceManager.GetString("SubComplaint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unified National Number.
+        /// </summary>
+        public static string UnifiedNationalNumber {
+            get {
+                return ResourceManager.GetString("UnifiedNationalNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit Number.
+        /// </summary>
+        public static string UnitNumber {
+            get {
+                return ResourceManager.GetString("UnitNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Medical Insurance Card.
+        /// </summary>
+        public static string VirtualMedicalCard {
+            get {
+                return ResourceManager.GetString("VirtualMedicalCard", resourceCulture);
             }
         }
     }

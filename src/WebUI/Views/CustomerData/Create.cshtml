@@ -1,0 +1,90 @@
+﻿@model CreateCustomerDataCommand
+@{
+    ViewData["Title"] = @Global.Add + " " + @Optic.CustomerData;
+    Layout = "_OpticLayout";
+}
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Add  @Optic.CustomerData</h3>
+        </div>
+        <div class="col-md-8">
+
+            <div class="menu text-right">
+                <partial name="_HeaderMenu" />
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile/@Global.Add /@Optic.CustomerData
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-10 col-lg-12">
+
+                <!--Page Content-->
+                <form asp-controller="CustomerData" asp-action="Create" method="post" enctype="multipart/form-data">
+
+                    <div class="parent-title">
+
+                        <h3 class="name-title" id="Company-Name"><strong> بيانات العميل الاساسية</strong></h3>
+
+                        <div class="display-information" style="display: block;">
+                            <partial name="_CustomerData" model="Model" />
+                        </div>
+
+                    </div>
+
+                    <!--   ...............Address.............  -->
+                    <div class="parent-title">
+
+                        <h3 class="name-title" id="Company-Name"><strong>العنوان الوطنى</strong></h3>
+
+                        <div class="display-information">
+                            <partial name="_NationalAddress" model="Model" />
+
+                        </div>
+
+                    </div>
+
+                    <!--   ...............Medical Data..............  -->
+                    <div class="parent-title">
+
+                        <h3 class="name-title" id="Company-Name"><strong> التأمين الطبى</strong></h3>
+
+                        <div class="display-information">
+                            <partial name="_MedicalInsurance" model="Model" />
+                        </div>
+
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning btn-sm" style="min-width:150px;">حفظ</button>
+                    </div>
+
+                </form>
+                <!--Page Content-->
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/pages/CustomerData/AddCustomerData.js"></script>
+}

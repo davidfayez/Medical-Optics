@@ -1,0 +1,274 @@
+﻿@model CreateCustomerDataCommand 
+
+<input type="hidden" asp-for="CustomerDataVM.Id" />
+<input type="hidden" asp-for="CustomerDataVM.CreatedUserId" />
+<input type="hidden" asp-for="CustomerDataVM.LastModifiedUserId" />
+<input type="hidden" asp-for="CustomerDataVM.DeletedUserId" />
+<input type="hidden" asp-for="CustomerDataVM.CreationDate" />
+<input type="hidden" asp-for="CustomerDataVM.LastModifiedDate" />
+<div class="row">
+    <div class="col-lg-9 ">
+
+        <div class="row">
+
+            <label class="col-xl-2 col-lg-4 form-group"> @Global.PaymentType </label>
+
+            <div class="col-xl-2 col-lg-3 col-6 form-group">
+
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" asp-for="CustomerDataVM.PayType" id="Cash" value="@((int)PayType.Cash)" checked>
+                    <label class="custom-control-label" for="Cash">@Global.Cash</label>
+
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-6 form-group">
+
+                <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" asp-for="CustomerDataVM.PayType" id="Credit" value="@((int)PayType.Credit)">
+                    <label class="custom-control-label" for="Credit">@Global.Credit </label>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.CustomerMRN</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.CustomerMRN" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.CustomerMRN" class="text-danger"></span>
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.CustomerFileNo</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.CustomerFileNo" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.CustomerFileNo" class="text-danger"></span>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.CustomerNameAr</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.CustomerNameAr" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.CustomerNameAr" class="text-danger"></span>
+
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.CustomerNameEn</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.CustomerNameEn" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.CustomerNameEn" class="text-danger"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.FatherName</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.FatherName" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.FatherName" class="text-danger"></span>
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.FamilyName</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.FamilyName" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.FamilyName" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Global.BirthDate</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="date" asp-for="CustomerDataVM.BirthDate" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.BirthDate" class="text-danger"></span>
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.Age</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="number" asp-for="CustomerDataVM.Age" class="form-control input-sys" readonly>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.IDType</label>
+
+            <div class="col-lg-4 form-group ">
+                <select asp-for="CustomerDataVM.IDType" asp-items="Model.CustomerDataVM.IDTypes" class="form-control input-sys">
+                </select>
+                <span asp-validation-for="CustomerDataVM.IDType" class="text-danger"></span>
+            </div>
+
+            <label class="col-lg-2 form-group ">  @Optic.IDNumber</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.IDNumber" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.IDNumber" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">  @Global.Phone1</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.Phone" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.Phone" class="text-danger"></span>
+
+            </div>
+
+            <label class="col-lg-2 form-group ">  @Global.Mobile</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.Mobile" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.Mobile" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-xl-2 col-lg-4 form-group"> @Global.Type </label>
+
+            <div class="col-xl-2 col-lg-3 col-6 form-group">
+
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" asp-for="CustomerDataVM.Gender" id="Male" value="@((int)Gender.Male)" checked>
+                    <label class="custom-control-label" for="Male">@Optic.Male</label>
+
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-6 form-group">
+
+                <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" asp-for="CustomerDataVM.Gender" id="Female" value="@((int)Gender.Female)">
+                    <label class="custom-control-label" for="Female">@Optic.Female </label>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.Nationality</label>
+
+            <div class="col-lg-4 form-group ">
+                <select asp-for="CustomerDataVM.NationalityId" asp-items="Model.CustomerDataVM.Nationalities" class="form-control input-sys">
+                </select>
+
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.Religion</label>
+
+            <div class="col-lg-4 form-group ">
+                <select asp-for="CustomerDataVM.ReligionId" asp-items="Model.CustomerDataVM.Religiones" class="form-control input-sys">
+                </select>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.SocialStatus</label>
+
+            <div class="col-lg-4 form-group ">
+                <select asp-for="CustomerDataVM.SocialStatusId" asp-items="Model.CustomerDataVM.SocialStatuses" class="form-control input-sys">
+                    
+                </select>
+
+            </div>
+
+            <label class="col-lg-2 form-group ">@Global.Email</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="CustomerDataVM.Email" class="form-control input-sys">
+                <span asp-validation-for="CustomerDataVM.Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <label asp-for="CustomerDataVM.Description" class="col-xl-2 col-lg-3 form-group  ">
+                @Global.Description
+            </label>
+
+            <div class="col-xl-8 col-lg-7 form-group ">
+                <textarea asp-for="CustomerDataVM.Description" class="form-control input-sys"></textarea>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <label class="col-xl-2 col-lg-4 form-group ">
+                @Global.Status
+            </label>
+
+            <div class="col-xl-2 col-lg-3 col-6 form-group">
+
+                <div class="custom-control custom-radio">
+                    <input type="radio" asp-for="CustomerDataVM.IsActive" value="True" class="custom-control-input" id="rdActive" checked>
+                    <label class="custom-control-label" for="rdActive">@Global.Active</label>
+
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-6 form-group">
+
+                <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" asp-for="CustomerDataVM.IsActive" value="False" id="rdInactive">
+                    <label class="custom-control-label" for="rdInactive">@Global.Inactive</label>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="col-lg-3">
+        <div class="image-upload">
+            @if (Model.CustomerDataVM.Id > 0)
+            {
+                <input type="hidden" asp-for="CustomerDataVM.ImageUrl" value="@Model.CustomerDataVM.ImageUrl" />
+                <a href="~/images/@Model.CustomerDataVM.ImageUrl" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                    <img src="~/images/@Model.CustomerDataVM.ImageUrl" id="customerImage">
+                </a>
+            }
+            else
+            {
+                <a href="~/images/back-login.jpg" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                    <img src="~/images/back-login.jpg" id="customerImage">
+                </a>
+            }
+            <label asp-for="CustomerDataVM.CustomerImage">@Optic.CustomerImage</label>
+            <input type="file" asp-for="CustomerDataVM.CustomerImage" accept=".gif, .jpg, .png" onchange="setCustomerImage(this)" style="display:none;">
+        </div>
+    </div>
+
+
+</div>

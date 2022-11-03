@@ -1,0 +1,33 @@
+﻿@model GetAllPatientsFilesQuery
+<form asp-controller="CustomerData" asp-action="GetAllPatientsFilesByFilter"
+      data-ajax="true"
+      data-ajax-method="POST"
+      data-ajax-update="#block-item"
+      data-ajax-mode="replace" autocomplete="off">
+
+    <div class="row patient-data ">
+        <div class="col-lg-2 col-6 form-group ">
+            <label class="form-group">@Optic.CustomerMRN</label>
+
+            <input type="text" asp-for="CustomerMRN" class="form-control input-sys" >
+
+        </div>
+        <div class="col-lg-3 col-6 form-group ">
+            <label class="form-group">@Optic.IDNumber</label>
+            <input type="text" asp-for="IDNumber" class="form-control input-sys">
+
+        </div>
+        <div class="col-lg-4 col-6 form-group ">
+            <label class="form-group">@Optic.ClientName</label>
+            <input type="text" asp-for="ClientName" class="form-control input-sys">
+
+        </div>
+
+        <div class="col-lg-2 col-6 form-group ">
+            <button type="submit" class="btn-add-line" style="margin-top: 20px;" id="btnSearch">@Global.Search</button>
+
+        </div>
+
+    </div>
+
+</form>

@@ -86,7 +86,7 @@ public class NationalityController : BaseController
 
     public async Task<JsonResult> GetAll()
     {
-        var religion = await Mediator.Send(new GetAllNationalityQuery());
-        return Json(religion);
+        var Nationalities = await Mediator.Send(new GetAllNationalityQuery());
+        return Json(Nationalities);
     }
 }

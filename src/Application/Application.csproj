@@ -13,8 +13,11 @@
         <PackageReference Include="FluentValidation" Version="10.3.4" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.4" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="1.0.3" />
         
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+
+
     </ItemGroup>
 
     <ItemGroup>
@@ -66,6 +69,8 @@
     <ItemGroup>
       <Folder Include="Branches\Commands\" />
       <Folder Include="Def\City\Queries\GetAll\" />
+      <Folder Include="Optic\CustomerData\Commands\Delete\" />
+      <Folder Include="Optic\CustomerData\Commands\Update\" />
     </ItemGroup>
 
 </Project>

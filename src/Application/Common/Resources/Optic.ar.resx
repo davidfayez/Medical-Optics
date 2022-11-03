@@ -117,14 +117,86 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Age" xml:space="preserve">
+    <value>العمر</value>
+  </data>
+  <data name="CardImage" xml:space="preserve">
+    <value>صورة كارت التامين</value>
+  </data>
+  <data name="CardNumber" xml:space="preserve">
+    <value>رقم بطاقة التأمين</value>
+  </data>
+  <data name="ClassType" xml:space="preserve">
+    <value>نوع الفئة</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>اسم العميل</value>
+  </data>
   <data name="Complaint" xml:space="preserve">
     <value>الشكوي</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>البلد</value>
   </data>
+  <data name="CustomerData" xml:space="preserve">
+    <value>بيانات العميل</value>
+  </data>
+  <data name="CustomerFileNo" xml:space="preserve">
+    <value>رقم ملف العميل</value>
+  </data>
+  <data name="CustomerImage" xml:space="preserve">
+    <value>صورة  العميل</value>
+  </data>
+  <data name="CustomerMRN" xml:space="preserve">
+    <value>كود العميل</value>
+  </data>
+  <data name="CustomerNameAr" xml:space="preserve">
+    <value>اسم العميل عربى</value>
+  </data>
+  <data name="CustomerNameEn" xml:space="preserve">
+    <value>اسم العميل انجليزى</value>
+  </data>
+  <data name="DateExpiry" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="DateIssued" xml:space="preserve">
+    <value>تاريخ الاصدار</value>
+  </data>
   <data name="Diagnose" xml:space="preserve">
     <value>التشخيص</value>
+  </data>
+  <data name="ExtraNumber" xml:space="preserve">
+    <value>الرقم الإضافي</value>
+  </data>
+  <data name="FamilyName" xml:space="preserve">
+    <value>اسم العائلة</value>
+  </data>
+  <data name="FatherName" xml:space="preserve">
+    <value>اسم الاب</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>انثى</value>
+  </data>
+  <data name="IDNumber" xml:space="preserve">
+    <value>رقم الاقامة / الهوية الوطنية</value>
+  </data>
+  <data name="IDType" xml:space="preserve">
+    <value>نوع الهوية</value>
+  </data>
+  <data name="InsuranceCompanyName" xml:space="preserve">
+    <value>اسم شركة التأمين</value>
+  </data>
+  <data name="MainCustomerData" xml:space="preserve">
+    <value>بيانات العميل الاساسية</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>ذكر</value>
+  </data>
+  <data name="MedicalInsurance" xml:space="preserve">
+    <value>التأمين الطبى</value>
+  </data>
+  <data name="NationalAddress" xml:space="preserve">
+    <value>العنوان الوطنى</value>
   </data>
   <data name="Nationality" xml:space="preserve">
     <value>الجنسيه</value>
@@ -132,10 +204,31 @@
   <data name="OpticMedicalFile" xml:space="preserve">
     <value>الملف الطبى للنظارت</value>
   </data>
+  <data name="PatientFile" xml:space="preserve">
+    <value>ملف العميل</value>
+  </data>
+  <data name="PayType" xml:space="preserve">
+    <value>طريقة الدفع</value>
+  </data>
   <data name="Religion" xml:space="preserve">
     <value>الديانه</value>
   </data>
+  <data name="SocialStatus" xml:space="preserve">
+    <value>الحالة الاجتماعية</value>
+  </data>
+  <data name="StreetName" xml:space="preserve">
+    <value>اسم الشارع</value>
+  </data>
   <data name="SubComplaint" xml:space="preserve">
     <value>الشكوى الفرعيه</value>
+  </data>
+  <data name="UnifiedNationalNumber" xml:space="preserve">
+    <value>الرقم الوطني الموحد</value>
+  </data>
+  <data name="UnitNumber" xml:space="preserve">
+    <value>رقم الوحدة</value>
+  </data>
+  <data name="VirtualMedicalCard" xml:space="preserve">
+    <value>كارت التأمين الافتراضى</value>
   </data>
 </root>

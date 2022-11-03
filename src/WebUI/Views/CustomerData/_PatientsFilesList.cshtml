@@ -1,0 +1,39 @@
+﻿@model List<CustomerDataVM>
+
+<div class="paging-1">
+
+    <ul class="row ul-clients content">
+        @foreach (var patient in Model)
+        {
+            <li class="col-lg-4 col-md-6">
+                <a href="M-Patient-File-inner.html" class="hvr-hang">
+                    <img src="~/images/@patient.ImageUrl" />
+                    <div class="container-client">
+
+                        <h5 class="name-client">@patient.CustomerMRN @patient.CustomerNameEn </h5>
+                        <h6>@patient.Email</h6>
+                        <h6>@patient.Mobile</h6>
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="visit-client">Visit</h5>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="date-client">@patient.BirthDate.Value.ToShortDateString()</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </a>
+            </li>
+
+        }
+
+    </ul>
+
+    <br>
+    <div class="page_navigation"></div>
+
+    <div class="clear"></div>
+
+</div>

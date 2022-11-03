@@ -4,6 +4,7 @@ using Medical_Optics.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Medical_Optics.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221027163609_AddFavoriteTables")]
+    partial class AddFavoriteTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,13 +126,13 @@ namespace Medical_Optics.Infrastructure.Migrations
                             Id = "5e46158f-44e1-4e78-8101-8a4617d5daba",
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "b795837e-ee8a-41ac-aed4-3fea2f771308",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(5717),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 12, DateTimeKind.Local).AddTicks(9968),
                             EmailConfirmed = false,
                             FullName = "ERP Developer",
                             Image = "profile-icon.jpg",
                             IsDeleted = false,
                             IsDeveloper = true,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(5718),
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 12, DateTimeKind.Local).AddTicks(9968),
                             LockoutEnabled = true,
                             NormalizedUserName = "DEVELOPER",
                             Password = "123456",
@@ -180,7 +182,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                         new
                         {
                             Id = "63998b7d-6724-49a6-8488-0798f13726d5",
-                            ConcurrencyStamp = "b5f4b56e-4096-47d5-99d0-35860396c4c9",
+                            ConcurrencyStamp = "31951e95-3343-447b-b7ca-6774f0587b45",
                             Name = "Developer",
                             NameAr = "مبرمج",
                             NormalizedName = "DEVELOPER",
@@ -429,7 +431,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                             BranchNameEn = "Main Branch",
                             CommercialRegister = "123456",
                             CreatedUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6013),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(186),
                             DefCompanyId = 1,
                             Email = "test@example.com",
                             Fax = "123456",
@@ -438,7 +440,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = false,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6014),
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(187),
                             LogoUrl = "//test.jpg",
                             Notes = "No",
                             Phone1 = "01204789654",
@@ -660,7 +662,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                             CompanyNameAr = "الشركة",
                             CompanyNameEn = "Company",
                             CreatedUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(5993),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(169),
                             Email = "test@example.com",
                             Fax = "123456",
                             FinancialYearEnd = new DateTime(2022, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -668,7 +670,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                             IsActive = false,
                             IsDeleted = false,
                             IsSystem = false,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(5985),
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(162),
                             Location = "Riadh",
                             LogoUrl = "//test.jpg",
                             Notes = "No",
@@ -763,12 +765,12 @@ namespace Medical_Optics.Infrastructure.Migrations
                             CountryNameAr = "السعودية",
                             CountryNameEn = "KSA",
                             CreatedUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6129),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(271),
                             Description = "NO",
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = false,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6131)
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(272)
                         });
                 });
 
@@ -862,7 +864,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                             AbbreviationEn = "",
                             Code = "1",
                             CreatedUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6094),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(251),
                             CurrencyNameAr = "العملة الافتراضية",
                             CurrencyNameEn = "Default Currency",
                             DefaultFactor = 1m,
@@ -870,7 +872,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                             IsDeleted = false,
                             IsPimary = true,
                             IsSystem = false,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6095)
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(252)
                         });
                 });
 
@@ -1009,12 +1011,12 @@ namespace Medical_Optics.Infrastructure.Migrations
                         {
                             Id = 1,
                             CreatedUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6159),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(285),
                             Description = "",
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = false,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6161),
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(286),
                             ReligionCode = "1",
                             ReligionNameAr = "مسلم",
                             ReligionNameEn = "Mulslim"
@@ -1171,12 +1173,12 @@ namespace Medical_Optics.Infrastructure.Migrations
                             Id = 1,
                             AspNetUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
                             CreatedUserId = "5e46158f-44e1-4e78-8101-8a4617d5daba",
-                            CreationDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6046),
+                            CreationDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(216),
                             DefBranchId = 1,
                             IsActive = true,
                             IsDeleted = false,
                             IsSystem = false,
-                            LastModifiedDate = new DateTime(2022, 10, 29, 15, 57, 0, 316, DateTimeKind.Local).AddTicks(6047)
+                            LastModifiedDate = new DateTime(2022, 10, 27, 18, 36, 8, 13, DateTimeKind.Local).AddTicks(217)
                         });
                 });
 
@@ -1290,6 +1292,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -1320,6 +1323,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
+                        .IsRequired()
                         .HasMaxLength(850)
                         .HasColumnType("nvarchar(850)");
 
@@ -1344,7 +1348,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("NationalityId")
-                        //.IsRequired()
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("PayType")
@@ -1355,11 +1359,11 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ReligionId")
-                        //.IsRequired()
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int?>("SocialStatusId")
-                        //.IsRequired()
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1769,13 +1773,16 @@ namespace Medical_Optics.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("CardImageUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardNumber")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ClassType")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -1798,10 +1805,12 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("InsuranceCompanyName")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -1843,6 +1852,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("BuildingNumber")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
@@ -1862,10 +1872,12 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DistrictName")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ExtraNumber")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -1885,18 +1897,22 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("PostalCode")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("StreetName")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("UnifiedNationalNumber")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("UnitNumber")
+                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
@@ -2416,20 +2432,20 @@ namespace Medical_Optics.Infrastructure.Migrations
                     b.HasOne("Medical_Optics.Domain.Entities.Def.DefNationality", "Nationality")
                         .WithMany("CustomersData")
                         .HasForeignKey("NationalityId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                    //.IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("Medical_Optics.Domain.Entities.Def.DefReligion", "Religion")
                         .WithMany("CustomersData")
                         .HasForeignKey("ReligionId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                    //.IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("Medical_Optics.Domain.Entities.HR.HrSocialStatus", "SocialStatus")
                         .WithMany("CustomersData")
                         .HasForeignKey("SocialStatusId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                        //.IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("CreatedUser");
 

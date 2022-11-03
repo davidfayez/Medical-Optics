@@ -222,6 +222,9 @@
   <data name="CapitalNameEn" xml:space="preserve">
     <value>Capital Name English</value>
   </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
   <data name="CashBank" xml:space="preserve">
     <value>Cash And Bank</value>
   </data>
@@ -311,6 +314,9 @@
   </data>
   <data name="CreationDate" xml:space="preserve">
     <value>Creation Date</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Credit</value>
   </data>
   <data name="Currencies" xml:space="preserve">
     <value>Currencies</value>
