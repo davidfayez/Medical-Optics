@@ -1,0 +1,90 @@
+﻿@model List<CustomerDataVM>
+@{
+    ViewData["Title"] = @Optic.PatientFile;
+    Layout = "_OpticLayout";
+}
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">  @Optic.PatientFile</h3>
+        </div>
+        <div class="col-md-8">
+
+            <div class="menu text-right">
+                <partial name="_HeaderMenu" />
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile/@Optic.PatientFile
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+                <div class="col-xl-10 col-lg-12">
+                    <div class="filter-client">
+                         <partial name="_SearchInCustomerData" model="new GetAllPatientsFilesQuery()" />
+
+                    </div>
+                    <div id="myWizard">
+                    
+                        <div class="row">
+                        <div class="col-6">
+                            <button class="btn-filter"><i class="fas fa-filter"></i></button>
+                        </div>
+                        <div class="col-6 text-right">
+                            <ul id="myTab" class="nav-lists nav nav-tabs" style="display: inline-block;">
+                                <li class="nav-item"><a class="nav-link active" id="ListView-tab" data-toggle="tab" href="#block-item"><i class="fas fa-th-large"></i> </a></li>
+                                <li class="nav-item"><a class="nav-link" id="KendoGrid-tab" data-toggle="tab" onclick="RefreshGrid()" href="#list-item"> <i class="fas fa-list"></i></a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    
+                        <div class="tab-content patient-data" id="myTabContent">
+                        <div id="block-item" class="tab-pane fade active show">
+                            <partial name="_PatientsFilesList" model="Model" />
+
+                        </div>
+
+
+
+                        <!-- ...........tab2......... -->
+
+                        <div id="list-item" class="tab-pane fade ">
+@*                            <div class="over-fixed">
+                                
+                            </div>*@
+                            <div id="PatientsFilesGrid" @*class="over-fixed"*@>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    </div>
+
+            </div>   
+
+
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script asp-append-version="true" src="~/js/pages/CustomerData/ListPatientsFiles.js"></script>
+}

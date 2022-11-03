@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
 namespace Medical_Optics.Infrastructure.Configurations;
-public class FavoriteDiagnosisConfiguration : IEntityTypeConfiguration<FavoriteDiagnosis>
+public class FavoriteDiagnoseConfiguration : IEntityTypeConfiguration<FavoriteDiagnose>
 {
-    public void Configure(EntityTypeBuilder<FavoriteDiagnosis> builder)
+    public void Configure(EntityTypeBuilder<FavoriteDiagnose> builder)
     {
-        builder.ToTable(nameof(FavoriteDiagnosis));
+        builder.ToTable(nameof(FavoriteDiagnose));
 
         builder.Property(s => s.Id).UseIdentityColumn();
 

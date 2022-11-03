@@ -117,14 +117,86 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Age" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="CardImage" xml:space="preserve">
+    <value>Card Image</value>
+  </data>
+  <data name="CardNumber" xml:space="preserve">
+    <value>Card Number</value>
+  </data>
+  <data name="ClassType" xml:space="preserve">
+    <value>Class Type</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Client Name</value>
+  </data>
   <data name="Complaint" xml:space="preserve">
     <value>Complaint</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>Country</value>
   </data>
+  <data name="CustomerData" xml:space="preserve">
+    <value>Customer Data</value>
+  </data>
+  <data name="CustomerFileNo" xml:space="preserve">
+    <value>Customer File No</value>
+  </data>
+  <data name="CustomerImage" xml:space="preserve">
+    <value>Customer Image</value>
+  </data>
+  <data name="CustomerMRN" xml:space="preserve">
+    <value>Customer MRN</value>
+  </data>
+  <data name="CustomerNameAr" xml:space="preserve">
+    <value>Customer Arabic Name</value>
+  </data>
+  <data name="CustomerNameEn" xml:space="preserve">
+    <value>Customer English Name</value>
+  </data>
+  <data name="DateExpiry" xml:space="preserve">
+    <value>Date Expiry</value>
+  </data>
+  <data name="DateIssued" xml:space="preserve">
+    <value>Date Issued</value>
+  </data>
   <data name="Diagnose" xml:space="preserve">
     <value>Diagnose</value>
+  </data>
+  <data name="ExtraNumber" xml:space="preserve">
+    <value>Extra Number</value>
+  </data>
+  <data name="FamilyName" xml:space="preserve">
+    <value>Family Name</value>
+  </data>
+  <data name="FatherName" xml:space="preserve">
+    <value>Father Name</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="IDNumber" xml:space="preserve">
+    <value>ID Number</value>
+  </data>
+  <data name="IDType" xml:space="preserve">
+    <value>ID Type</value>
+  </data>
+  <data name="InsuranceCompanyName" xml:space="preserve">
+    <value>Insurance Company Name</value>
+  </data>
+  <data name="MainCustomerData" xml:space="preserve">
+    <value>MainCustomerData</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="MedicalInsurance" xml:space="preserve">
+    <value>Medical Insurance</value>
+  </data>
+  <data name="NationalAddress" xml:space="preserve">
+    <value>National Address</value>
   </data>
   <data name="Nationality" xml:space="preserve">
     <value>Nationality</value>
@@ -132,10 +204,31 @@
   <data name="OpticMedicalFile" xml:space="preserve">
     <value>Optics Medical File</value>
   </data>
+  <data name="PatientFile" xml:space="preserve">
+    <value>Patient File</value>
+  </data>
+  <data name="PayType" xml:space="preserve">
+    <value>Pay Type</value>
+  </data>
   <data name="Religion" xml:space="preserve">
     <value>Religion</value>
   </data>
+  <data name="SocialStatus" xml:space="preserve">
+    <value>Social Status</value>
+  </data>
+  <data name="StreetName" xml:space="preserve">
+    <value>Street Name</value>
+  </data>
   <data name="SubComplaint" xml:space="preserve">
     <value>SubComplaint</value>
+  </data>
+  <data name="UnifiedNationalNumber" xml:space="preserve">
+    <value>Unified National Number</value>
+  </data>
+  <data name="UnitNumber" xml:space="preserve">
+    <value>Unit Number</value>
+  </data>
+  <data name="VirtualMedicalCard" xml:space="preserve">
+    <value>Virtual Medical Insurance Card</value>
   </data>
 </root>

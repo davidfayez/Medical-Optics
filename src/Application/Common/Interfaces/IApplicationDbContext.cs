@@ -45,7 +45,9 @@ public interface IApplicationDbContext
 
     #region Favorite
     DbSet<FavoriteComplaint> FavoriteComplaints { get; }
-    DbSet<FavoriteDiagnosis> FavoriteDiagnosises { get; }
+    DbSet<FavoriteComplaintItem> FavoriteComplaintItems { get; }
+    DbSet<FavoriteDiagnose> FavoriteDiagnoses { get; }
+    DbSet<FavoriteDiagnoseItem> FavoriteDiagnoseItems { get; }
     DbSet<FavoriteExamination> FavoriteExaminations { get; }
     DbSet<FavoritePharmacy> FavoritePharmacies { get; }
 

@@ -1,0 +1,93 @@
+﻿@model CreateCustomerDataCommand
+
+
+<input type="hidden" asp-for="NationalAddressVM.Id" />
+<input type="hidden" asp-for="NationalAddressVM.ClientId" />
+
+<div class="row">
+
+
+    <label class="col-lg-2 form-group "> @Optic.UnifiedNationalNumber</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.UnifiedNationalNumber" class="form-control input-sys">
+
+    </div>
+
+    <label class="col-lg-2 form-group "> @Global.BuildNumber</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.BuildingNumber" class="form-control input-sys">
+
+    </div>
+
+
+</div>
+
+
+<div class="row">
+
+    <label class="col-lg-2 form-group ">@Optic.StreetName</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.StreetName" class="form-control input-sys">
+
+    </div>
+
+    <label class="col-lg-2 form-group "> @Global.District</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.DistrictName" class="form-control input-sys">
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <label class="col-lg-2  form-group">@Global.City</label>
+
+    <div class="col-lg-4 form-group ">
+@*        <select asp-for="NationalAddressVM.CityId" asp-items="Model.NationalAddressVM.Cities" class="form-control input-sys"></select>
+*@        <input type="text" asp-for="NationalAddressVM.CityId" class="form-control input-sys customDDL">
+    </div>
+
+    <label class="col-lg-2  form-group">@Global.PostCode</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.PostalCode" class="form-control input-sys">
+
+    </div>
+</div>
+
+<div class="row">
+
+    <label class="col-lg-2  form-group"> @Optic.ExtraNumber</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.ExtraNumber" class="form-control input-sys">
+    </div>
+
+    <label class="col-lg-2  form-group"> @Optic.UnitNumber</label>
+
+    <div class="col-lg-4 form-group ">
+        <input type="text" asp-for="NationalAddressVM.UnitNumber" class="form-control input-sys">
+    </div>
+
+</div>
+
+<hr />
+<div class="row">
+
+    <label class="col-lg-2 form-group">اضافة مرفقات</label>
+
+    <div class="col-lg-4 form-group ">
+        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#Attach-file"><i class="fas fa-paperclip"></i></button>
+
+    </div>
+
+</div>
+@*<div class="text-center">
+
+    <button class="btn btn-warning btn-sm" style="min-width:150px;">حفظ</button>
+</div>*@

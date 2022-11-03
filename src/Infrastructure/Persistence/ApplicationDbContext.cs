@@ -73,10 +73,11 @@ public partial class ApplicationDbContext : IdentityDbContext<AspNetUser, Applic
 
     #region Favorite
     public virtual DbSet<FavoriteComplaint> FavoriteComplaints => Set<FavoriteComplaint>();
-    public virtual DbSet<FavoriteDiagnosis> FavoriteDiagnosises => Set<FavoriteDiagnosis>();
+    public virtual DbSet<FavoriteComplaintItem> FavoriteComplaintItems => Set<FavoriteComplaintItem>();
+    public virtual DbSet<FavoriteDiagnose> FavoriteDiagnoses => Set<FavoriteDiagnose>();
+    public virtual DbSet<FavoriteDiagnoseItem> FavoriteDiagnoseItems => Set<FavoriteDiagnoseItem>();
     public virtual DbSet<FavoriteExamination> FavoriteExaminations => Set<FavoriteExamination>();
     public virtual DbSet<FavoritePharmacy> FavoritePharmacies => Set<FavoritePharmacy>();
-
     #endregion
 
 

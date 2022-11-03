@@ -376,6 +376,15 @@ namespace Medical_Optics.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cash.
+        /// </summary>
+        public static string Cash {
+            get {
+                return ResourceManager.GetString("Cash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cash And Bank.
         /// </summary>
         public static string CashBank {
@@ -642,6 +651,15 @@ namespace Medical_Optics.Application.Common.Resources {
         public static string CreationDate {
             get {
                 return ResourceManager.GetString("CreationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credit.
+        /// </summary>
+        public static string Credit {
+            get {
+                return ResourceManager.GetString("Credit", resourceCulture);
             }
         }
         

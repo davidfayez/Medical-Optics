@@ -1,0 +1,102 @@
+﻿@model CreateCustomerDataCommand 
+
+<input type="hidden" asp-for="MedicalInsuranceVM.Id" />
+<input type="hidden" asp-for="MedicalInsuranceVM.ClientId" />
+
+<div class="row">
+    <div class="col-lg-9 ">
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.InsuranceCompanyName</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="MedicalInsuranceVM.InsuranceCompanyName" class="form-control input-sys">
+                <span asp-validation-for="MedicalInsuranceVM.InsuranceCompanyName" class="text-danger"></span>
+
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.CardNumber</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="MedicalInsuranceVM.CardNumber" class="form-control input-sys">
+                <span asp-validation-for="MedicalInsuranceVM.CardNumber" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.ClassType</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="text" asp-for="MedicalInsuranceVM.ClassType" class="form-control input-sys">
+                <span asp-validation-for="MedicalInsuranceVM.ClassType" class="text-danger"></span>
+
+            </div>
+
+            <label class="col-lg-2 form-group ">@Optic.DateIssued</label>
+
+            <div class="col-lg-4 form-group ">
+                <input type="date" asp-for="MedicalInsuranceVM.DateIssued" class="form-control input-sys">
+                <span asp-validation-for="MedicalInsuranceVM.DateIssued" class="text-danger"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <label class="col-lg-2 form-group ">@Optic.DateExpiry</label>
+            <div class="col-lg-4 form-group ">
+                <input type="date" asp-for="MedicalInsuranceVM.DateExpiry" class="form-control input-sys">
+                <span asp-validation-for="MedicalInsuranceVM.DateExpiry" class="text-danger"></span>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <label class="col-lg-2 form-group ">@Global.Description</label>
+
+            <div class="col-lg-10 form-group ">
+                <textarea asp-for="MedicalInsuranceVM.Description" class="form-control input-sys"></textarea>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-3">
+
+        <div class="image-upload">
+            @if (Model.MedicalInsuranceVM.Id > 0)
+            {
+                <input type="hidden" asp-for="MedicalInsuranceVM.CardImageUrl" value="@Model.MedicalInsuranceVM.CardImageUrl" />
+                <a href="~/images/@Model.MedicalInsuranceVM.CardImageUrl" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                    <img src="~/images/@Model.MedicalInsuranceVM.CardImageUrl" id="cardImage">
+                </a>
+            }
+            else
+            {
+                <a href="~/images/back-login.jpg" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                    <img src="~/images/back-login.jpg" id="cardImage">
+                </a>
+            }
+            
+            <label asp-for="MedicalInsuranceVM.CardImage">@Optic.CardImage</label>
+            <input type="file" asp-for="MedicalInsuranceVM.CardImage" accept=".gif, .jpg, .png" onchange="setMedicalCardImage(this)" style="display:none;">
+        </div>
+    </div>
+
+@*    <div class="col-12">
+        <br>
+        <div class="text-center">
+
+            <button class="btn btn-warning btn-sm" style="min-width:150px;">حفظ</button>
+        </div>
+        <br>
+    </div>
+*@
+
+</div>
