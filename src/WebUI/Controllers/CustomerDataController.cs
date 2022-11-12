@@ -120,11 +120,11 @@ public class CustomerDataController : BaseController
             if (command != null)
             {
                 await FillCustomerDataDDLAsync(command);
-                return View("Create", command);
+                return RedirectToAction("Create", command);
             }
         }
 
-        return View(new CreateCustomerDataCommand());
+        return RedirectToAction("Create",new CreateCustomerDataCommand());
     }
 
     public async Task<JsonResult> GetAllPatientsFiles(string customerMRN, string iDNumber, string clientName)

@@ -50,6 +50,11 @@
 
     <ItemGroup>
       <Content Remove="wwwroot\js\Pages\City\AddCity.js" />
+      <Content Remove="wwwroot\js\Pages\Favorite\Complaint\ListFavoritesComplaints.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\js\Pages\Favorite\Complaint\ListFavoritesComplaints.js" />
     </ItemGroup>
 
     <ItemGroup>
@@ -189,6 +194,7 @@
       <None Include="wwwroot\js\moment.min.js" />
       <None Include="wwwroot\js\my-js.js" />
       <None Include="wwwroot\js\Pages\City\AddCity.js" />
+      <None Include="wwwroot\js\Pages\Favorite\Complaint\ListFavoritesComplaints.js" />
       <None Include="wwwroot\js\Pages\Layout.js" />
       <None Include="wwwroot\js\paginga.jquery.js" />
       <None Include="wwwroot\js\popper.min.js" />

@@ -1460,7 +1460,7 @@ namespace Medical_Optics.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
+                        //.IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 

@@ -69,6 +69,8 @@
     <ItemGroup>
       <Folder Include="Branches\Commands\" />
       <Folder Include="Def\City\Queries\GetAll\" />
+      <Folder Include="Favorite\Complaint\Commands\Delete\" />
+      <Folder Include="Favorite\Complaint\Commands\Update\" />
       <Folder Include="Optic\CustomerData\Commands\Delete\" />
       <Folder Include="Optic\CustomerData\Commands\Update\" />
     </ItemGroup>

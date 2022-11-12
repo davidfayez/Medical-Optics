@@ -1,0 +1,137 @@
+﻿@model CreateFavoriteComplaintCommand
+@{
+    ViewData["Title"] = @Global.Add + " " + @Optic.Diagnose;
+    Layout = "_OpticLayout";
+}
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Add  @Optic.Diagnose</h3>
+        </div>
+        <div class="col-md-8">
+
+            <div class="menu text-right">
+                <partial name="_HeaderMenu" />
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile/@Global.Add /@Optic.Complaint
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-10 col-lg-12">
+
+                <!--Page Content-->
+                <form asp-controller="FavoriteComplaint" asp-action="Create" method="post" class="row" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="CreationDate" />
+                    <div class="col-lg-12 ">
+                        <div class="row">
+                            <label asp-for="FavoriteName" class="col-xl-2 col-lg-3 form-group">@Global.Name</label>
+
+                            <div class="col-xl-3 col-lg-3 form-group ">
+                                <input type="text" asp-for="FavoriteName" class="form-control input-sys">
+                                <span asp-validation-for="FavoriteName" class="text-danger"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <label asp-for="Description" class="col-xl-2 col-lg-3 form-group  ">
+                                @Global.Description
+                            </label>
+
+                            <div class="col-xl-8 col-lg-7 form-group ">
+                                <textarea asp-for="Description" class="form-control input-sys" id="Description"></textarea>
+
+                            </div>
+                        </div>
+                        <br/>
+
+                        <div id="example" role="application">
+                            <div class="demo-section wide">
+                                <input type='text' id='searchBox' class='k-input k-textbox k-input-solid k-input-md k-rounded-md' placeholder='search items' />
+                                <div class="k-rtl">
+                                    <label for="optional" id="opt">Optional</label>
+                                    <label for="selected">Selected</label>
+                                    <br />
+                                    <select id="optional"></select>
+                                    <select asp-for="SelectedIds" id="selected"></select>
+                                    @if(Model !=null)
+                                    {
+                                        <input type="hidden" value="@string.Join(",", Model.SelectedIds)" id="SelectedIds" />
+                                    }
+                                    <span asp-validation-for="SelectedIds" class="text-danger"></span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .demo-section label {
+                                margin-bottom: 5px;
+                                font-weight: bold;
+                                display: inline-block;
+                            }
+
+                            #opt {
+                                width: 550px;
+                            }
+
+                            #example .demo-section {
+                                max-width: none;
+                                width: 1200px;
+                            }
+
+                            #example .k-listbox {
+                                width: 550px;
+                                height: 350px;
+                            }
+
+                                #example .k-listbox:first-of-type {
+                                    /*width: 270px;*/
+                                    margin-right: 1px;
+                                }
+
+                            .k-input {
+                                width: 500px;
+                            }
+                        </style>
+                        <br />
+
+                    </div>
+                    <br/>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> @Global.Save</button>
+                        <a asp-action="Index" class="btn btn-dark btn-sm"><i class="fas fa-arrow-left"></i> @Global.Back</a>
+                    </div>
+
+                </form>
+                <!--Page Content-->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/pages/Favorite/Complaint/AddFavoriteComplaint.js"></script>
+}
