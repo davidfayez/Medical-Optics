@@ -28,7 +28,7 @@ public class FavoriteComplaintController : BaseController
     [HttpGet]
     public IActionResult Create()
     {
-        return View(new CreateFavoriteComplaintCommand());
+        return View(/*new CreateFavoriteComplaintCommand()*/);
     }
 
     [HttpPost]
