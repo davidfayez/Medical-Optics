@@ -85,8 +85,17 @@ public class SubComplaintController : BaseController
 
     public async Task<JsonResult> GetAll()
     {
-        var diagnose = await Mediator.Send(new GetAllSubCompalintQuery());
-        return Json(diagnose);
+        var SubCompalints = await Mediator.Send(new GetAllSubCompalintQuery());
+        return Json(SubCompalints);
+    }
+
+    public async Task<JsonResult> GetAllSubCompalintByComplaintId(int complaintId)
+    {
+        var SubCompalints = await Mediator.Send(new GetAllSubCompalintQuery
+        {
+            CompalintId = complaintId
+        });
+        return Json(SubCompalints);
     }
 
 }

@@ -37,5 +37,6 @@ public class CustomerData : AuditableEntity
     public virtual HrSocialStatus? SocialStatus { get; set; }
     public virtual NationalAddress NationalAddress { get; set; }
     public virtual MedicalInsurance MedicalInsurance { get; set; }
+    public virtual PatientMedicalFile PatientMedicalFile { get; set; }
 
 }

@@ -1,0 +1,11 @@
+﻿@model GetPatientFileByIdQuery
+<form class="learn__content__search mb-4"
+      asp-controller="PatientFile" asp-action="GetEducationtypesByName"
+      data-ajax="true"
+      data-ajax-method="POST"
+      data-ajax-update="#_CustomerDataContainer"
+      data-ajax-mode="replace" autocomplete="off">
+
+     <input type="text" class="form-control input-sys" asp-for="MRN">
+
+</form>

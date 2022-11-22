@@ -40,6 +40,8 @@ public interface IApplicationDbContext
     DbSet<CustomerData> CustomersData { get; }
     DbSet<MedicalInsurance> MedicalInsurances { get; }
     DbSet<NationalAddress> NationalAddresses { get; }
+    DbSet<PatientMedicalFile> PatientMedicalFiles { get; }
+    DbSet<PatientComplaint> PatientComplaints { get; }
 
     #endregion
 

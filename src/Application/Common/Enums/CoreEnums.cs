@@ -18,9 +18,23 @@ public enum IDType
     Passport
 }
 
+public enum DiagnoseType
+{
+    Principal = 1,
+    Secondary
+}
+
 public enum Gender
 {
     Male = 1,
     Female,
+}
+
+public enum Side
+{
+    None = 1,
+    Right,
+    Left,
+    Bilateral,
 }
 

@@ -1,0 +1,268 @@
+﻿@model CreatePatientMedicalFileCommand
+<div class="row">
+    <div class="col-lg-8">
+        <div class="accordion" id="accordionExampleSeven-A">
+
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingSeven-A">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseSeven-A" aria-expanded="true" aria-controls="collapseSeven">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div> Favorite
+                    </h2>
+                </div>
+
+                <div id="collapseSeven-A" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExampleSeven-A">
+
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <label class="col-lg-3 form-group ">Add Favorite Name</label>
+
+                            <div class="col-lg-5 col-9 form-group ">
+                                <input class="form-control input-sys" >
+
+                            </div>
+
+                            <div class="col-lg-4 form-group col-3">
+                                <button class="btn-add-line">Add</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <label class="col-lg-3 form-group ">Favorite Complaints</label>
+
+                            <div class="col-lg-5 form-group ">
+                                <input type="text" asp-for="FavoriteComplaintId" class="form-control input-sys customDDL">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExampleThree">
+
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingThree">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div>Main Complaint
+                    </h2>
+                </div>
+
+                <div id="collapseThree" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExampleThree">
+                    <div class="card-body" style="min-height:216px">
+
+
+                        <div class="">
+
+                            <div class="row">
+
+                                <label class="col-lg-3 form-group  ">Main Complaint</label>
+
+                                <div class="col-lg-6 col-9 form-group  ">
+                                    <input type="text" asp-for="ComplaintId" class="form-control input-sys customDDL">
+
+                                </div>
+                                <div class="col-lg-2 col-3 form-group ">
+                                    <button class="btn btn-warning btn-no-raduis"><i class="fas fa-bars"></i></button>
+                                </div>
+
+
+
+                            </div>
+                            <div class="row">
+
+                                <label class="col-lg-3 form-group  ">Sub Complaint  </label>
+
+                                <div class="col-lg-6 col-9 form-group  ">
+                                    <input type="text" asp-for="SubComplaintId" class="form-control input-sys customDDL">
+                                </div>
+                                <div class="col-lg-2 col-3 form-group ">
+                                    <button class="btn btn-warning btn-no-raduis"><i class="fas fa-bars"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button id="btnMainComplaint" style=" width: 50%;" class="btn-add-line">Add</button>
+                            </div>
+
+                            <div class="overflow-li">
+
+                                <ul class="list-check">
+                                    @*@foreach(var complaint in Model.PatientComplaintsVM)
+                                    {
+                                        <li>
+                                            <div class="item-li-file">
+                                                <label class="label-table"><input type="checkbox" class="check-table" value=""> @complaint.CreationDate</label>
+                                            </div>
+                                            <div class="Des-div">@complaint.ComplaintName</div>
+                                        </li>
+                                    }*@
+                                </ul>
+                            </div>
+                            <div class="text-right"><button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#Complaint-file"><i class="fas fa-arrow-left"></i> Show Previous Complaint</button> <button id="btnAddPreviousComplaint" class="btn btn-sm btn-dark"><i class="fas fa-plus"></i> Add Previous Complaint</button></div>
+
+                            <textarea id="txtEditor-1"></textarea>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4">
+
+
+        <div class="accordion" id="accordionExampleSeven-z">
+
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingSeven-z">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseSeven-z" aria-expanded="true" aria-controls="collapseSeven">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div> Favorite  For All File
+                    </h2>
+                </div>
+
+                <div id="collapseSeven-z" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExampleSeven-z">
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <label class="col-lg-12 form-group ">Add Favorite Name</label>
+
+                            <div class="col-lg-9 col-9 form-group ">
+                                <input class="form-control input-sys" >
+
+                            </div>
+
+
+                            <div class="col-lg-3 col-3 form-group col-3">
+                                <button class="btn-add-line" style="min-width:60px;">Add</button>
+
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+
+                            <label class="col-lg-12 form-group ">Favorite Examination</label>
+
+                            <div class="col-lg-12 form-group ">
+                                <select class="form-control input-sys" ></select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExampleFour">
+
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingFour">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="Four">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div>Side / Site/ Onset
+
+                    </h2>
+                </div>
+
+                <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExampleFour">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-lg-6 form-group ">
+                                <label class="form-group">Site / Site</label>
+                                <select id="ComplaintSide" asp-items="Model.Sides" class="form-control input-sys">
+                                </select>
+
+                            </div>
+                            
+                            <div class="col-lg-6 form-group ">
+                                <label class="form-group">Onset</label>
+                                <select id="Onset" class="form-control input-sys">
+                                    <option>Onset 1</option>
+                                    <option>Onset 2</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6 form-group ">
+                                <label class="form-group">Course</label>
+                                <select id="Course" class="form-control input-sys">
+                                    <option>Course 1</option>
+                                    <option>Course 2</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center">
+                            <button id="btnAddSide" style="display: block; width: 100%;" class="btn btn-sm btn-dark">Add</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExampleFive">
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingFive">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="Four">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div>Duration
+
+                    </h2>
+                </div>
+
+                <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionExampleFive">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-lg-3 form-group ">
+                                <label class="form-group">Hour</label>
+                                <input type="number" id="Hour" class="form-control input-sys">
+
+                            </div>
+                            <div class="col-lg-3 form-group ">
+                                <label class="form-group">Day</label>
+                                <input type="number" id="Day" class="form-control input-sys">
+
+                            </div>
+
+                            <div class="col-lg-3 form-group ">
+                                <label class="form-group">Month</label>
+                                <input type="number" id="Month" class="form-control input-sys">
+
+                            </div>
+
+                            <div class="col-lg-3 form-group ">
+                                <label class="form-group">Year</label>
+                                <input type="number" id="Year" class="form-control input-sys">
+
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button id="btnAddDuration" style="display: block; width: 100%;" class="btn btn-sm btn-dark">Add</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

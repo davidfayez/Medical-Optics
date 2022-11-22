@@ -1,0 +1,213 @@
+﻿@model CreatePatientMedicalFileCommand
+@{
+    ViewData["Title"] = @Global.Add + " " + @Optic.Complaint;
+    Layout = "_OpticLayout";
+}
+<style>
+    .Editor-container {
+        margin-top: 10px;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .Editor-editor {
+        height: 300px;
+        padding: 1%;
+        border: 1px solid #EEE;
+        border-radius: 0;
+        word-wrap: break-word;
+    }
+</style>
+<div class="card margin-card container-fluid yourdiv">
+    <div class="card-header position-relative padding-card row">
+        <div class="col-md-4">
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Add  @Optic.Complaint</h3>
+        </div>
+        <div class="col-md-8">
+
+            <div class="menu text-right">
+                <partial name="_HeaderMenu" />
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body max-height">
+        <div class="padding-screen"></div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-12 left-menu">
+
+                <div class="card">
+                    <div class="card-header back-green">
+                        @Optic.OpticMedicalFile/@Global.Add /@Optic.Complaint
+                    </div>
+                    <div class="card-body back-black">
+
+                        <div id="acdnmenu">
+                            <partial name="_LeftMenu" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-10 col-lg-12">
+                <div id="_CustomerDataContainer">
+                    <partial name="_CustomerData" model="Model.PatientDataVM" />
+                </div>
+
+                <div id="myWizard">
+                    <ul id="myTab" class="nav-lists nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" id="Complaint-tab" data-toggle="tab" href="#Complaint">Complaint </a></li>
+                        <li class="nav-item"><a class="nav-link" id="Examination-tab" data-toggle="tab" href="#Examination"> Examination</a></li>
+                        <li class="nav-item"><a class="nav-link" id="Diagnosis-tab" data-toggle="tab" href="#Diagnosis"> Diagnosis </a></li>
+                        <li class="nav-item"><a class="nav-link" id="Pharmacy-tab" data-toggle="tab" href="#Pharmacy"> Pharmacy </a></li>
+                    </ul>
+
+                    <div class="tab-content patient-data" id="myTabContent">
+                        <div id="Complaint"  class="tab-pane fade active show">
+                            <partial name="_Complaint" model="Model"/>
+                        </div>
+                        <!-- ...........tab2......... -->
+
+                        <div id="Examination" class="tab-pane fade ">
+                            <partial name="_Examination" />
+                        </div>
+
+                        <!-- ...........tab3......... -->
+
+                        <div id="Diagnosis" class="tab-pane fade ">
+                            <partial name="_Diagnosis" model="Model" />
+                        </div>
+
+                        <!-- ...........tab4......... -->
+        
+                        <div id="Pharmacy" class="tab-pane fade">
+                            <partial name="_Pharmacy" />
+                        </div>
+       
+                    </div>
+
+                    <div class="text-left">
+                        <button class="btnPrev btn-tabs-N  mr-1 ml-auto">Prv</button>
+                        <button class="btnNext btn-tabs-N">Nex</button>
+                    </div>
+        
+                </div> 
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<partial name="_PopUp" />
+
+@section Scripts{
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="~/js/jquery.smartmenus.js"></script>
+
+    <!-- SmartMenus jQuery init -->
+    <script type="text/javascript">
+        $(function () {
+            $('#main-menu').smartmenus({
+                mainMenuSubOffsetX: -1,
+                subMenusSubOffsetX: 10,
+                subMenusSubOffsetY: 0
+            });
+        });
+    </script>
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="~/js/icon.js"></script>
+
+    <script src="~/js/waitMe.js"></script>
+    <script>
+        $(function () {
+
+            var current_effect = 'win8';
+
+            $('.save_ro').click(function () {
+                run_waitMe(current_effect);
+                setTimeout(function () {
+                    $(".waitMe").removeAttr("style").fadeOut(200);
+                }, 4000);
+            });
+
+
+            function run_waitMe(effect) {
+                $('.yourdiv').waitMe({
+                    effect: effect,
+                    text: 'Please wait...',
+                    bg: 'rgba(0,0,0,0.1)',
+                    color: '#000',
+                    sizeW: '',
+                    sizeH: ''
+                });
+            }
+
+        });
+    </script>
+
+    <!--.................For This Page only.................-->
+
+
+    <script src="~/js/jquery.multiselect.js"></script>
+
+    <script>
+        $(function () {
+            $('select[multiple].active.3col').multiselect({
+                columns: 1,
+                placeholder: 'Choose ',
+                search: true,
+                searchOptions: {
+                    //                'default': 'coun'
+                },
+                selectAll: true
+            });
+
+        });
+    </script>
+
+    <script src="~/js/imagelightbox.js"></script>
+    <script src="~/js/lightbox.js"></script>
+
+
+    <!-- .....................cropping................. -->
+
+    <script type="text/javascript" src="~/js/jquery.Jcrop.js"></script>
+    <script type="text/javascript" src="~/js/jquery.SimpleCropper.js"></script>
+    <script>
+        // Init Simple Cropper
+        $('.cropme').simpleCropper();
+    </script>
+
+
+    <script src="~/js/jquery-bootstrap-tab-wizard.min.js"></script>
+    <script>
+        $('#myWizard').TabWizard({
+
+            nextButtonClass: '.btnNext',
+            previousButtonClass: '.btnPrev',
+            onFinish: function () {
+
+            },
+        });
+    </script>
+
+    <script src="~/js/accordion.js"></script>
+    <script>
+        jQuery(function () {
+            jQuery("#acdnmenu").accordionMenu();
+        });
+    </script>
+    <script type="text/javascript" src="~/js/text-editor.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#txtEditor-1").Editor();
+            $("#txtEditor-2").Editor();
+            $("#txtEditor-3").Editor();
+            $("#txtEditor-4").Editor();
+        });
+    </script>
+    <script asp-append-version="true" src="~/js/pages/PatientFile/AddPatientFile.js"></script>
+}

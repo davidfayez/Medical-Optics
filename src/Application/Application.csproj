@@ -73,6 +73,7 @@
       <Folder Include="Favorite\Complaint\Commands\Update\" />
       <Folder Include="Optic\CustomerData\Commands\Delete\" />
       <Folder Include="Optic\CustomerData\Commands\Update\" />
+      <Folder Include="Optic\PatientFile\Commands\ViewModels\" />
     </ItemGroup>
 
 </Project>

@@ -68,6 +68,8 @@ public partial class ApplicationDbContext : IdentityDbContext<AspNetUser, Applic
     public virtual DbSet<CustomerData> CustomersData => Set<CustomerData>();
     public virtual DbSet<MedicalInsurance> MedicalInsurances => Set<MedicalInsurance>();
     public virtual DbSet<NationalAddress> NationalAddresses => Set<NationalAddress>();
+    public virtual DbSet<PatientMedicalFile> PatientMedicalFiles => Set<PatientMedicalFile>();
+    public virtual DbSet<PatientComplaint> PatientComplaints => Set<PatientComplaint>();
 
     #endregion
 
