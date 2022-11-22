@@ -7,7 +7,7 @@ using DB = Medical_Optics.Domain.Entities.Optic;
 namespace Medical_Optics.Application.Optic.SubCompalint.Queries.GetAll;
 public class GetAllSubCompalintQuery: IRequest<List<SubCompalintVM>>
 {
-
+    public int? CompalintId { get; set; }
 }
 
 public class GetAllSubCompalintQueryHandler : IRequestHandler<GetAllSubCompalintQuery, List<SubCompalintVM>>
@@ -22,8 +22,12 @@ public class GetAllSubCompalintQueryHandler : IRequestHandler<GetAllSubCompalint
     }
     public Task<List<SubCompalintVM>> Handle(GetAllSubCompalintQuery request, CancellationToken cancellationToken)
     {
-        var SubComplaints = _applicationDbContext.SubComplaints.Where(s => !s.IsDeleted).ToList();
-        var SubComplaintVms = _mapper.Map<List<SubCompalintVM>>(SubComplaints);
+        var SubComplaints = _applicationDbContext.SubComplaints.Where(s => !s.IsDeleted);
+
+        if (request.CompalintId != null)
+            SubComplaints = SubComplaints.Where(s => s.ComplaintId == request.CompalintId);
+
+        var SubComplaintVms = _mapper.Map<List<SubCompalintVM>>(SubComplaints.ToList());
         return Task.FromResult(SubComplaintVms);
 
     }

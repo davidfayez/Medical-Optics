@@ -1,4 +1,5 @@
 ﻿@model List<CustomerDataVM>
+@*href="M-Patient-File-inner.html"*@
 
 <div class="paging-1">
 
@@ -6,7 +7,7 @@
         @foreach (var patient in Model)
         {
             <li class="col-lg-4 col-md-6">
-                <a href="M-Patient-File-inner.html" class="hvr-hang">
+                <a asp-controller="PatientFile" asp-action="Create" asp-route-id="@patient.Id" class="hvr-hang">
                     <img src="~/images/@patient.ImageUrl" />
                     <div class="container-client">
 

@@ -1,0 +1,151 @@
+﻿@model PatientDataVM
+<div class="row">
+    <div class="col-lg-9">
+
+        <div class="accordion" id="accordionExample">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingOne">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div>Patient Data
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <div class="patient-data">
+                            <div class="row">
+                                <div class="col-lg-2 col-6 form-group ">
+                                    <label class="form-group">Mrn</label>
+                                    <partial name="_SearchByMRN" model="new GetPatientFileByIdQuery{MRN = Model.CustomerMRN}" />
+                                </div>
+                                <div class="col-lg-4 col-6 form-group ">
+                                    <label class="form-group">@Optic.ClientName</label>
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="CustomerNameEn">
+                                </div>
+
+
+
+                                <div class="col-lg-2 col-6 form-group ">
+                                    <label class="form-group">@Optic.CardNumber </label>
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="MedicalCode">
+
+                                </div>
+
+
+
+                                <div class="col-lg-4 col-6 form-group ">
+                                    <label class="form-group">@Optic.InsuranceCompanyName</label>
+
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="MedicalCompany">
+
+                                </div>
+
+
+
+                                <div class="col-lg-2 col-4 form-group ">
+                                    <label class="form-group">Episode No# </label>
+
+                                    <input type="text" disabled="" class="form-control input-sys" @*asp-for=""*@>
+
+                                </div>
+
+                                <div class="col-lg-2 col-4 form-group ">
+                                    <label class="form-group">@Optic.CustomerFileNo</label>
+
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="CustomerFileNo">
+
+                                </div>
+
+                                <div class="col-lg-2 col-4 form-group ">
+                                    <label class="form-group">Sex</label>
+
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="GenderName">
+
+                                </div>
+
+                                <div class="col-lg-2 col-4 form-group ">
+                                    <label class="form-group">@Optic.Age</label>
+
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="Age">
+
+                                </div>
+                                <div class="col-lg-2 col-4 form-group ">
+                                    <label class="form-group">@Global.BirthDate</label>
+
+                                    <input type="date" disabled="" class="form-control input-sys" asp-for="BirthDate">
+
+                                </div>
+                                <div class="col-lg-2 col-4 form-group ">
+                                    <label class="form-group">Date/Time</label>
+
+                                    <input type="date" disabled="" class="form-control input-sys" asp-for="@DateTime.Now.Date">
+
+                                </div>
+
+                                <div class="col-lg-3 col-6 form-group ">
+                                    <label class="form-group">Nationalty</label>
+                                    <input type="text" disabled="" class="form-control input-sys" asp-for="NationalityName">
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-3">
+
+        <div class="accordion" id="accordionExampleTwo">
+
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingTwo">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div>Client Card
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExampleTwo">
+                    <div class="card-body" style="min-height:216px">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="image-upload">
+                                    <a href="~/images/@Model.ImageUrl" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                                        <img src="~/images/@Model.ImageUrl">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="image-upload">
+                                    <a href="~/images/@Model.MedicalImageUrl" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                                        <img src="~/images/@Model.MedicalImageUrl">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

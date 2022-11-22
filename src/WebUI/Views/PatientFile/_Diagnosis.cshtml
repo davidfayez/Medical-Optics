@@ -1,0 +1,174 @@
+﻿@model CreatePatientMedicalFileCommand
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="accordion" id="accordionExampleSeven-B">
+
+
+            <div class="card card-item">
+                <div class="card-header head-accordion back-dash" id="headingSeven-B">
+                    <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseSeven-B" aria-expanded="true" aria-controls="collapseSeven">
+                        <div class="icon-accordion"><i class="fas fa-minus"></i> </div> Favorite
+                    </h2>
+                </div>
+
+                <div id="collapseSeven-B" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExampleSeven-B">
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <label class="col-lg-3 form-group ">Add Favorite Name</label>
+
+                            <div class="col-lg-5 col-9 form-group ">
+                                <input class="form-control input-sys" >
+
+                            </div>
+
+
+                            <div class="col-lg-4 form-group col-3">
+                                <button class="btn-add-line">Add</button>
+
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+
+                            <label class="col-lg-3 form-group ">Favorite Examination</label>
+
+                            <div class="col-lg-5 form-group ">
+                                <select class="form-control input-sys" ></select>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-item">
+            <div class="card-header head-accordion back-dash" id="headingNine">
+                <h2 class="mb-0 h3-activity" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="Four">
+                    <div class="icon-accordion"><i class="fas fa-minus"></i> </div> Diagnosis
+
+                </h2>
+            </div>
+
+            <div id="collapseNine" class="collapse show" aria-labelledby="headingNine" data-parent="#accordionExampleNine">
+                <div class="card-body">
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="patient-data">
+
+                                <div class="row">
+                                    <div class="col-lg-2 col-4 form-group ">
+                                        <label class="form-group">Side/ Site</label>
+
+                                        <select id="DiagnoseSide" asp-items="Model.Sides" class="form-control input-sys">
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-2 col-4 form-group ">
+                                        <label class="form-group">Diagnose Type</label>
+                                        <select id="DiagnoseType" asp-items="Model.DiagnoseTypes" class="form-control input-sys">
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-6 col-8 form-group ">
+                                        <label class="form-group">Diagnosis Code</label>
+                                        <input type="text" id="DiagnoseCode" class="form-control input-sys customDDL">
+
+                                    </div>
+
+                                    <div class="col-lg-2 col-6 form-group ">
+                                        <button id="btnAddDiagnose" class="btn-add-line" style="margin-top: 20px;">Add</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="overflow-li">
+
+                                <ul class="list-check">
+                                    <li>
+                                        <div class="item-li-file">
+                                            <label class="label-table"><input type="checkbox" class="check-table" value=""> 12/5/2019</label>
+                                        </div>
+                                        <div class="Des-div">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+
+                                    </li>
+
+                                    <li>
+                                        <div class="item-li-file">
+                                            <label class="label-table"><input type="checkbox" class="check-table" value=""> 12/5/2019</label>
+                                        </div>
+                                        <div class="Des-div">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+
+                                    </li>
+
+                                    <li>
+                                        <div class="item-li-file">
+                                            <label class="label-table"><input type="checkbox" class="check-table" value=""> 12/5/2019</label>
+                                        </div>
+                                        <div class="Des-div">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+
+                                    </li>
+
+                                    <li>
+                                        <div class="item-li-file">
+                                            <label class="label-table"><input type="checkbox" class="check-table" value=""> 12/5/2019</label>
+                                        </div>
+                                        <div class="Des-div">Lorem, ipsum dolor sit amet consectetur adipisicing elit</div>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="text-right"><button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#Diagnosis-file"><i class="fas fa-arrow-left"></i> Show Previous Diagnosis</button> <button class="btn btn-sm btn-dark"><i class="fas fa-plus"></i> Add Previous Diagnosis</button></div>
+
+                                    <textarea id="txtEditor-3"></textarea>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="position-relative">
+                                        <h3 class="icd-code">ICD Code</h3>
+                                        <textarea placeholder="" style="min-height: 215px;padding-top: 25px; margin-top: 50px;" class="form-control input-sys textarea-tabs" ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>

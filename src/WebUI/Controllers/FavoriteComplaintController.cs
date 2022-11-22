@@ -4,6 +4,7 @@ using Medical_Optics.Application.Favorite.Complaint.Commands.Create;
 using Medical_Optics.Application.Favorite.Complaint.Commands.Delete;
 using Medical_Optics.Application.Favorite.Complaint.Queries.GetAll;
 using Medical_Optics.Application.Favorite.Complaint.Queries.GetById;
+using Medical_Optics.Application.Favorite.Complaint.Queries.GetComplaintsByFavoriteId;
 using Medical_Optics.Application.Optic.Complaint.Commands.Delete;
 using Medical_Optics.Application.Optic.Complaint.Commands.Update;
 using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
@@ -81,6 +82,14 @@ public class FavoriteComplaintController : BaseController
         return Json(FavoritesComplaints);
     }
 
-    
 
+    public async Task<JsonResult> GetComplaintsByFavoriteId(int id)
+    {
+        var Complaints = await Mediator.Send(new GetComplaintsByFavoriteIdQuery
+        {
+            FavoriteId = id,
+        });
+        var text = Complaints.Select(s => s.ComplaintNameEn).ToList();
+        return Json(text);
+    }
 }
