@@ -5,6 +5,8 @@ using Medical_Optics.Application.Common.Interfaces;
 namespace Medical_Optics.Application.Optic.Diagnose.Queries.GetAll;
 public class GetAllDiagnoseQuery : IRequest<List<DiagnoseVM>>
 {
+    public List<int>? OptionalIds { get; set; }
+    public List<int>? SelectedIds { get; set; }
 
 }
 
@@ -22,8 +24,15 @@ public class GetAllDiagnoseQueryHandler : IRequestHandler<GetAllDiagnoseQuery, L
     {
         try
         {
-            var Diagnose = _applicationDbContext.Diagnoses.Where(d => !d.IsDeleted).ToList();
-            var DiagnoseVMs = _mapper.Map<List<DiagnoseVM>>(Diagnose);
+            var Diagnosis = _applicationDbContext.Diagnoses.Where(d => !d.IsDeleted);
+
+            if (request.OptionalIds != null)
+                Diagnosis = Diagnosis.Where(s => !request.OptionalIds.Contains(s.Id));
+
+            if (request.SelectedIds != null)
+                Diagnosis = Diagnosis.Where(s => request.SelectedIds.Contains(s.Id));
+
+            var DiagnoseVMs = _mapper.Map<List<DiagnoseVM>>(Diagnosis.ToList());
             return Task.FromResult(DiagnoseVMs);
         }
         catch (Exception)

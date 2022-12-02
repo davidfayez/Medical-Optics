@@ -14,4 +14,5 @@ public class PatientMedicalFile : AuditableEntity
     public int ClientId { get; set; }            
     public virtual CustomerData Client { get; set; }
     public virtual IList<PatientComplaint> PatientComplaints { get; set; }
+    public virtual IList<PatientDiagnose> PatientDiagnosis { get; set; }
 }

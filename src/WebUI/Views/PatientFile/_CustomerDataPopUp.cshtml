@@ -1,0 +1,108 @@
+﻿@model PatientDataVM
+
+<div class="col-lg-9">
+
+    <div class="row">
+        <div class="col-lg-2 col-6 form-group ">
+            <label class="form-group">Mrn</label>
+
+            <input type="text" class="form-control input-sys" asp-for="CustomerMRN">
+
+        </div>
+        <div class="col-lg-4 col-6 form-group ">
+            <label class="form-group">Client Name</label>
+            <input type="text" disabled="" class="form-control input-sys" asp-for="CustomerNameEn">
+
+
+        </div>
+
+
+
+        <div class="col-lg-2 col-6 form-group ">
+            <label class="form-group">Code</label>
+            <input type="text" disabled="" class="form-control input-sys" asp-for="MedicalCode">
+
+        </div>
+
+
+
+        <div class="col-lg-4 col-6 form-group ">
+            <label class="form-group">Company Name</label>
+
+            <input type="text" disabled="" class="form-control input-sys" asp-for="MedicalCompany">
+
+        </div>
+
+
+
+        <div class="col-lg-2 col-4 form-group ">
+            <label class="form-group">Episode No# </label>
+
+            <input type="text" disabled="" class="form-control input-sys" @*asp-for=""*@>
+
+        </div>
+
+        <div class="col-lg-2 col-4 form-group ">
+            <label class="form-group">File No</label>
+
+            <input type="text" disabled="" class="form-control input-sys" asp-for="CustomerFileNo">
+
+        </div>
+
+        <div class="col-lg-2 col-4 form-group ">
+            <label class="form-group">Sex</label>
+
+            <input type="text" disabled="" class="form-control input-sys" asp-for="GenderName">
+
+        </div>
+
+        <div class="col-lg-2 col-4 form-group ">
+            <label class="form-group">Age</label>
+
+            <input type="text" disabled="" class="form-control input-sys" asp-for="Age">
+
+        </div>
+        <div class="col-lg-2 col-4 form-group ">
+            <label class="form-group">Dob</label>
+
+            <input type="date" disabled="" class="form-control input-sys" asp-for="BirthDate">
+
+        </div>
+        <div class="col-lg-2 col-4 form-group ">
+            <label class="form-group">Date/Time</label>
+
+            <input type="date" disabled="" class="form-control input-sys" asp-for="@DateTime.Now.Date">
+
+        </div>
+
+        <div class="col-lg-3 col-6 form-group ">
+            <label class="form-group">Nationalty</label>
+
+            <input type="text" disabled="" class="form-control input-sys" asp-for="NationalityName">
+
+        </div>
+
+
+
+    </div>
+
+</div>
+<div class="col-lg-3">
+    <div class="row">
+        <div class="col-6">
+            <div class="image-upload">
+                <a href="~/images/@Model.ImageUrl" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                    <img src="~/images/@Model.ImageUrl">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="image-upload">
+                <a href="~/images/@Model.MedicalImageUrl" data-imagelightbox="Medical" data-ilb2-caption="كارت التامين">
+                    <img src="~/images/@Model.MedicalImageUrl">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

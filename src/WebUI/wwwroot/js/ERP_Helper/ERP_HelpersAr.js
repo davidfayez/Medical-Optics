@@ -251,6 +251,7 @@
     /*N*/
     NameAr: 'الاسم عربي',
     NameEn: 'الاسم انجليزي',
+    Name: 'الاسم',
     NotMain: 'غير رئيسية',
     Notes: 'ملاحظات',
     NotificationPeriod: 'التذكير قبل',
@@ -395,6 +396,8 @@
     ThereAreNoExchangeBondsForThisCustody: ' لا توجد اى سندات صرف على هذه العهدة ',
     TotalReveal: 'اجمالى الكشف',
     TotalCustody: 'اجمالى العهدة',
+    Type: 'النوع',
+
     /*U*/
     UserName: 'اسم المستخدم',
     UniversityName: 'اسم الجامعة',

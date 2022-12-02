@@ -21,7 +21,7 @@ public class FavoriteDiagnoseConfiguration : IEntityTypeConfiguration<FavoriteDi
                .HasMaxLength(300);
 
         builder.Property(s => s.Description)
-              .IsRequired()
+              //.IsRequired()
               .HasMaxLength(500);
     }
 }
