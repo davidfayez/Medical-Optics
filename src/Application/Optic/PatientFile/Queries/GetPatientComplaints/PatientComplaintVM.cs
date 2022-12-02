@@ -14,7 +14,7 @@ public class PatientComplaintVM : AuditableEntity, IMapFrom<PatientComplaint>
 {
     public void Mapping(Profile profile)
     {
-        profile.CreateMap<PatientComplaint, PatientDataVM>()
+        profile.CreateMap<PatientComplaint, PatientComplaintVM>()
                .ReverseMap();
     }
     public int Id { get; set; }

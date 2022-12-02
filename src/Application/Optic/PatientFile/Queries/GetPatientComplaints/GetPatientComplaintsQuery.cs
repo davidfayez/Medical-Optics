@@ -31,7 +31,7 @@ public class GetPatientComplaintsQueryHandler : IRequestHandler<GetPatientCompla
                                                 .Include(s => s.PatientComplaints)
                                                 .FirstOrDefault(s => !s.IsDeleted && s.ClientId == request.ClientId);
         
-        var PatientComplaints = PatientMedicalFile.PatientComplaints.Where(s => !s.IsDeleted).ToList();
+        var PatientComplaints = PatientMedicalFile?.PatientComplaints.Where(s => !s.IsDeleted).ToList();
 
         var PatientComplaintsVM = _mapper.Map<List<PatientComplaintVM>>(PatientComplaints);
 

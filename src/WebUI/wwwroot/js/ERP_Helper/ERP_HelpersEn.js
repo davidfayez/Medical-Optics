@@ -246,6 +246,7 @@
     /*N*/
     NameAr: 'Arabic Name',
     NameEn: 'English Name',
+    Name:'Name',
     NotMain: 'Not Main',
     Notes: 'Notes',
     NotificationPeriod: 'Notification Period',
@@ -395,6 +396,7 @@
     ThereAreNoExchangeBondsForThisCustody: ' There are no exchange bonds for this custody ',
     TotalReveal: 'Total Reveal ',
     TotalCustody: ' Total Custody',
+    Type: 'Type',
     /*U*/
     UserName: 'User Name',
     UniversityName: 'University Name',

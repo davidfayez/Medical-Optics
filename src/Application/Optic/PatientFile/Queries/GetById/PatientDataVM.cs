@@ -25,6 +25,7 @@ public class PatientDataVM : AuditableEntity, IMapFrom<DB.CustomerData>
     }
 
     public int Id { get; set; }
+    public int VisitNo { get; set; }
     public string CustomerMRN { get; set; }                                   // كود العميل --unique
     public string CustomerFileNo { get; set; }                              // رقم ملف العميل
     public string CustomerNameAr { get; set; }                            // اسم العميل عربى

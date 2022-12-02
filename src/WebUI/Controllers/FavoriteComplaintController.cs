@@ -64,7 +64,6 @@ public class FavoriteComplaintController : BaseController
         return View(new CreateFavoriteComplaintCommand());
     }
 
-
     [HttpPost]
     public async Task<JsonResult> DeleteAsync(int id)
     {
@@ -81,7 +80,6 @@ public class FavoriteComplaintController : BaseController
         var FavoritesComplaints = await Mediator.Send(new GetAllFavoritesComplaintsQuery());
         return Json(FavoritesComplaints);
     }
-
 
     public async Task<JsonResult> GetComplaintsByFavoriteId(int id)
     {

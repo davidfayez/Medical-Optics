@@ -1,12 +1,12 @@
-﻿@model CreateFavoriteComplaintCommand
+﻿@model CreateFavoriteDiagnoseCommand
 @{
-    ViewData["Title"] = @Global.Add + " " + @Optic.Complaint;
+    ViewData["Title"] = @Global.Add + " " + @Optic.Diagnose;
     Layout = "_OpticLayout";
 }
 <div class="card margin-card container-fluid yourdiv">
     <div class="card-header position-relative padding-card row">
         <div class="col-md-4">
-            <span class="icon-page"></span> <h3 class="page-name">@Global.Add  @Optic.Complaint</h3>
+            <span class="icon-page"></span> <h3 class="page-name">@Global.Add  @Optic.Diagnose</h3>
         </div>
         <div class="col-md-8">
 
@@ -23,7 +23,7 @@
 
                 <div class="card">
                     <div class="card-header back-green">
-                        @Optic.OpticMedicalFile/@Global.Add /@Optic.Complaint
+                        @Optic.OpticMedicalFile/@Global.Add /@Optic.Diagnose
                     </div>
                     <div class="card-body back-black">
 
@@ -39,9 +39,12 @@
             <div class="col-xl-10 col-lg-12">
 
                 <!--Page Content-->
-                <form asp-controller="FavoriteComplaint" asp-action="Create" method="post" class="row" enctype="multipart/form-data">
+                <form asp-controller="FavoriteDiagnose" asp-action="Create" method="post" class="row" enctype="multipart/form-data">
                     <input type="hidden" asp-for="Id" />
-                    <input type="hidden" asp-for="CreationDate" />
+                    @if(Model?.Id != null)
+                    {
+                        <input type="hidden" asp-for="CreationDate" />
+                    }
                     <div class="col-lg-12 ">
                         <div class="row">
                             <label asp-for="FavoriteName" class="col-xl-2 col-lg-3 form-group">@Global.Name</label>
@@ -133,5 +136,5 @@
 </div>
 
 @section Scripts{
-    <script src="~/js/pages/Favorite/Complaint/AddFavoriteComplaint.js"></script>
+    <script src="~/js/pages/Favorite/Diagnose/AddFavoriteDiagnose.js"></script>
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Medical_Optics.Application.Optic.Complaint.Queries.GetAll;
 using Medical_Optics.Application.Optic.Diagnose.Commands.Create;
 using Medical_Optics.Application.Optic.Diagnose.Commands.Delete;
 using Medical_Optics.Application.Optic.Diagnose.Commands.Update;
@@ -88,6 +89,36 @@ public class DiagnoseController : BaseController
     {
         var diagnose = await Mediator.Send(new GetAllDiagnoseQuery());
         return Json(diagnose);
+    }
+
+    public async Task<JsonResult> GetAllOptional(string selectedIds)
+    {
+        List<int> optionalListIds = null;
+
+        if (selectedIds != null)
+            optionalListIds = selectedIds.Split(',').Select(Int32.Parse).ToList();
+
+        var Complaints = await Mediator.Send(new GetAllDiagnoseQuery
+        {
+            OptionalIds = optionalListIds
+        });
+
+        return Json(Complaints);
+    }
+
+    public async Task<JsonResult> GetAllSelected(string selectedIds)
+    {
+        List<int> selectedListIds = null;
+
+        if (selectedIds != null)
+            selectedListIds = selectedIds.Split(',').Select(Int32.Parse).ToList();
+
+        var Complaints = await Mediator.Send(new GetAllDiagnoseQuery
+        {
+            SelectedIds = selectedListIds
+        });
+
+        return Json(Complaints);
     }
 
 }
